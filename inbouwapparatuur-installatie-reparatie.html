@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Installatie, vervanging en reparatie van inbouwapparatuur door Obbink Service. Vraag service of advies aan.">
+  <title>Inbouwapparatuur installeren & repareren | Obbink Service</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    .inbouw-focus{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);align-items:stretch;gap:0;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:#fff;box-shadow:var(--shadow);margin-top:28px}
+    .inbouw-focus--reverse .inbouw-focus-media{order:2}.inbouw-focus--reverse .inbouw-focus-content{order:1}
+    .inbouw-focus-media{min-height:470px;background:#eef3f5;overflow:hidden}
+    .inbouw-focus-media img{width:100%;height:100%;min-height:470px;display:block;object-fit:cover;object-position:center}
+    .inbouw-focus-figure{margin:0;height:100%;display:flex;flex-direction:column;background:#eef3f5}
+    .inbouw-focus-figure img{flex:1;height:auto;min-height:380px}
+    .inbouw-focus-caption{padding:18px 22px 20px;background:#fff;border-top:1px solid var(--line)}
+    .inbouw-focus-caption strong{display:block;font-size:18px;line-height:1.3;color:var(--ink);margin-bottom:5px}
+    .inbouw-focus-caption span{display:block;font-size:15px;line-height:1.55;color:var(--ink-2)}
+    .inbouw-focus-content{padding:clamp(32px,5vw,64px);display:flex;flex-direction:column;justify-content:center}
+    .inbouw-focus-content h2{font-size:clamp(34px,4vw,54px);line-height:1.04;margin:8px 0 18px}
+    .inbouw-focus-content>p:not(.eyebrow):not(.inbouw-quote):not(.inbouw-note){font-size:18px;line-height:1.65;color:var(--ink-2);margin:0 0 18px}
+    .inbouw-quote{font-size:clamp(25px,3vw,36px);line-height:1.15;font-weight:900;color:var(--ink);margin:18px 0 24px;padding-left:18px;border-left:4px solid var(--orange)}
+    .inbouw-note{margin:4px 0 20px;padding:16px 18px;border-radius:14px;background:var(--orange-soft);color:var(--ink-2);line-height:1.55}
+    .inbouw-usps{display:grid;grid-template-columns:1fr 1fr;gap:11px 18px;list-style:none;padding:0;margin:8px 0 26px}
+    .inbouw-usps li{position:relative;padding-left:27px;font-weight:800;color:var(--ink-2)}
+    .inbouw-usps li::before{content:'✓';position:absolute;left:0;top:-1px;width:19px;height:19px;border-radius:50%;display:grid;place-items:center;background:var(--orange-soft);color:var(--orange);font-size:12px;font-weight:900}
+    .inbouw-focus .actions{margin-top:0}
+    .inbouw-focus .actions .button{min-width:210px;text-align:center}
+    .obbink-shop-link{display:flex;align-items:center;gap:16px;margin-top:18px;padding:15px 18px;border:1px solid var(--line);border-radius:16px;background:#fff;text-decoration:none;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+    .obbink-shop-link:hover{transform:translateY(-1px);border-color:var(--orange);box-shadow:0 10px 26px rgba(20,31,43,.08)}
+    .obbink-shop-link img{width:118px;max-height:50px;object-fit:contain;flex:0 0 auto}
+    .obbink-shop-link span{font-size:16px;line-height:1.35;font-weight:850;color:var(--ink)}
+    .obbink-shop-link span::after{content:'  →';color:var(--orange)}
+    @media(max-width:900px){.inbouw-focus,.inbouw-focus--reverse{grid-template-columns:1fr}.inbouw-focus--reverse .inbouw-focus-media,.inbouw-focus--reverse .inbouw-focus-content{order:initial}.inbouw-focus-media,.inbouw-focus-media img{min-height:320px}.inbouw-focus-figure img{min-height:320px}.inbouw-usps{grid-template-columns:1fr}}
+    @media(max-width:560px){.inbouw-focus{border-radius:20px}.inbouw-focus-content{padding:28px 22px}.inbouw-focus-media,.inbouw-focus-media img,.inbouw-focus-figure img{min-height:250px}.inbouw-focus-caption{padding:15px 18px 17px}.inbouw-focus .actions{display:grid}.inbouw-focus .actions .button{width:100%;min-width:0}.obbink-shop-link{align-items:flex-start;flex-direction:column}.obbink-shop-link img{width:108px}}
+    .inbouw-hero-practice{display:flex;align-self:start;flex-direction:column;overflow:hidden;padding:0!important;background:#fff!important;box-shadow:var(--shadow)!important}
+    .inbouw-hero-practice-media{aspect-ratio:4 / 3;background:#eef3f5;overflow:hidden}
+    .inbouw-hero-practice-media img{width:100%;height:100%;display:block;object-fit:cover;object-position:center 50%}
+    .inbouw-hero-practice-content{padding:26px 38px 32px}
+    .inbouw-hero-practice-content h2{margin:0 0 12px;font-size:clamp(26px,3vw,38px);line-height:1.1}
+    .inbouw-hero-practice-content>p{margin:0;color:var(--ink-2);font-size:16px;line-height:1.55}
+    .inbouw-hero-practice-link{display:flex;align-items:center;gap:18px;margin-top:20px}
+    .inbouw-hero-practice-link img{width:min(150px,42vw);height:auto;object-fit:contain}
+    .inbouw-hero-practice-link small{color:var(--muted);font-size:13px;font-weight:800}
+    .inbouw-hero-practice-link .button{min-height:46px;padding:0 18px;white-space:nowrap}
+    @media(max-width:560px){.inbouw-hero-practice-content{padding:24px 22px 28px}.inbouw-hero-practice-link{align-items:flex-start;flex-wrap:wrap;gap:10px 14px}.inbouw-hero-practice-link .button{flex:1 1 180px}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Obbink Service home"><img src="assets/obbink-service.svg" alt="Obbink Service"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Hoofdnavigatie">
+      <a href="index.html#diensten">Oplossingen</a><a href="index.html#reparatie">Reparatie</a><a href="index.html#zakelijk">Zakelijk</a><a href="organisatie.html">Organisatie</a><a class="button button-small" href="index.html#aanvragen">Service aanvragen</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="page-hero energy-page-hero">
+    <div class="container page-hero-grid">
+      <div>
+        <p class="eyebrow">INBOUWAPPARATUUR</p>
+        <h1>Installatie & reparatie van inbouwapparatuur</h1>
+        <p class="page-hero-copy">Een inbouwapparaat moet niet alleen goed werken, maar ook technisch en netjes in uw keuken worden geplaatst. Obbink Service verzorgt installatie, vervanging, reparatie en service van inbouwapparatuur. Van vaatwasser en oven tot kookplaat en koel-vriescombinatie.</p>
+        <div class="actions"><a class="button" href="index.html#aanvragen">Reparatie of service aanvragen</a><a class="button button-blue" href="https://www.obbink.nl/winkels/" target="_blank" rel="noopener">Persoonlijk advies in een winkel</a></div>
+        <div class="hero-points airco-points"><span>Installatie</span><span>Vervanging</span><span>Reparatie</span><span>Service</span></div>
+      </div>
+      <div class="feature-box inbouw-hero-practice">
+        <div class="inbouw-hero-practice-media"><img src="assets/OBBINK INBOUW.png" alt="Pascal van Obbink Service tijdens de installatie van een inbouwvaatwasser" data-inbouw-alt="install.imageAlt"></div>
+        <div class="inbouw-hero-practice-content">
+          <h2 data-inbouw-i18n="install.captionTitle">Vakkundig ingebouwd door Obbink Service</h2>
+          <p data-inbouw-i18n="install.captionBody">Pascal van Obbink Service tijdens de installatie van een inbouwvaatwasser. Van aansluiten en stellen tot het netjes afwerken van het keukenfront.</p>
+          <div class="inbouw-hero-practice-link">
+            <img src="assets/Obbinklogo.png" alt="Obbink">
+            <small data-inbouw-i18n="hero.category">Inbouw vaatwassers</small>
+            <a class="button button-blue" href="https://www.obbink.nl/witgoed/vaatwassers/inbouw-vaatwassers" target="_blank" rel="noopener" data-inbouw-i18n="hero.assortment">Bekijk ons assortiment</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><p class="eyebrow">TWEE KANTEN VAN DEZELFDE SERVICE</p><h2>Repareren als het kan. Vernieuwen als het beter is.</h2><p>Of het nu gaat om een storing aan uw huidige apparaat of om een compleet nieuwe set keukenapparatuur: u krijgt bij Obbink advies én de technische uitvoering via Obbink Service.</p></div>
+
+      <article class="inbouw-focus" aria-labelledby="repair-focus-title">
+        <div class="inbouw-focus-media"><img src="assets/Obbink HR-98.jpg" alt="Obbink Service monteur repareert inbouwapparatuur" data-inbouw-alt="repair.imageAlt"></div>
+        <div class="inbouw-focus-content">
+          <p class="eyebrow" data-inbouw-i18n="repair.eyebrow">REPARATIE VAN INBOUWAPPARATUUR</p>
+          <h2 id="repair-focus-title" data-inbouw-i18n="repair.title">Vakkundige reparatie van inbouwapparatuur.</h2>
+          <p data-inbouw-i18n="repair.body">Werkt uw inbouwapparaat niet meer goed of heeft u een storing? Obbink Service verzorgt diagnose en reparatie van onder andere vaatwassers, ovens, kookplaten, afzuigkappen en koel-vriescombinaties. We kijken eerst wat technisch én economisch verstandig is.</p>
+          <p class="inbouw-note" data-inbouw-i18n="repair.warranty">Voor verschillende merken zijn we geautoriseerd om reparaties uit te voeren, ook binnen de fabrieksgarantie. Of een reparatie onder garantie valt, hangt af van merk, apparaat en garantievoorwaarden.</p>
+          <ul class="inbouw-usps">
+            <li data-inbouw-i18n="repair.usp1">Reparatie van inbouwapparatuur</li>
+            <li data-inbouw-i18n="repair.usp2">Ook service binnen fabrieksgarantie</li>
+            <li data-inbouw-i18n="repair.usp3">Geautoriseerd door verschillende fabrikanten</li>
+            <li data-inbouw-i18n="repair.usp4">Vakkundige diagnose en herstel</li>
+          </ul>
+          <div class="actions"><a class="button" href="index.html#aanvragen" data-inbouw-i18n="repair.cta">Reparatie aanvragen</a></div>
+        </div>
+      </article>
+
+      <article class="inbouw-focus inbouw-focus--reverse" aria-labelledby="install-focus-title">
+        <div class="inbouw-focus-media"><img src="assets/Bosch_accentline_kitchen_1200x800.webp" alt="Bosch AccentLine keuken met inbouwapparatuur" data-inbouw-alt="install.kitchenAlt"></div>
+        <div class="inbouw-focus-content">
+          <p class="eyebrow" data-inbouw-i18n="install.eyebrow">INSTALLATIE & INBOUW</p>
+          <h2 id="install-focus-title" data-inbouw-i18n="install.title">Nieuwe inbouwapparatuur, netjes geplaatst.</h2>
+          <p data-inbouw-i18n="install.body">Een nieuw inbouwapparaat moet niet alleen mooi passen, maar ook technisch correct worden aangesloten en afgewerkt. Obbink Service verzorgt de inbouw en installatie van onder andere vaatwassers, ovens, kookplaten, afzuigkappen en koel-vriescombinaties.</p>
+          <p data-inbouw-i18n="install.store">In onze Obbink-winkels kunnen we u bovendien adviseren over compleet nieuwe keukenapparatuur en direct een passende offerte maken. Zo combineert u persoonlijk productadvies met vakkundige montage door onze eigen technische organisatie.</p>
+          <p class="inbouw-quote" data-inbouw-i18n="install.quote">Koop bij de man die het ook maken kan.</p>
+          <ul class="inbouw-usps">
+            <li data-inbouw-i18n="install.usp1">Inbouw en installatie van nieuwe apparatuur</li>
+            <li data-inbouw-i18n="install.usp2">Advies en offerte in de winkel</li>
+            <li data-inbouw-i18n="install.usp3">Technisch correct aangesloten</li>
+            <li data-inbouw-i18n="install.usp4">Netjes afgewerkt en opgeleverd</li>
+          </ul>
+          <div class="actions"><a class="button" href="https://www.obbink.nl/winkels/" target="_blank" rel="noopener" data-inbouw-i18n="install.cta1">Persoonlijk advies in de winkel</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-heading"><p class="eyebrow">VAN VAATWASSER TOT KOELKAST</p><h2>Inbouwapparatuur vraagt om vakmanschap.</h2><p>Een apparaat vervangen lijkt soms eenvoudig, maar maatvoering, aansluitingen, ventilatie en montage moeten wel kloppen. Onze monteurs kijken daarom niet alleen naar het apparaat, maar naar de complete situatie.</p></div>
+      <div class="feature-row">
+        <div class="feature-box"><strong>Vaatwassers</strong><p>Installatie, vervanging en reparatie van volledig en half geïntegreerde vaatwassers, inclusief een nette aansluiting en afstelling van het keukenfront.</p></div>
+        <div class="feature-box"><strong>Ovens, combi-ovens & kookplaten</strong><p>Vakkundige montage en technische service voor ovens, combi-ovens, magnetrons en elektrische of inductiekookplaten.</p></div>
+        <div class="feature-box"><strong>Koelen & vriezen</strong><p>Installatie en service van ingebouwde koelkasten, vriezers en koel-vriescombinaties, met aandacht voor juiste montage en ventilatie.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><p class="eyebrow">OBBINK + OBBINK SERVICE</p><h2>Advies, apparaat én technische uitvoering.</h2><p>Bij Obbink kunt u terecht voor persoonlijk advies over nieuwe inbouwapparatuur. Obbink Service zorgt vervolgens voor de technische kant: installatie, vervanging, reparatie en service. Zo hoeft u niet zelf verschillende partijen bij elkaar te zoeken.</p></div>
+      <div class="feature-row">
+        <div class="feature-box"><strong>Obbink</strong><p>Persoonlijk productadvies en keuze van het juiste apparaat.</p></div>
+        <div class="feature-box"><strong>Obbink Service</strong><p>Technische beoordeling, installatie, reparatie en service.</p></div>
+        <div class="feature-box"><strong>Één vertrouwd adres</strong><p>Van de keuze in de winkel tot een nette technische oplevering.</p></div>
+      </div>
+      <div class="actions"><a class="button button-blue" href="https://www.obbink.nl/winkels/" target="_blank" rel="noopener">Zoek een Obbink-winkel bij u in de buurt</a></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-grid"><div><img src="assets/obbink-service.svg" alt="Obbink Service" class="footer-logo"><p>Technische service voor thuis en zakelijk.</p></div><div><strong>Inbouwapparatuur</strong><a href="index.html#aanvragen">Service aanvragen</a><a href="https://www.obbink.nl/winkels/" target="_blank" rel="noopener">Persoonlijk advies</a></div><div><strong>Verder</strong><a href="index.html">Homepage</a><a href="https://www.obbink.nl/" target="_blank" rel="noopener">Naar Obbink.nl</a></div></div></footer>
+<script src="assets/app.js"></script>
+<script>
+(() => {
+  const language = new URLSearchParams(window.location.search).get('lang') || localStorage.getItem('obbink-language') || 'nl';
+  if (language === 'nl') return;
+
+  const translations = {
+    de: {
+      "hero.category":"Einbaugeschirrspüler","hero.assortment":"Unser Sortiment ansehen","install.kitchenAlt":"Bosch AccentLine Küche mit Einbaugeräten",
+      'repair.eyebrow':'REPARATUR VON EINBAUGERÄTEN',
+      'repair.title':'Fachgerechte Reparatur von Einbaugeräten.',
+      'repair.body':'Funktioniert Ihr Einbaugerät nicht mehr richtig oder liegt eine Störung vor? Obbink Service übernimmt Diagnose und Reparatur unter anderem von Geschirrspülern, Backöfen, Kochfeldern, Dunstabzugshauben sowie Kühl- und Gefrierkombinationen. Wir prüfen zuerst, was technisch und wirtschaftlich sinnvoll ist.',
+      'repair.warranty':'Für verschiedene Marken sind wir autorisiert, Reparaturen auch innerhalb der Herstellergarantie auszuführen. Ob eine Reparatur unter die Garantie fällt, hängt von Marke, Gerät und Garantiebedingungen ab.',
+      'repair.usp1':'Reparatur von Einbaugeräten','repair.usp2':'Service auch innerhalb der Herstellergarantie','repair.usp3':'Von verschiedenen Herstellern autorisiert','repair.usp4':'Fachgerechte Diagnose und Reparatur','repair.cta':'Reparatur anfragen','repair.imageAlt':'Obbink Service Techniker repariert ein Einbaugerät',
+      'install.eyebrow':'INSTALLATION & EINBAU','install.title':'Neue Einbaugeräte, sauber eingebaut.','install.body':'Ein neues Einbaugerät muss nicht nur optisch passen, sondern auch technisch korrekt angeschlossen und sauber fertiggestellt werden. Obbink Service übernimmt den Einbau und die Installation unter anderem von Geschirrspülern, Backöfen, Kochfeldern, Dunstabzugshauben sowie Kühl- und Gefrierkombinationen.','install.store':'In unseren Obbink-Filialen beraten wir Sie außerdem zu einer komplett neuen Küchenausstattung und erstellen direkt ein passendes Angebot. So verbinden Sie persönliche Produktberatung mit fachgerechter Montage durch unsere eigene technische Organisation.','install.quote':'Kaufen Sie bei dem Fachmann, der es auch reparieren kann.','install.usp1':'Einbau und Installation neuer Geräte','install.usp2':'Beratung und Angebot im Geschäft','install.usp3':'Technisch korrekt angeschlossen','install.usp4':'Sauber montiert und übergeben','install.cta1':'Persönliche Beratung im Geschäft','install.imageAlt':'Pascal von Obbink Service installiert einen Einbaugeschirrspüler','install.captionTitle':'Fachgerecht eingebaut von Obbink Service','install.captionBody':'Pascal von Obbink Service bei der Installation eines Einbaugeschirrspülers. Vom Anschließen und Ausrichten bis zur sauberen Montage der Küchenfront.','install.assortment':'Unser Sortiment an Einbaugeschirrspülern ansehen'
+    },
+    en: {
+      "hero.category":"Built-in dishwashers","hero.assortment":"View our range","install.kitchenAlt":"Bosch AccentLine kitchen with built-in appliances",
+      'repair.eyebrow':'BUILT-IN APPLIANCE REPAIR','repair.title':'Professional repair of built-in appliances.','repair.body':'Is your built-in appliance no longer working properly or does it have a fault? Obbink Service diagnoses and repairs dishwashers, ovens, hobs, extractor hoods and built-in fridge-freezers, among other appliances. We first assess what makes technical and economic sense.','repair.warranty':'For various brands, we are authorised to carry out repairs within the manufacturer warranty as well. Whether a repair is covered by warranty depends on the brand, appliance and warranty conditions.','repair.usp1':'Repair of built-in appliances','repair.usp2':'Service within manufacturer warranty','repair.usp3':'Authorised by various manufacturers','repair.usp4':'Professional diagnosis and repair','repair.cta':'Request a repair','repair.imageAlt':'Obbink Service technician repairing a built-in appliance',
+      'install.eyebrow':'INSTALLATION & BUILT-IN FITTING','install.title':'New built-in appliances, neatly installed.','install.body':'A new built-in appliance should not only fit beautifully, it must also be connected correctly and finished neatly. Obbink Service installs dishwashers, ovens, hobs, extractor hoods and built-in fridge-freezers, among other appliances.','install.store':'At our Obbink stores, we can also advise you on a complete new set of kitchen appliances and prepare a suitable quotation straight away. This combines personal product advice with professional installation by our own technical organisation.','install.quote':'Buy from the people who can also repair it.','install.usp1':'Fitting and installation of new appliances','install.usp2':'Advice and quotation in store','install.usp3':'Technically correct connection','install.usp4':'Neatly finished and handed over','install.cta1':'Personal advice in store','install.imageAlt':'Pascal from Obbink Service installing a built-in dishwasher','install.captionTitle':'Professionally installed by Obbink Service','install.captionBody':'Pascal from Obbink Service installing a built-in dishwasher, from connection and levelling to the neat finishing of the kitchen front.','install.assortment':'View our range of built-in dishwashers'
+    },
+    fr: {
+      "hero.category":"Lave-vaisselle encastrables","hero.assortment":"Voir notre assortiment","install.kitchenAlt":"Cuisine Bosch AccentLine avec appareils encastrables",
+      'repair.eyebrow':'RÉPARATION DES APPAREILS ENCASTRABLES','repair.title':'Réparation professionnelle des appareils encastrables.','repair.body':'Votre appareil encastrable ne fonctionne plus correctement ou présente une panne ? Obbink Service assure le diagnostic et la réparation, notamment des lave-vaisselle, fours, plaques de cuisson, hottes et combinés réfrigérateur-congélateur. Nous vérifions d’abord quelle solution est la plus pertinente sur les plans technique et économique.','repair.warranty':'Pour plusieurs marques, nous sommes agréés pour effectuer des réparations, y compris pendant la garantie constructeur. La prise en charge sous garantie dépend de la marque, de l’appareil et des conditions de garantie.','repair.usp1':'Réparation des appareils encastrables','repair.usp2':'Service pendant la garantie constructeur','repair.usp3':'Agréé par plusieurs fabricants','repair.usp4':'Diagnostic et réparation professionnels','repair.cta':'Demander une réparation','repair.imageAlt':'Technicien Obbink Service réparant un appareil encastrable',
+      'install.eyebrow':'INSTALLATION & ENCASTREMENT','install.title':'De nouveaux appareils, installés avec soin.','install.body':'Un nouvel appareil encastrable doit non seulement s’intégrer harmonieusement, mais aussi être raccordé correctement et fini avec soin. Obbink Service assure l’encastrement et l’installation, notamment des lave-vaisselle, fours, plaques de cuisson, hottes et combinés réfrigérateur-congélateur.','install.store':'Dans nos magasins Obbink, nous pouvons également vous conseiller pour un équipement de cuisine entièrement neuf et établir directement une offre adaptée. Vous combinez ainsi conseil personnalisé et installation professionnelle par notre propre organisation technique.','install.quote':'Achetez chez le spécialiste qui sait aussi réparer.','install.usp1':'Encastrement et installation de nouveaux appareils','install.usp2':'Conseil et offre en magasin','install.usp3':'Raccordement techniquement correct','install.usp4':'Finition soignée et mise en service','install.cta1':'Conseil personnalisé en magasin','install.imageAlt':'Pascal d’Obbink Service installe un lave-vaisselle encastrable','install.captionTitle':'Installation professionnelle par Obbink Service','install.captionBody':'Pascal d’Obbink Service pendant l’installation d’un lave-vaisselle encastrable, du raccordement et du réglage à la finition soignée de la façade de cuisine.','install.assortment':'Voir notre gamme de lave-vaisselle encastrables'
+    },
+    zh: {
+      "hero.category":"嵌入式洗碗机","hero.assortment":"查看我们的产品系列","install.kitchenAlt":"配有嵌入式家电的 Bosch AccentLine 厨房",
+      'repair.eyebrow':'嵌入式家电维修','repair.title':'专业维修嵌入式家电。','repair.body':'您的嵌入式家电无法正常工作或出现故障？Obbink Service 可为洗碗机、烤箱、灶具、抽油烟机以及嵌入式冰箱冷冻组合等设备提供检测与维修。我们会先判断从技术和经济角度看哪种方案更合理。','repair.warranty':'对于多个品牌，我们获得授权，可在制造商保修期内进行维修。具体是否属于保修范围，取决于品牌、设备及相应保修条款。','repair.usp1':'嵌入式家电维修','repair.usp2':'提供制造商保修期内服务','repair.usp3':'获得多家制造商授权','repair.usp4':'专业检测与维修','repair.cta':'申请维修','repair.imageAlt':'Obbink Service 技术人员维修嵌入式家电',
+      'install.eyebrow':'安装与嵌入','install.title':'全新嵌入式家电，安装整洁到位。','install.body':'新的嵌入式家电不仅要与厨房美观匹配，还必须正确连接并整洁收尾。Obbink Service 可为洗碗机、烤箱、灶具、抽油烟机以及嵌入式冰箱冷冻组合等设备提供嵌入和安装服务。','install.store':'在 Obbink 门店，我们还可以为整套全新厨房家电提供建议，并直接制作合适的报价。这样，您既能获得个性化产品建议，又能由我们自己的技术团队完成专业安装。','install.quote':'在既懂销售、也懂维修的专业人士那里购买。','install.usp1':'新设备嵌入与安装','install.usp2':'门店咨询与报价','install.usp3':'技术连接正确','install.usp4':'整洁安装并完成交付','install.cta1':'在门店获得个性化建议','install.imageAlt':'Obbink Service 的 Pascal 正在安装嵌入式洗碗机','install.captionTitle':'由 Obbink Service 专业安装','install.captionBody':'Obbink Service 的 Pascal 正在安装嵌入式洗碗机，从连接、调平到整洁安装厨房门板。','install.assortment':'查看我们的嵌入式洗碗机系列'
+    }
+  };
+
+  const dict = translations[language];
+  if (!dict) return;
+  document.querySelectorAll('[data-inbouw-i18n]').forEach((element) => {
+    const value = dict[element.dataset.inbouwI18n];
+    if (value) element.textContent = value;
+  });
+  document.querySelectorAll('[data-inbouw-alt]').forEach((image) => {
+    const value = dict[image.dataset.inbouwAlt];
+    if (value) image.alt = value;
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Miele Professional bij Obbink Service: professionele wasmachines, drogers, was-droogzuilen en vaatwassers met advies, installatie, onderhoud en service.">
+  <title>Miele Professional | Professioneel witgoed | Obbink Service</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <style>
+    /* Page-local Miele design; the shared Obbink header stays unchanged. */
+    .miele-page main{--miele-accent:#650b32;--ink:#202020;--ink-2:#45413f;--muted:#615b56;--line:#ded8d1;--soft:#f4f0eb;--soft-blue:#f4f0eb;--orange:#650b32;--blue:#650b32;color:var(--ink);background:#fff}
+    .miele-page main .eyebrow{color:var(--miele-accent);font-size:12px;letter-spacing:.12em}
+    .miele-page main h1,.miele-page main h2,.miele-page main h3{font-weight:700;letter-spacing:-.035em;line-height:1.1}
+    .miele-page main .button{background:var(--miele-accent);border:1px solid var(--miele-accent);border-radius:0;box-shadow:none;color:#fff;min-height:50px;padding:12px 22px;line-height:1.4;transform:none;transition:background .18s,color .18s,border-color .18s}
+    .miele-page main .button:hover{background:#202020;border-color:#202020;color:#fff;transform:none}
+    .miele-page main .button:focus-visible{outline:2px solid var(--miele-accent);outline-offset:4px}
+    .miele-page main .button-secondary{background:transparent;border-color:#202020;color:#202020}
+    .miele-page main .button-secondary:hover{background:#202020;color:#fff}
+    .miele-hero{padding:64px 0;background:#f4f0eb;border-bottom:1px solid var(--line)}
+    .miele-hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:54px;align-items:center}
+    .miele-brandline{margin-bottom:24px}
+    .miele-brandline img{width:180px;height:auto;display:block;filter:none;border-radius:0}
+    .miele-hero h1{font-size:clamp(40px,4.6vw,66px);margin:0 0 24px}
+    .miele-hero-copy{font-size:19px;line-height:1.7;color:var(--ink-2);margin:0;max-width:720px}
+    .miele-hero-media{background:#fff;border-radius:0;box-shadow:none;overflow:hidden}
+    .miele-hero-media img{display:block;width:100%;height:auto;object-fit:contain;border-radius:0}
+    .miele-page main .section-heading{max-width:880px}
+    .miele-page main .section-heading h2{font-size:clamp(32px,3.7vw,48px)}
+    .miele-products{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;margin-top:40px}
+    .miele-product{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:#f4f0eb;border:0;border-radius:0;box-shadow:none;overflow:hidden}
+    .miele-product img{display:block;width:100%;height:340px;object-fit:contain;padding:26px;background:#faf9f7;border-radius:0}
+    .miele-product:first-child img{padding:0}
+    .miele-product-body{padding:44px;display:flex;flex-direction:column;justify-content:center;grid-column:1;grid-row:1;min-width:0}
+    .miele-product>img{grid-column:2;grid-row:1}
+    .miele-product:nth-child(even) .miele-product-body{grid-column:2}
+    .miele-product:nth-child(even)>img{grid-column:1}
+    .miele-product h3{font-size:clamp(27px,2.5vw,34px);margin:0 0 18px}
+    .miele-product p{margin:0;color:var(--ink-2);font-size:17px;line-height:1.7}
+    .miele-support-section{background:#f4f0eb;color:var(--ink)}
+    .miele-service{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;align-items:stretch}
+    .miele-story{min-width:0;overflow:hidden;background:#fff;border:0;border-radius:0;box-shadow:none}
+    .miele-story>img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center;background:#eee;border-radius:0}
+    .miele-story>.miele-partner-photo{object-position:center 38%}
+    .miele-story-body{padding:32px}
+    .miele-story-body .eyebrow{margin:0 0 14px;line-height:1.5}
+    .miele-story-body h3{font-size:clamp(27px,2.6vw,34px);margin:0 0 20px}
+    .miele-story-body>p:not(.eyebrow){font-size:17px;line-height:1.7;color:var(--ink-2);margin:0}
+    .miele-service-points{list-style:none;padding:20px 0 0;margin:24px 0 0;border-top:1px solid var(--line);display:grid;gap:10px;color:var(--ink);font-size:15px;font-weight:650}
+    .miele-service-points li{display:flex;align-items:baseline;gap:11px}
+    .miele-service-points li:before{content:'';width:16px;height:2px;background:var(--miele-accent);flex-shrink:0;align-self:center}
+    .miele-page main .miele-cta{padding:48px;background:#181818;color:#fff;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.8fr);gap:40px;align-items:center;border-radius:0}
+    .miele-cta h2{font-size:clamp(32px,3.5vw,48px);margin:12px 0 20px}
+    .miele-cta p{color:#f4eeef;line-height:1.7}
+    .miele-page main .miele-cta .eyebrow{color:#eee1e6;border-left:3px solid var(--miele-accent);padding-left:14px}
+    .miele-page main .miele-cta .button{background:var(--miele-accent);color:#fff;border-color:var(--miele-accent)}
+    .miele-page main .miele-cta .button:hover{background:#fff;color:#181818;border-color:#fff}
+    .miele-page main .miele-cta .button:focus-visible{outline-color:#fff}
+    .miele-cta .actions{margin:0;justify-content:center}
+    .miele-page>.site-footer{background:#202020}
+    .miele-page .service-assistant-launcher{background:#650b32;border-color:#650b32;border-radius:0}
+    @media(max-width:900px){.miele-hero-grid{grid-template-columns:minmax(0,1fr);gap:36px}.miele-hero-media{max-width:740px}.miele-hero{padding:48px 0}.miele-service,.miele-cta{grid-template-columns:minmax(0,1fr)}.miele-product-body{padding:28px}.miele-product img{height:310px;padding:20px}.miele-cta .actions{justify-content:flex-start}}
+    @media(max-width:600px){.miele-hero h1{font-size:clamp(36px,9vw,48px)}.miele-brandline img{width:150px}.miele-hero-copy{font-size:17px}.miele-page main .actions .button{width:100%}.miele-product{grid-template-columns:minmax(0,1fr)}.miele-product>img,.miele-product:nth-child(even)>img{grid-column:1;grid-row:1;height:270px}.miele-product-body,.miele-product:nth-child(even) .miele-product-body{grid-column:1;grid-row:2;padding:26px}.miele-product p,.miele-story-body>p:not(.eyebrow){font-size:16px}.miele-story-body{padding:26px}.miele-story>img{aspect-ratio:4/3}.miele-page main .miele-cta{padding:28px;gap:22px}}
+
+    /* These two editorial photographs fill their entire grid cell. */
+    .miele-product:nth-child(2),.miele-product:nth-child(3){min-height:340px}
+    .miele-product:nth-child(2)>img,.miele-product:nth-child(3)>img{padding:0;height:100%;min-height:0;object-fit:cover;object-position:center;border-radius:0;align-self:stretch}
+    @media(max-width:900px){
+      .miele-product:nth-child(2),.miele-product:nth-child(3){grid-template-columns:minmax(0,1fr);min-height:0}
+      .miele-product:nth-child(2)>img,.miele-product:nth-child(3)>img{grid-column:1;grid-row:1;height:auto;aspect-ratio:16/9}
+      .miele-product:nth-child(2)>.miele-product-body,.miele-product:nth-child(3)>.miele-product-body{grid-column:1;grid-row:2}
+    }
+    /* All three product rows use the same stacked proportions on smaller screens. */
+    @media(max-width:900px){
+      .miele-product:first-child{grid-template-columns:minmax(0,1fr)}
+      .miele-product:first-child>img{grid-column:1;grid-row:1;height:auto;aspect-ratio:16/9;padding:0;object-fit:cover}
+      .miele-product:first-child>.miele-product-body{grid-column:1;grid-row:2}
+    }
+  </style>
+</head>
+<body class="miele-page">
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Obbink Service home"><img src="assets/obbinkservice.png" alt="Obbink Service"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Hoofdnavigatie"><a href="index.html#diensten">Oplossingen</a><a href="professioneel-witgoed.html">Professioneel witgoed</a><a href="index.html#zakelijk">Zakelijk</a><a class="button button-small" href="index.html#aanvragen">Service aanvragen</a></nav>
+  </div>
+</header>
+<main>
+  <section class="miele-hero">
+    <div class="container miele-hero-grid">
+      <div>
+        <div class="miele-brandline"><img src="assets/miele.png" alt="Miele" width="800" height="451"></div>
+        <h1>Miele Professional bij Obbink Service.</h1>
+        <p class="miele-hero-copy">Professionele apparatuur voor organisaties waar dagelijks gebruik, continuïteit en technische betrouwbaarheid tellen. Obbink Service helpt bij keuze, levering, installatie, ingebruikname, onderhoud en service.</p>
+        <div class="actions"><a class="button" href="index.html#zakelijk">Vraag zakelijk advies aan</a><a class="button button-secondary" href="professioneel-witgoed.html">Terug naar professioneel witgoed</a></div>
+      </div>
+      <div class="miele-hero-media"><img src="assets/MielePRO.webp" alt="Miele Professional apparatuur" onerror="this.style.display='none';this.parentElement.style.minHeight='320px'"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-heading"><p class="eyebrow">PROFESSIONEEL WASSEN, DROGEN EN AFWASSEN</p><h2>Apparatuur afgestemd op professioneel gebruik.</h2><p>De juiste keuze begint bij de toepassing. Hoe vaak draait de machine, hoeveel capaciteit is nodig, hoe snel moet een programma klaar zijn en wat betekent uitval voor uw organisatie?</p></div>
+      <div class="miele-products">
+        <article class="miele-product"><img src="assets/Miele-WAS-PRO.avif" alt="Miele Professional wasmachine" onerror="this.style.display='none'"><div class="miele-product-body"><h3>Professionele wasmachines</h3><p>Voor organisaties die dagelijks betrouwbaar moeten kunnen wassen. We kijken naar capaciteit, gebruiksfrequentie, programma's, aansluiting en plaatsing.</p></div></article>
+        <article class="miele-product"><img src="assets/miele_wassen_geweldenaars.webp" alt="Miele Professional was-droogzuil" onerror="this.style.display='none'"><div class="miele-product-body"><h3>Wassen & drogen</h3><p>Professionele was- en droogoplossingen, ook wanneer ruimte, doorlooptijd en continuïteit belangrijke factoren zijn.</p></div></article>
+        <article class="miele-product"><img src="assets/miele_afwassen_geweldenaars.webp" alt="Miele Professional vaatwasser" onerror="this.style.display='none'"><div class="miele-product-body"><h3>Professionele vaatwassers</h3><p>Voor omgevingen waar vaat snel, frequent en betrouwbaar verwerkt moet worden. Advies begint bij gebruik, capaciteit en gewenste doorlooptijd.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-light miele-support-section">
+    <div class="container">
+      <div class="section-heading"><p class="eyebrow">OBBINK SERVICE ERACHTER</p><h2>Niet alleen leveren, maar ook technisch begeleiden.</h2><p>Professioneel witgoed is onderdeel van een bedrijfsproces. Daarom moet ook de technische ondersteuning kloppen.</p></div>
+      <div class="miele-service miele-stories">
+        <article class="miele-story">
+          <img src="assets/mielepro_afwas_binnenkant.webp" alt="Binnenzijde van een Miele Professional vaatwasser tijdens het afwassen" width="904" height="509" loading="lazy" decoding="async">
+          <div class="miele-story-body">
+            <p class="eyebrow" data-miele-story="innovation">INNOVATIE &amp; RESULTAAT</p>
+            <h3 data-miele-story="technology">Professionele vaatwastechniek</h3>
+            <p data-miele-story="technologyBody">Miele Professional vaatwassers zijn ontwikkeld voor snelheid, capaciteit en een betrouwbaar afwasresultaat. Voor horeca, zorg en andere professionele omgevingen kijken we samen welke oplossing het beste past bij het gebruik, de belasting en de gewenste doorlooptijd.</p>
+          </div>
+        </article>
+        <article class="miele-story">
+          <img src="assets/Obbink%20HR-49.jpg" alt="Obbink Service-monteur met tablet bij de geopende servicebus" loading="lazy" decoding="async" class="miele-partner-photo">
+          <div class="miele-story-body">
+            <p class="eyebrow" data-miele-story="service">SERVICE &amp; ONDERSTEUNING</p>
+            <h3 data-miele-story="partner">Obbink Service als vaste partner</h3>
+            <p data-miele-story="partnerBody">Bij professioneel witgoed stopt het niet bij de keuze van het toestel. Obbink Service ondersteunt bij advies, levering, plaatsing, ingebruikname, onderhoud en service. Zo heeft u één aanspreekpunt voor zowel de apparatuur als de continuïteit van uw organisatie.</p>
+            <ul class="miele-service-points">
+              <li data-miele-story="advice">Advies op locatie</li>
+              <li data-miele-story="installation">Installatie en ingebruikname</li>
+              <li data-miele-story="maintenance">Onderhoud en service</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container miele-cta">
+      <div><p class="eyebrow">VOOR ZORG, RECREATIE EN BEDRIJVEN</p><h2>Welke Miele Professional-oplossing past bij uw organisatie?</h2><p>Vertel ons waar de apparatuur wordt gebruikt, hoe intensief en welke capaciteit u nodig heeft. Dan kijken we samen naar een passende professionele oplossing.</p></div>
+      <div class="actions"><a class="button button-light" href="index.html#zakelijk">Zakelijk advies aanvragen</a></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer"><div class="container footer-grid"><div><img src="assets/obbinkservice.png" alt="Obbink Service" class="footer-logo"><p>Technische service voor thuis en zakelijk.</p></div><div><strong>Professioneel witgoed</strong><a href="professioneel-witgoed.html">Overzicht</a><a href="electrolux-professional.html">Electrolux Professional</a></div><div><strong>Zakelijk</strong><a href="index.html#zakelijk">Obbink Zakelijk</a><a href="index.html#aanvragen">Service aanvragen</a></div></div></footer>
+<script src="assets/app.js?v=miele-i18n-2" data-i18n-version="miele-2"></script>
+</body>
+</html>

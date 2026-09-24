@@ -1,0 +1,339 @@
+(() => {
+  const ZH = {
+    'Obbink Service Assistent':'Obbink Service 助手','Even kijken…':'请稍等…','Waar kunnen we u mee helpen?':'我们能为您提供什么帮助？','Airco advies':'空调咨询','Reparatie & storing':'维修与故障','Onderhoud & service':'维护与服务','Winkeladvies':'门店咨询','Stel uw vraag…':'请提出您的问题…','Waar kunnen we u over adviseren?':'您希望我们为您提供哪方面的建议？','Beschrijf uw storing of foutmelding…':'请描述您的故障或错误信息…','Wat wilt u graag weten?':'您想了解什么？','Versturen':'发送','Sluit Obbink Service Assistent':'关闭 Obbink Service 助手','Kies een onderwerp':'选择主题','De digitale assistent wordt momenteel voorbereid. U kunt natuurlijk wel contact opnemen met Obbink Service.':'数字助手正在准备中。当然，您也可以联系 Obbink Service。','Dit is onze AI-assistent in ontwikkeling. We werken er voortdurend aan om de antwoorden beter en duidelijker te maken. Uw vragen helpen ons te ontdekken welke informatie klanten nodig hebben en waar we onze kennis verder kunnen verbeteren.':'这是正在开发中的 AI 助手。我们会持续改进，让回答更清晰、更完善。您的问题帮助我们了解客户需要哪些信息，以及如何进一步完善知识。','Komt u er niet uit? Dan helpen onze medewerkers van Obbink Service u natuurlijk graag verder.':'如果仍有疑问，Obbink Service 的工作人员当然很乐意继续帮助您。','AIRCO ADVIES':'空调咨询','Bereid u goed voor.':'请做好准备。','Bekijk welke informatie en foto’s ons helpen om sneller tot een passende oplossing te komen.':'了解哪些信息和照片有助于我们更快找到合适的方案。','Bekijk de voorbereidingschecklist':'查看准备清单','Goed voorbereid op uw airco-advies':'为您的空调咨询做好准备','Met een paar gegevens en duidelijke foto’s kunnen wij uw situatie vooraf beter inschatten.':'通过一些信息和清晰的照片，我们可以提前更好地评估您的情况。','Met een paar gegevens en duidelijke foto’s kunnen wij uw situatie vooraf beter inschatten. Dat helpt ons om gerichter te adviseren en een nauwkeuriger voorstel te maken.':'通过一些信息和清晰的照片，我们可以提前更好地评估您的情况，从而提供更有针对性的建议和更准确的方案。','Ruimte & isolatie':'空间与隔热','Noteer de lengte, breedte en hoogte van de ruimte. Geef ook aan hoe goed de ruimte is geïsoleerd, hoeveel ramen er zijn, welk type glas aanwezig is en of er veel zoninstraling of andere warmtebronnen zijn.':'请记录空间的长、宽和高，并说明隔热情况、窗户数量、玻璃类型，以及是否有强烈日照或其他热源。','Gebruik & wensen':'使用方式与需求','Wilt u alleen koelen of ook verwarmen? Gaat het om een slaapkamer, woonkamer, kantoor of meerdere ruimtes? Deze informatie helpt ons bij de keuze van het juiste vermogen en tussen single-split of multi-split.':'您只需要制冷，还是也需要制热？这是卧室、客厅、办公室还是多个空间？这些信息有助于我们选择合适的功率以及单联机或多联机方案。','Plaatsing & installatie':'安装位置与安装','Maak foto’s van de ruimte en mogelijke plekken voor de binnen- en buitenunit. Informatie over de afstand tussen beide units, de elektrische aansluiting en de afvoer van condenswater helpt ons om de installatie beter vooraf in te schatten.':'请拍摄空间以及室内机和室外机可能安装位置的照片。两台设备之间的距离、电源连接和冷凝水排放信息，有助于我们提前评估安装。','Tip: maak vooraf foto’s van de ruimte, de buitengevel en mogelijke montageplaatsen.':'提示：请提前拍摄空间、外墙和可能安装位置的照片。','Sluit voorbereidingschecklist':'关闭准备清单','Persoonlijk advies van onze specialisten':'我们的专业顾问提供个性化建议','Wij denken graag met u mee over de beste oplossing voor uw woning.':'我们很乐意与您一起为住宅寻找最佳方案。','Hoe beter u bent voorbereid, hoe gerichter wij u kunnen adviseren. Met de juiste informatie kunnen we sneller beoordelen welke airco past en een betere offerte maken.':'准备得越充分，我们就越能有针对性地提供建议。信息越完整，我们越快判断合适的空调，并制定更好的报价。','Hoe beter u bent voorbereid, hoe beter wij u kunnen adviseren.':'准备得越充分，我们就越能为您提供更好的建议。','Vertel ons voor welke ruimte de airco bedoeld is, hoe groot deze is en hoe u de ruimte gebruikt. Denk aan woonkamer, slaapkamer, kantoor of praktijkruimte.':'请告诉我们空调用于哪个空间、空间有多大以及如何使用。可以是客厅、卧室、办公室或诊疗室。','Foto’s en mogelijke plaatsing':'照片与可能的安装位置','Maak een paar duidelijke foto’s van de ruimte en de plek waar de binnenunit en buitenunit zouden kunnen komen. Dat helpt ons om sneller mee te denken.':'请拍摄几张清晰的空间照片，以及室内机和室外机可能安装位置的照片。这有助于我们更快为您提供建议。','Isolatie en bijzonderheden':'隔热与特殊情况','Geef aan of er veel glas aanwezig is, hoe de isolatie is en of er andere aandachtspunten zijn. Hoe completer de informatie, hoe beter wij u kunnen adviseren.':'请说明是否有大面积玻璃、隔热情况如何以及是否有其他注意事项。信息越完整，我们就越能提供合适的建议。',
+    'Persoonlijk advies dichtbij':'附近的个性化建议','PERSOONLIJK ADVIES DICHTBIJ':'附近的个性化建议','9 winkels met specialisten':'9 家设有专业顾问的门店','Voor persoonlijk advies zien wij u graag in één van onze winkels.':'如需个性化建议，欢迎到我们的任一家门店。','9 winkels in de Achterhoek':'Achterhoek 地区的 9 家门店','Bekijk alle Obbink-winkels':'查看所有 Obbink 门店','Persoonlijk advies in de winkel':'在门店获得个性化建议','Samen naar de juiste airco-oplossing':'共同选择合适的空调方案','Liever samen kijken welke airco bij uw woning past? Onze specialisten bespreken uw ruimte, het gewenste comfort en de mogelijkheden voor koelen en verwarmen. Zo kiezen we samen een passende oplossing, waarna Obbink Service de installatie vakkundig kan verzorgen.':'想一起看看哪种空调适合您的住宅吗？我们的专业顾问会了解您的空间、舒适需求以及制冷制热方案。我们共同选择合适的方案，之后由 Obbink Service 提供专业安装。','Liever samen kijken welke airco bij uw woning past? In onze Obbink-winkels staan specialisten voor u klaar. We bespreken de ruimte, het gewenste comfort en de mogelijkheden voor koelen en verwarmen. Daarna kan Obbink Service zorgen voor een passende en vakkundige installatie.':'想一起看看哪种空调适合您的住宅吗？Obbink 门店的专业顾问随时为您服务。我们会讨论空间、舒适需求以及制冷制热方案，之后由 Obbink Service 提供合适且专业的安装。','Persoonlijk advies van een specialist':'专业顾问的个性化建议','Samen kijken naar ruimte en gebruik':'共同了解空间和使用方式','Installatie door Obbink Service':'由 Obbink Service 安装','Vind een Obbink-winkel':'查找 Obbink 门店','Vind uw Obbink-winkel':'查找您的 Obbink 门店','Bereid uw winkelbezoek voor':'为您的门店访问做好准备','Met de juiste informatie kunnen we u direct gerichter adviseren.':'有了正确的信息，我们就能立即为您提供更有针对性的建议。','Advies in de winkel. Installatie door Obbink Service.':'门店提供建议，Obbink Service 负责安装。',
+    'Menu':'菜单','Vervanging':'更换','Homepage':'首页','Oplossingen':'解决方案','Reparatie':'维修','Zakelijk':'企业客户','Organisatie':'关于我们','Service aanvragen':'申请服务','Meer bekijken →':'查看更多 →','Technische service voor thuis en zakelijk.':'面向家庭与企业客户的技术服务。','Overzicht':'概览','Meer':'更多','Verder':'更多','Werken bij':'加入我们','Werken bij Obbink Service':'加入 Obbink Service','Over Obbink Service':'关于 Obbink Service','Servicebeloften':'服务承诺','Betrokken bij de regio':'扎根本地社区','Betrokken bij onze regio':'扎根本地社区','Airco & installatie':'空调与安装','Bel 0544 394878':'致电 0544 394878','Neem contact op':'联系我们',
+
+    'Service • Installatie • Advies':'服务 • 安装 • 咨询','Techniek die werkt.':'可靠运作的技术。','Service die blijft.':'始终如一的服务。','Obbink Service helpt thuis en zakelijk met reparatie, installatie, airco, wifi, energieopslag, professioneel witgoed en beeld & geluid. Van eerste advies tot oplevering en service.':'Obbink Service 为家庭和企业客户提供维修、安装、空调、Wi‑Fi、储能、专业电器以及影音系统服务。从前期咨询到安装交付与售后服务，全程由我们负责。','Bekijk onze oplossingen':'查看我们的解决方案','Deskundig advies':'专业建议','Vakkundige montage':'专业安装','Betrouwbare service':'可靠服务','Mijn apparaat is defect':'我的设备出现故障','Start direct een reparatieaanvraag':'立即提交维修申请','Ik zoek advies of installatie':'我需要咨询或安装','Bekijk airco, wifi, energie en meer':'查看空调、Wi‑Fi、能源等方案','Ik ben zakelijke klant':'我是企业客户','Naar Obbink Zakelijk en professionele oplossingen':'查看 Obbink 企业与专业解决方案','Eigen technische organisatie':'自有技术团队','Advies, installatie en service':'咨询、安装与服务','Service Center':'服务中心','Technische expertise vanuit Lichtenvoorde':'来自 Lichtenvoorde 的技术专长','Thuis & zakelijk':'家庭与企业','Van woning tot professionele omgeving':'从家庭住宅到专业商业环境','Eén serviceketen':'一体化服务流程','Van aanvraag tot planning en factuur':'从申请、安排到结算','Meer dan reparatie':'不只是维修','Waar kunnen wij u mee helpen?':'我们能为您做什么？','Obbink Service is de technische voordeur voor oplossingen die verder gaan dan alleen een product verkopen. Kies een onderwerp en ontdek wat we voor u kunnen doen.':'Obbink Service 不只是销售产品，而是为客户提供完整的技术解决方案。选择一个主题，看看我们能为您做什么。',
+    'Koelen én verwarmen, passend advies, montage, onderhoud en service.':'制冷与制热，包含方案建议、安装、维护与服务。','Wifi, energie, professional & meer':'Wi‑Fi、能源、专业方案及更多','Service en winkel slim verbonden':'服务与零售高效连接','Advies bij Obbink Service. Prijs en voorraad bij Obbink.':'Obbink Service 提供专业建议，Obbink 提供实时价格与库存。','Ik wil advies of installatie':'我需要咨询或安装','Naar Obbink.nl':'前往 Obbink.nl',
+    'Reparatie & service':'维修与服务','Een goede reparatie begint met de juiste informatie.':'高质量维修，从准确的信息开始。','Reparatie aanmelden':'提交维修申请','Vraag online een monteur aan huis aan':'在线预约上门技术人员','Meld uw reparatie eenvoudig online bij ons aan.':'可在线轻松提交维修申请。','Vul uw gegevens in en voeg een foto van het typeplaatje toe':'填写信息并上传铭牌照片','Wij nemen uw serviceaanvraag in behandeling':'我们将处理您的服务申请','Vertel ons wat er aan de hand is.':'请告诉我们出现了什么问题。','Bosch of Siemens?':'Bosch 或 Siemens？','Liever direct contact?':'希望直接联系我们？','Stuur ons een WhatsApp-bericht':'发送 WhatsApp 消息','Liever bellen?':'更愿意电话联系？','Naam *':'姓名 *','Telefoonnummer *':'电话号码 *','E-mailadres *':'电子邮箱 *','Voorkeur contact':'首选联系方式','Telefonisch':'电话','Postcode *':'邮编 *','Huisnummer *':'门牌号 *','Straat *':'街道 *','Toevoeging':'附加信息','Plaats *':'城市 *','Apparaat *':'设备 *','Merk *':'品牌 *','Kies of typ een apparaat':'选择或输入设备','Kies of typ een merk':'选择或输入品牌','Serienummer / type':'序列号 / 型号','Wat is er aan de hand? *':'出现了什么问题？ *','Beschrijf de storing zo duidelijk mogelijk':'请尽量详细描述故障','Foto typeplaatje of storing':'上传铭牌或故障照片','Serviceaanvraag starten':'提交服务申请',
+    'Obbink Zakelijk':'Obbink 企业服务','Eén ingang voor bedrijven, organisaties en zorginstellingen.':'为企业、机构和护理组织提供统一服务入口。','Zakelijke aanvraag starten':'提交企业服务申请','Voorbeelden van zakelijke routes':'企业服务示例','Ontdek de organisatie achter onze service.':'了解 Obbink Service 背后的团队。','Naar Organisatie':'了解我们的组织',
+
+    'Reparatie & Service':'维修与服务','Slim reparatie aanmelden met merk- en apparaatspecifieke gegevens.':'根据品牌和设备信息快速提交维修申请。','Klimaat':'气候舒适','Advies, modellen, installatie, onderhoud en service voor koelen én verwarmen.':'提供制冷与制热产品建议、安装、维护和服务。','Thuisbatterij & energieopslag':'家庭电池与储能','Energie':'能源','Advies over capaciteit, toepassing, installatie en slim energiegebruik.':'提供容量、应用、安装和智能能源使用方面的建议。','Wifi & netwerkoplossingen':'Wi‑Fi 与网络解决方案','Netwerk':'网络','Stabiele wifi, bekabeling en slimme beveiliging voor thuis en zakelijk.':'为家庭和企业提供稳定 Wi‑Fi、布线和智能安防。','Professionele beeld- & geluidsoplossingen':'专业影音解决方案','Van scherm en audio tot montage, configuratie en complete zakelijke oplossingen.':'从显示设备和音响，到安装、配置和完整企业解决方案。','Miele Professional & professioneel witgoed':'Miele Professional 与专业电器','Professional':'专业','Advies, installatie, onderhoud en service voor professionele toepassingen.':'面向专业应用的咨询、安装、维护与服务。','Premium':'高端定制','Techniek, interieur en gebruiksgemak samenbrengen in één oplossing.':'将技术、室内设计与易用性融合为一个整体方案。','Installatie & montage':'安装与装配','Installatie':'安装','Vakkundig installeren, aansluiten, monteren en opleveren van apparatuur.':'专业完成设备安装、连接、装配和交付。','Garantie':'保修','Een duidelijke route voor klanten met een WERTGARANTIE-servicevraag.':'为 WERTGARANTIE 客户提供清晰的服务流程。','Eén ingang voor bedrijven, organisaties en zorginstellingen, direct naar de juiste persoon.':'为企业、机构和护理组织提供统一入口，并直接对接合适的负责人。',
+
+    'Premium maatwerk':'高端定制','Techniek die mooi opgaat in uw interieur.':'让技术自然融入您的空间。','ElectroStylist brengt techniek, interieur en gebruiksgemak samen. Niet beginnen bij een los apparaat, maar bij de ruimte, het gebruik en het eindbeeld dat u wilt bereiken.':'ElectroStylist 将技术、室内设计和使用体验融为一体。我们不是从单一设备出发，而是从空间、使用方式和您希望实现的最终效果开始。','Bekijk onze aanpak':'了解我们的方式','Bespreek uw situatie':'沟通您的需求','Eén geheel in plaats van losse techniek.':'整体解决方案，而不是零散设备。','Plaatsing, bediening, bekabeling en afwerking worden vanaf het begin als één oplossing bekeken.':'从一开始，我们就把位置、操作、布线和收尾设计视为一个完整方案。','Van techniek naar totaalbeeld':'从技术到整体空间','De beste techniek hoeft niet de meeste aandacht te trekken.':'最好的技术，不需要成为空间的视觉焦点。','De ruimte als uitgangspunt':'以空间为起点','Techniek die daarbij past':'选择真正适合的技术','Netjes geïntegreerd':'整洁融合','Waar ElectroStylist waarde toevoegt':'ElectroStylist 的价值所在','Techniek wordt onderdeel van de ruimte.':'让技术成为空间的一部分。','ElectroStylist is bedoeld voor situaties waarin uitstraling, comfort en technische kwaliteit even belangrijk zijn.':'ElectroStylist 适用于对美感、舒适度和技术品质同样重视的空间。','Beeld & geluid':'影音系统','Een goede beeld- en geluidsoplossing draait om meer dan alleen apparatuur. Met de juiste plaatsing, bekabeling en afwerking zorgen we voor comfort en jarenlang kijk- en luisterplezier.':'优秀的影音方案不只是设备本身。通过合理的位置、布线与精细收尾，让客户长期享受舒适的视听体验。','Wifi & connectiviteit':'Wi‑Fi 与连接','Goede wifi is onmisbaar in huis en op het werk. Met de juiste dekking, apparatuur en plaatsing zorgen we voor een stabiele verbinding die overal werkt en netjes uit het zicht blijft.':'无论在家还是工作场所，稳定的 Wi‑Fi 都不可或缺。通过合理覆盖、设备选择和位置规划，我们提供稳定连接，同时让设备尽量隐于空间之中。','Installatie & afwerking':'安装与精细收尾','Roy en Dennis zijn twee van onze ElectroStylisten. Met hun passie voor beeld, geluid en strakke afwerking zorgen zij dat techniek niet alleen goed werkt, maar ook mooi in de ruimte past.':'Roy 和 Dennis 是我们的两位 ElectroStylist。他们热爱影音与精细安装，确保技术不仅运行出色，也能美观地融入空间。','Onze aanpak':'我们的工作方式','Van idee naar een oplossing die klopt.':'从想法到真正合适的解决方案。','Een goed resultaat begint met begrijpen wat u wilt bereiken. Pas daarna komt de techniek.':'好的结果始于理解客户真正想实现什么，然后才选择技术。','Inventariseren':'需求分析','Uitwerken':'方案设计','Installeren':'安装实施','Opleveren & service':'交付与服务','Een ruimte of project in gedachten?':'有空间或项目需要规划？','Begin niet met het product. Begin met wat u wilt bereiken.':'不要先从产品开始，而要先从目标开始。','Vertel ons wat u wilt verbeteren of realiseren. Dan kijken we samen welke techniek daarbij past en hoe we die het beste kunnen integreren.':'告诉我们您希望改善或实现什么，我们将一起确定适合的技术，并找到最好的集成方式。',
+
+    'Airco & klimaat':'空调与气候舒适','Comfort in':'四季','elk seizoen':'舒适','Comfort in elk seizoen.':'四季舒适。','Comfort in elk seizoen':'四季舒适','Een prettig binnenklimaat wordt steeds belangrijker. Een moderne airco koelt uw woning in de zomer en kan in de winter efficiënt verwarmen. Met zonnepanelen kan een airco bovendien extra interessant zijn, omdat een deel van het elektriciteitsverbruik met zelf opgewekte stroom kan worden gedekt.':'舒适的室内环境正变得越来越重要。现代空调在夏季为住宅降温，也能在冬季高效供暖。使用太阳能电池板时，空调会更具吸引力，因为部分用电可以由自发电力提供。','Advies / installatie aanvragen':'申请咨询 / 安装','Prijs & voorraad bij Obbink':'Obbink 实时价格与库存','Koelen in de zomer. Efficiënt verwarmen in de winter.':'夏季制冷，冬季高效供暖。','STEK-gecertificeerd':'通过 STEK 认证','Koelen & verwarmen':'制冷与制热','Passend capaciteitsadvies':'合适的容量建议','Montage & service':'安装与服务','Eerst de ruimte, dan de airco':'先看空间，再选空调','Niet ieder huis of iedere ruimte vraagt dezelfde oplossing.':'不同住宅和空间需要不同的解决方案。','Single-split':'单联机','Multi-split':'多联机','Koelen én verwarmen':'制冷与制热','Vraag advies':'申请建议','Bekijk Obbink.nl':'查看 Obbink.nl','Van advies tot oplevering':'从咨询到交付','Uw situatie':'您的情况','Advies':'建议','Montage':'安装','Service':'服务','Wilt u zelf een model bekijken?':'想自己查看具体型号？','Actuele prijs en voorraad blijven bij Obbink.':'最新价格和库存由 Obbink 提供。','Airco advies':'空调咨询','Vertel ons waar u airco wilt gebruiken.':'告诉我们您准备在哪里使用空调。','Ruimte en gebruik':'空间与用途','Advies en vervolg':'建议与下一步',
+    'Onze klimaatpartner':'我们的气候合作伙伴','Onze betrouwbare partner':'值得信赖的合作伙伴','Onze betrouwbare klimaatpartner':'值得信赖的气候合作伙伴','Voor klimaattechniek werken we veel met LG. De systemen zijn interessant door hun stille werking, moderne invertertechniek, mogelijkheden voor koelen én verwarmen en slimme bediening. Welke oplossing past, hangt altijd af van de ruimte en de toepassing; daarover adviseren we u persoonlijk.':'在气候技术方面，我们经常与 LG 合作。其系统具有静音运行、现代变频技术、制冷制热和智能控制等特点。合适的方案取决于空间和使用方式，我们会为您提供个性化建议。','Stille binnenunits':'静音室内机','Slimme bediening':'智能控制','Single- en multi-split mogelijk':'支持单联机和多联机','Oplossing 1 — Basismodel':'方案 1 — 基础型号','Basismodel':'基础型号','Geschikt voor één ruimte zoals een slaapkamer, werkkamer of kleine woonkamer. Koelen en verwarmen: een nette en betaalbare oplossing.':'适合卧室、书房或小客厅等单个房间。制冷制热，整洁且经济实用。','Oplossing 2 — Extra comfort':'方案 2 — 更舒适','Extra comfort':'更舒适','Een stillere en slimmere oplossing voor ruimtes waar comfort extra belangrijk is. Bediening via LG ThinQ en WiFi waar van toepassing.':'适合特别重视舒适度的空间，运行更安静且更智能。适用时可通过 LG ThinQ 和 WiFi 控制。','Oplossing 3 — Multi-split oplossing':'方案 3 — 多联机方案','1 buitenunit, 2 binnenunits':'一台室外机，两台室内机','Geschikt wanneer meerdere ruimtes apart geregeld moeten worden: één buitenunit met bijvoorbeeld twee binnenunits.':'适合需要分别调节多个空间的情况：一台室外机连接例如两台室内机。','LG, onze betrouwbare partner':'LG，我们值得信赖的合作伙伴','LG. Betrouwbare klimaattechniek, vakkundig geïnstalleerd door Obbink Service.':'LG。可靠的气候技术，由 Obbink Service 专业安装。','Betrouwbare klimaattechniek, vakkundig geïnstalleerd door Obbink Service.':'可靠的气候技术，由 Obbink Service 专业安装。','Voor klimaattechniek werken we veel met LG. De systemen combineren stille werking, moderne invertertechniek, koelen én verwarmen en slimme bediening. Met single- en multi-splitoplossingen kunnen we voor één ruimte of voor meerdere vertrekken een passende oplossing samenstellen.':'在气候技术方面，我们经常与 LG 合作。其系统兼具静音运行、现代变频技术、制冷制热和智能控制。通过单联机和多联机方案，我们可以为一个或多个房间组合合适的解决方案。','Stil comfort':'静享舒适','Bepaalde LG DUALCOOL-modellen werken volgens LG tot circa 19 dB(A). Daardoor zijn ze ook interessant voor slaapkamers en werkkamers.':'据 LG 介绍，部分 LG DUALCOOL 型号运行噪音低至约 19 dB(A)，同样适合卧室和书房。','Koelen én verwarmen':'制冷与制热','Een moderne LG split-airco werkt als lucht-luchtwarmtepomp en kan daardoor zowel koelen als efficiënt verwarmen.':'现代 LG 分体式空调可作为空气源热泵，因此既能制冷，也能高效供暖。','Slim met LG ThinQ':'LG ThinQ 智能控制','Bij verschillende modellen is WiFi geïntegreerd. Via LG ThinQ kan de airco op afstand worden bediend en kan bij geschikte modellen inzicht worden verkregen in het energieverbruik.':'部分型号内置 WiFi。通过 LG ThinQ，您可以远程控制空调，适用型号还可查看能源消耗。','Single- & multi-split':'单联机与多联机','Van één ruimte tot meerdere vertrekken: LG biedt zowel single-split- als multi-splitoplossingen.':'从一个房间到多个空间，LG 提供单联机和多联机方案。','Van één ruimte tot het hele huis':'从一个房间到整套住宅',    'Welke LG-oplossing past bij u?':'哪种 LG 解决方案适合您？','Welke LG-oplossing past bij uw situatie?':'哪种 LG 解决方案适合您的情况？','Oplossing 2 — Design & comfort':'方案 2 — 设计与舒适','LG ARTCOOL':'LG ARTCOOL','Voor wie naast comfort ook uitstraling belangrijk vindt. LG ARTCOOL combineert een modern design met stille werking, koelen én verwarmen en slimme bediening via LG ThinQ en WiFi.':'适合除了舒适也重视外观的人。LG ARTCOOL 将现代设计、静音运行、制冷制热以及通过 LG ThinQ 和 WiFi 的智能控制结合在一起。','Oplossing 3 — Multi-split':'方案 3 — 多联机','Een slimme oplossing voor meerdere ruimtes. Met één buitenunit kunnen bijvoorbeeld twee binnenunits afzonderlijk worden geregeld, zoals voor een woonkamer en slaapkamer of twee slaapkamers.':'适合多个空间的智能方案。一台室外机可以分别控制两台室内机，例如客厅和卧室，或两间卧室。','U hoeft niet eerst alle typenummers te kennen. Wij kijken naar de ruimte, het gewenste comfort en het gebruik en adviseren vervolgens een passende oplossing.':'您不必先了解所有型号。我们会根据空间、舒适需求和使用方式，为您建议合适的解决方案。','1 · Slimme basis':'1 · 智能基础','LG Standard Plus':'LG Standard Plus','Een sterke prijs/kwaliteitkeuze voor één ruimte. Geschikt voor bijvoorbeeld een slaapkamer, werkkamer of woonkamer. Koelen en verwarmen met moderne invertertechniek en, afhankelijk van het model, slimme bediening via WiFi.':'适合单个房间的高性价比选择，例如卧室、书房或客厅。采用现代变频技术制冷制热，部分型号支持 WiFi 智能控制。','Voor één ruimte · Single-split':'适用于一个房间 · 单联机','Bekijk de basisoplossing':'查看基础方案','2 · Design & comfort':'2 · 设计与舒适','LG ARTCOOL & comfortmodellen':'LG ARTCOOL 与舒适型','Voor wie niet alleen comfort zoekt, maar ook waarde hecht aan uitstraling. Een airco hoeft geen storend apparaat aan de muur te zijn. LG biedt modellen die techniek, comfort en design combineren.':'适合不仅追求舒适，也重视外观的人。空调不必成为墙上的突兀设备。LG 提供融合技术、舒适与设计的型号。','Voor woonkamer · slaapkamer · kantoor':'适用于客厅 · 卧室 · 办公室','Bekijk design & comfort':'查看设计与舒适方案','3 · Meerdere ruimtes':'3 · 多个空间','LG Multi-Split':'LG Multi-Split','Met één buitenunit kunnen meerdere binnenunits worden aangestuurd. Bijvoorbeeld twee slaapkamers, of een woonkamer en slaapkamer. Iedere ruimte kan afzonderlijk worden geregeld.':'一台室外机可以控制多个室内机，例如两间卧室，或客厅和卧室。每个空间都可以单独调节。','Eén buitenunit · meerdere binnenunits':'一台室外机 · 多台室内机','Bekijk Multi-Split':'查看 Multi-Split','Bij bepaalde LG-modellen geldt 10 jaar garantie op de invertercompressor. Dit betreft de compressor en is niet hetzelfde als 10 jaar volledige garantie op de complete installatie.':'部分 LG 型号提供变频压缩机 10 年保修。该保修仅适用于压缩机，并不等同于整套安装提供 10 年完整保修。', 'Prijs & voorraad bij Obbink':'Obbink 实时价格与库存','Koelen in de zomer. Efficiënt verwarmen in de winter.':'夏季制冷，冬季高效供暖。','STEK-gecertificeerd':'通过 STEK 认证','Koelen & verwarmen':'制冷与制热','Passend capaciteitsadvies':'合适的容量建议','Montage & service':'安装与服务','Eerst de ruimte, dan de airco':'先看空间，再选空调','Niet ieder huis of iedere ruimte vraagt dezelfde oplossing.':'不同住宅和空间需要不同的解决方案。','Single-split':'单联机','Multi-split':'多联机','Koelen én verwarmen':'制冷与制热','Vraag advies':'申请建议','Bekijk Obbink.nl':'查看 Obbink.nl','Van advies tot oplevering':'从咨询到交付','Uw situatie':'您的情况','Advies':'建议','Montage':'安装','Service':'服务','Wilt u zelf een model bekijken?':'想自己查看具体型号？','Actuele prijs en voorraad blijven bij Obbink.':'最新价格和库存由 Obbink 提供。','Airco advies':'空调咨询','Vertel ons waar u airco wilt gebruiken.':'告诉我们您准备在哪里使用空调。','Ruimte en gebruik':'空间与用途','Advies en vervolg':'建议与下一步',
+
+    'Wifi • Netwerk • Beveiliging':'Wi-Fi • 网络 • 安防','Overal verbonden. Netjes aangelegd. Goed ingesteld.':'全覆盖连接，整洁施工，专业调试。','Een goed netwerk merkt u vooral doordat het gewoon werkt. Obbink Service helpt met stabiele wifi, vaste netwerkaansluitingen en slimme beveiligingsoplossingen voor thuis en zakelijke omgevingen in de Achterhoek.':'一个好的网络，最重要的是稳定可靠。Obbink Service 为 Achterhoek 地区的家庭和企业提供稳定 Wi-Fi、有线网络和智能安防解决方案。','Bekijk de mogelijkheden':'查看方案','Van storing tot complete oplossing':'从故障处理到完整解决方案','Niet alleen meer bereik, maar een netwerk dat bij de situatie past.':'不只是扩大覆盖，而是建立真正适合使用场景的网络。','Onze oplossingen':'我们的解决方案','Voor thuis én voor zakelijke omgevingen.':'适用于家庭和商业环境。','Stabiele wifi in huis':'家庭稳定 Wi-Fi','Bekabeld netwerk':'有线网络','Slimme beveiliging':'智能安防','Netjes en begrijpelijk':'整洁、清晰、易用','Techniek moet niet alleen werken, maar ook goed worden opgeleverd.':'技术不仅要能用，也要被专业、完整地交付。','Ook voor bestaande installaties':'也适用于现有系统','Installeren & instellen':'安装与配置','Uitleg & oplevering':'说明与交付','Zakelijk netwerk':'企业网络','Meer apparaten vraagt om meer dan alleen een sterk wifi-signaal.':'设备越多，需要的不只是更强的 Wi-Fi 信号。','Voorbeelden':'应用示例','Wifi-dekking voor kantoor of praktijk':'办公室或诊所 Wi-Fi 覆盖','Bekabeling voor werkplekken en apparatuur':'工作区与设备网络布线','Netwerk voor professionele beeld- en geluidsoplossingen':'专业影音系统网络','Camera’s en slimme beveiliging':'摄像头与智能安防','Uitbreiding van een bestaand netwerk':'扩展现有网络','Regionale service':'本地服务','Technische hulp in de Achterhoek.':'Achterhoek 地区技术支持。','Wifi- of netwerkprobleem?':'遇到 Wi-Fi 或网络问题？','Aanvraag starten':'提交申请',
+
+    'De organisatie achter onze service.':'了解我们服务背后的组织。','100% Achterhoeks. Techniek sinds 1934.':'100% 扎根 Achterhoek，自 1934 年专注技术。','Obbink begon in 1934 bij oprichter Gerrit Obbink met service en techniek. Door zelf radio’s te bouwen, liepen we technisch al snel voor op bedrijven die wel konden verkopen, maar niet repareren.':'Obbink 由创始人 Gerrit Obbink 于 1934 年创立，从服务与技术起步。通过自主制造收音机，我们很早就建立了技术优势，而当时许多企业只能销售，却无法维修。','Techniek en service in eigen huis':'技术与服务都由我们自己掌握','Garantiereparatie':'保修维修','Geautoriseerd voor reparaties binnen garantie':'获得授权，可执行保修期内维修','Ontdek Obbink Service':'了解 Obbink Service','Vier verhalen, ieder met een eigen plek.':'四个主题，各自清晰呈现。','Over Obbink Service':'关于 Obbink Service','Onze servicebeloften':'我们的服务承诺','Heldere afspraken over wat klanten van Obbink Service mogen verwachten.':'清楚说明客户可以期待怎样的 Obbink Service。','Bekijk de servicebeloften →':'查看服务承诺 →','Betrokken bij onze regio':'扎根我们的地区','Onze maatschappelijke en lokale betrokkenheid, van KWF tot verenigingen en evenementen.':'从 KWF 到本地协会和活动，我们积极参与社会与地区发展。','Ontdek onze betrokkenheid →':'了解我们的社区参与 →','Werken bij Obbink Service →':'加入 Obbink Service →',
+
+    'Service waarop u kunt rekenen.':'值得信赖的服务。','Conceptstructuur':'概念结构','Zeven duidelijke beloften, elk met een korte uitleg en waar nodig praktische voorwaarden.':'七项清晰服务承诺，并配有简短说明和必要的实际条件。','Afspraak is afspraak':'承诺就要兑现','Duidelijke communicatie over planning en wijzigingen.':'清晰沟通安排与变更。','Goed voorbereid op pad':'充分准备再出发','Vakkundige service':'专业服务','Technische kennis en zorgvuldig werken staan centraal.':'技术能力与认真作业始终是核心。','Duidelijkheid over de kosten':'费用透明','Netjes werken':'整洁施工','Respect voor woning, werkplek en apparatuur.':'尊重客户的住宅、工作场所和设备。','Repareren als dat verstandig is':'在合理时优先维修','We laten u niet los':'持续负责到底',
+
+    'Over ons':'关于我们','De technische kracht achter Obbink.':'Obbink 背后的技术实力。','Inhoud volgt.':'更多内容即将上线。','Onze historie':'我们的历史','Onze technische organisatie':'我们的技术团队','Werk aan techniek die ertoe doet.':'从事真正有价值的技术工作。','Eerst het verhaal, daarna de vacatures.':'先了解我们，再看职位。','Afwisselend technisch werk':'多样化的技术工作','Leren en ontwikkelen':'学习与成长','Korte lijnen':'高效直接的沟通','Bekijk vacatures':'查看职位','Open sollicitatie':'主动申请','Vacatures':'招聘职位','Hier komen straks onze openstaande functies.':'我们的开放职位将显示在这里。',
+
+    'Maatschappelijk & lokaal betrokken':'社会责任与本地参与','Betrokken bij de Achterhoek.':'扎根 Achterhoek。','Zakenvriend van KWF':'KWF 企业伙伴','Dicht bij de regio':'贴近本地','We investeren graag terug in de omgeving waar we zelf deel van uitmaken.':'我们愿意回馈自己生活和工作的地区。','Sport & verenigingen':'体育与协会','Regionale evenementen':'地区活动','Maatschappelijke initiatieven':'社会公益项目','Waar we betrokken zijn':'我们的参与范围','Tientallen verenigingen, overzichtelijk per plaats.':'数十个协会与组织，按地区清晰展示。',
+
+    'Dank u. Dit is nog een prototype: in de volgende fase koppelen we de aanvraag aan de Obbink Service-processen en onze backoffice.':'谢谢。当前仍是原型版本；下一阶段我们会把服务申请接入 Obbink Service 的正式流程与后台系统。'
+  };
+
+  Object.assign(ZH, {
+    'Energieopslag voor thuis':'家用储能','ANKER SOLIX voor grotere energiebehoefte':'适用于更高能源需求的 ANKER SOLIX','Slimme energieopslag is niet alleen interessant voor woningen. Ook voor ondernemers, kantoren en andere situaties met een hoger energieverbruik kan energieopslag een interessante oplossing zijn. Met ANKER SOLIX kijken we naar een systeem dat past bij het verbruik, de installatie en de gewenste capaciteit.':'智能储能不仅适用于住宅。对于企业主、办公室和其他能源消耗较高的场景，储能也可能是有价值的方案。借助 ANKER SOLIX，我们会根据用电量、安装条件和所需容量来选择合适的系统。','Ook zakelijk adviseren we vanuit de praktijk: passend, schaalbaar en professioneel geïnstalleerd.':'面向企业客户，我们同样从实际需求出发提供建议：合适、可扩展并由专业人员安装。','Vraag zakelijk advies aan':'申请企业咨询','Meer uit uw energie met een thuisbatterij.':'用家用储能电池获得更多能源价值。','Laat u persoonlijk adviseren':'获取个性化建议','Bekijk thuisbatterijen bij Obbink':'查看 Obbink 家用储能电池','Slimme energieopslag voor thuis':'智能家用储能','HOE WERKT HET?':'如何运作？','Wat doet een thuisbatterij?':'家用储能电池有什么作用？','Zonnestroom bewaren':'储存太阳能电力','Uw energie slim gebruiken':'智能使用能源','Sturing die past':'适合的能源管理','WANNEER INTERESSANT?':'什么时候值得考虑？','Past een thuisbatterij bij uw situatie?':'家用储能电池适合您的情况吗？','Zonnepanelen':'太阳能电池板','Energieverbruik':'能源使用','Slim energiecontract':'智能能源合同','Capaciteit':'容量','VEILIGHEID EERST':'安全第一','Een thuisbatterij is onderdeel van uw elektrische installatie.':'家用储能电池是电气系统的一部分。','Jarenlang draaide het om zoveel mogelijk stroom opwekken.':'多年来，人们一直致力于尽可能多地发电。','Nu gaat het om slim omgaan met energie.':'现在更重要的是智能地使用能源。','Met een thuisbatterij helpt Obbink u om opgewekte stroom op het juiste moment op te slaan, te gebruiken en beter te benutten.':'借助家用储能电池，Obbink 帮助您在合适的时机储存、使用并更好地利用所发电力。','Maar een thuisbatterij is ook onderdeel van uw elektrische installatie. Daarom moeten plaatsing, aansluiting, beveiliging en instellingen goed passen bij uw woning. Obbink Service kan de installatie professioneel verzorgen en zorgen voor een veilige, correcte oplevering.':'家用储能电池也是电气系统的一部分。因此，安装位置、连接、防护和设置必须适合您的住宅。Obbink Service 可以提供专业安装，确保安全、正确地交付。','PERSOONLIJK ADVIES':'个性化建议','Welke thuisbatterij past bij u?':'哪种家用储能电池适合您？','Zoek een winkel bij u in de buurt':'查找附近的门店','Advies bij Obbink':'Obbink 提供建议','Techniek die werkt':'可靠运作的技术','ONZE OPLOSSING VOOR ENERGIEOPSLAG':'我们的储能方案','In vier heldere stappen naar energieopslag.':'四个清晰步骤实现能源存储','Persoonlijk advies':'个性化建议','Professionele installatie':'专业安装','Gebruik & service':'使用与服务','Bekijk ANKER SOLIX en thuisbatterijen bij Obbink':'在 Obbink 查看 ANKER SOLIX 和家用储能电池','Energieopslag':'储能','Thuisbatterijen bij Obbink':'Obbink 家用储能电池','Neem indien mogelijk mee:':'如有可能，请携带：','jaarlijks elektriciteitsverbruik':'年度用电量','aantal zonnepanelen':'太阳能电池板数量','vermogen/type omvormer indien bekend':'已知的逆变器功率/型号','type energiecontract':'能源合同类型','foto van de meterkast':'电表箱照片','wensen voor energieopslag':'储能需求','Technische beoordeling, installatie, oplevering en service.':'技术评估、安装、交付和服务。','Persoonlijk advies, de keuze van het systeem en actuele producten en prijzen.':'个性化建议、系统选择以及当前产品和价格。','We bekijken energieverbruik, zonnepanelen en wensen.':'我们会了解能源使用、太阳能电池板和您的需求。','Samen bepalen we welke oplossing en capaciteit passend zijn.':'共同确定合适的方案和容量。','Obbink Service verzorgt de technische installatie.':'Obbink Service 负责技术安装。','We zorgen dat de installatie correct werkt en helpen ook daarna met service.':'我们确保系统正确运行，并在之后继续提供服务。'
+  });
+  Object.assign(ZH, {
+    'Inbouwapparatuur: installatie & reparatie':'嵌入式家电：安装与维修','Inbouw':'嵌入式家电','Inbouwapparatuur':'嵌入式家电','Installatie, vervanging, reparatie en technische service voor inbouwapparatuur.':'嵌入式家电的安装、更换、维修和技术服务。','INBOUWAPPARATUUR':'嵌入式家电','Installatie & reparatie van inbouwapparatuur':'嵌入式家电安装与维修','Een inbouwapparaat moet niet alleen goed werken, maar ook technisch en netjes in uw keuken worden geplaatst. Obbink Service verzorgt installatie, vervanging, reparatie en service van inbouwapparatuur. Van vaatwasser en oven tot kookplaat en koel-vriescombinatie.':'嵌入式家电不仅要运行良好，也要在厨房中规范、整洁地安装。Obbink Service 提供嵌入式家电的安装、更换、维修和服务，涵盖洗碗机、烤箱、灶具以及冰箱冷冻柜。','Reparatie of service aanvragen':'申请维修或服务','Persoonlijk advies in een winkel':'在门店获得个性化建议',    'TECHNISCHE UITVOERING':'技术实施','Netjes gemonteerd. Goed aangesloten.':'安装整洁，连接规范。','Installatie, vervanging en reparatie van volledig en half geïntegreerde vaatwassers, inclusief een nette aansluiting en afstelling van het keukenfront.':'全嵌入式和半嵌入式洗碗机的安装、更换和维修，包括整洁的连接以及厨房面板的调节。','Vakkundige montage en technische service voor ovens, combi-ovens, magnetrons en elektrische of inductiekookplaten.':'为烤箱、组合烤箱、微波炉以及电灶或电磁炉提供专业安装和技术服务。','Installatie en service van ingebouwde koelkasten, vriezers en koel-vriescombinaties, met aandacht voor juiste montage en ventilatie.':'提供嵌入式冰箱、冷冻柜和冰箱冷冻柜组合的安装与服务，并重视正确安装和通风。','Van de eerste beoordeling tot de technische oplevering kijken we naar het apparaat én de keuken waarin het komt.':'从初步评估到技术交付，我们会同时考虑设备和安装它的厨房环境。','VAN VAATWASSER TOT KOELKAST':'从洗碗机到冰箱','Inbouwapparatuur vraagt om vakmanschap.':'嵌入式家电需要专业技术。','Een apparaat vervangen lijkt soms eenvoudig, maar maatvoering, aansluitingen, ventilatie en montage moeten wel kloppen. Onze monteurs kijken daarom niet alleen naar het apparaat, maar naar de complete situatie.':'更换设备看似简单，但尺寸、连接、通风和安装都必须正确。因此，我们的技术人员关注的不只是设备，而是完整的现场情况。','Vaatwassers':'洗碗机','Ovens, combi-ovens & kookplaten':'烤箱、组合烤箱与灶具','Koelen & vriezen':'冷藏与冷冻','INSTALLEREN OF VERVANGEN':'安装或更换','Van oud apparaat naar een oplossing die echt past.':'从旧设备到真正合适的方案。','Bij vervanging van inbouwapparatuur is alleen de buitenmaat niet altijd voldoende. Nismaten, scharnieren, keukenfronten, aansluitingen en ventilatieruimte kunnen per situatie verschillen. Obbink Service controleert wat nodig is en zorgt voor een nette technische oplevering.':'更换嵌入式家电时，仅看外部尺寸并不总是足够。安装槽尺寸、铰链、厨房面板、连接和通风空间都可能因情况而异。Obbink Service 会检查所需条件并确保整洁的技术交付。',    'Nieuw apparaat installeren':'安装新设备','Wij zorgen voor plaatsing, aansluiting, afstelling en een correcte oplevering.':'我们负责安装就位、连接、调试并确保规范交付。','Bestaand apparaat vervangen':'更换现有设备','Wij beoordelen of het nieuwe apparaat technisch en qua maatvoering geschikt is voor de bestaande keuken.':'我们会评估新设备在技术和尺寸上是否适合现有厨房。','REPARATIE & SERVICE':'维修与服务','Niet automatisch vervangen als repareren nog kan.':'如果还能维修，不必急于更换。','Een storing betekent niet altijd dat een apparaat vervangen moet worden. Obbink Service onderzoekt de klacht, kijkt naar de technische staat en beoordeelt welke oplossing verstandig is. Zo krijgt u duidelijkheid voordat er onnodig een nieuw apparaat wordt aangeschaft.':'故障并不总意味着必须更换设备。Obbink Service 会调查问题、检查技术状态并评估合理的解决方案，让您在不必要购买新设备前先获得清晰判断。',    'Geef bij een serviceaanvraag indien mogelijk merk, typenummer, foutcode en een korte omschrijving van de storing door.':'申请服务时，请尽可能提供品牌、型号、错误代码和故障简述。','Werkt uw huidige inbouwapparaat niet meer goed? Dan beoordelen we eerst of reparatie mogelijk en zinvol is.':'现有嵌入式家电无法正常工作？我们会先评估维修是否可行且值得。','Service aanvragen':'申请服务','Klacht beoordelen':'评估故障','We brengen de storing en de technische situatie in kaart.':'我们会了解故障和现场的技术情况。','Oplossing bespreken':'讨论解决方案','U krijgt duidelijkheid over repareren of vervangen.':'您将清楚了解维修还是更换更合适。','OBBINK + OBBINK SERVICE':'OBBINK + OBBINK SERVICE','Advies, apparaat én technische uitvoering.':'咨询、设备与技术实施。','Bij Obbink kunt u terecht voor persoonlijk advies over nieuwe inbouwapparatuur. Obbink Service zorgt vervolgens voor de technische kant: installatie, vervanging, reparatie en service. Zo hoeft u niet zelf verschillende partijen bij elkaar te zoeken.':'Obbink 提供新嵌入式家电的个性化建议。随后由 Obbink Service 负责技术部分：安装、更换、维修和服务。您无需自行协调多个服务方。','Persoonlijk productadvies en keuze van het juiste apparaat.':'个性化产品建议和合适设备的选择。','Technische beoordeling, installatie, reparatie en service.':'技术评估、安装、维修和服务。','Één vertrouwd adres':'一个值得信赖的地址','Van de keuze in de winkel tot een nette technische oplevering.':'从门店选购到整洁的技术交付。','Zoek een Obbink-winkel bij u in de buurt':'查找附近的 Obbink 门店','Inbouwapparatuur installeren & repareren | Obbink Service':'安装与维修嵌入式家电 | Obbink Service','Installatie, vervanging en reparatie van inbouwapparatuur door Obbink Service. Vraag service of advies aan.':'Obbink Service 提供嵌入式家电安装、更换和维修。欢迎申请服务或咨询。'
+  });
+  // Homepage careers section.
+  Object.assign(ZH, {
+  "is": "就是",
+  "nooit saai": "每天都有新意",
+  "Een kijkje bij Obbink Service": "走近 Obbink Service",
+  "Obbink Service in beeld": "Obbink Service 影像",
+  "Elke dag iets anders. Elke dag iets leren.": "每天都有新挑战，每天都能学到新知识。",
+  "Techniek staat nooit stil. De apparaten die we repareren veranderen, en wij groeien mee. Bij Obbink Service blijf je ontdekken, leer je in de praktijk en bouw je aan je vakmanschap.": "技术从不停步。我们维修的设备不断变化，我们也随之成长。在 Obbink Service，你可以持续探索，在实践中学习，不断提升专业技能。",
+  "Leren én verdienen.": "边学技能，边拿薪水。",
+  "Ook als student kun je bij ons beginnen: volg een opleiding, doe praktijkervaring op en krijg betaald terwijl je het vak leert.": "在校学生也可以加入我们：参加职业培训，积累实践经验，在学习专业技能的同时获得报酬。",
+  "Zit jij liever niet de hele dag achter een bureau? Werk je graag met je handen en wil je iets maken waar je trots op kunt zijn? Bij ons komen techniek, service en jouw ontwikkeling samen.": "不想整天坐在办公桌前？喜欢动手实践，想做出让自己自豪的成果？在这里，技术、服务和个人成长相互结合。",
+  "Maak werk van jouw toekomst bij Obbink Service.": "在 Obbink Service，开启你的职业未来。",
+  "Ontdek hoe jij kunt groeien in een vak dat elke dag iets nieuws brengt.": "探索你的成长之路，在每天都有新发现的职业中不断进步。",
+  "Ontdek werken bij Obbink Service": "了解 Obbink Service 的职业机会"
+});
+  // Reuse the existing translation for the uppercase heading.
+  ZH['ENERGIEOPSLAG VOOR THUIS'] = ZH['Energieopslag voor thuis'];
+  // Shared customer-facing text and homepage translations.
+  Object.assign(ZH, {
+    "Hallo Obbink Service, ik heb een vraag over een serviceaanvraag.": "您好，Obbink Service，我想咨询服务申请相关的问题。",
+    "Obbink Service home": "Obbink Service 首页",
+    "Hoofdnavigatie": "主导航",
+    "Waarom Obbink Service": "为什么选择 Obbink Service",
+    "Obbink Service monteur bij airco-installatie": "Obbink Service 技术人员安装空调",
+    "Neem contact op via WhatsApp": "通过 WhatsApp 联系我们",
+    "Bel Obbink Service op 0544 394878": "致电 Obbink Service：0544 394878",
+    "TIJDELIJKE VISUAL": "临时示意图",
+    "Reparatie aanvragen": "申请维修",
+    "Installatie & oplossingen": "安装与解决方案",
+    "Serviceproces": "服务流程",
+    "Professioneel witgoed": "商用家电",
+    "Professioneel": "商用",
+    "Airco": "空调",
+    "Thuisbatterij": "家用储能电池",
+    "Advies aanvragen": "申请咨询",
+    "Airco advies aanvragen": "申请空调咨询",
+    "Energieadvies": "能源咨询",
+    "Zakelijk advies aanvragen": "申请企业咨询",
+    "E-mail": "电子邮件",
+    "Wasmachine": "洗衣机",
+    "Wasdroger": "干衣机",
+    "Vaatwasser": "洗碗机",
+    "Koelkast": "冰箱",
+    "Vrieskast / vriezer": "冷冻柜",
+    "Koel-vriescombinatie": "冷藏冷冻组合冰箱",
+    "Kookplaat": "灶具",
+    "Fornuis": "炉灶",
+    "Oven": "烤箱",
+    "Combi-oven / magnetron": "组合烤箱／微波炉",
+    "Magnetron": "微波炉",
+    "Afzuigkap": "抽油烟机",
+    "Koffiezetter / espressomachine": "咖啡机／意式咖啡机",
+    "Televisie": "电视机",
+    "Audio": "音响",
+    "Anders": "其他",
+    "FD-nummer": "FD 编号",
+    "Bijv. WGG.../01": "例如 WGG.../01",
+    "Bijv. FD 0312": "例如 FD 0312",
+    "Gebruiker": "用户",
+    "Vul dit veld in.": "请填写此字段。",
+    "Vul een geldig e-mailadres in.": "请输入有效的电子邮件地址。",
+    "Controleer de ingevulde waarde.": "请检查填写的内容。",
+    "Obbink Service | Technische service voor thuis en zakelijk": "Obbink Service | 家庭与企业技术服务",
+    "Obbink Service: reparatie, installatie en technische oplossingen voor thuis en zakelijk.": "Obbink Service：为家庭和企业提供维修、安装与技术解决方案。",
+    "Professionele was-, droog- en vaatwasoplossingen van Miele Professional en Electrolux Professional, inclusief advies, installatie en service.": "Miele Professional 和 Electrolux Professional 商用洗衣、烘干与洗碗解决方案，包含咨询、安装与服务。",
+    "Voor zorg, recreatie, bedrijven en organisaties: professioneel witgoed, installatie, service en technische keuringen vanuit één technische organisatie.": "面向护理、休闲、企业及各类机构，由同一技术团队提供商用家电、安装、服务与技术检测。",
+    "Bijv. 06 12345678": "例如 06 12345678",
+    "Bijv. 7131 AA": "例如 7131 AA",
+    "Bijv. 12": "例如 12",
+    "Bijv. A": "例如 A",
+    "Vul in wat op het typeplaatje staat": "请填写铭牌上的信息",
+    "Tip: maak een duidelijke foto van het typeplaatje. Zo kunnen wij de gegevens controleren.": "提示：请拍摄清晰的铭牌照片，以便我们核对设备信息。",
+    "Op onze oplossingspagina’s tonen we relevante producten en modellen. Voor actuele prijzen, voorraad en direct bestellen gaat u door naar de Obbink-webshop. Zo blijft er één plek waar commerciële productinformatie actueel is.": "我们的解决方案页面展示相关产品和型号。如需查看最新价格、库存或直接下单，请前往 Obbink 网上商店。这样，最新的销售产品信息始终集中在一个地方。",
+    "Daarom past ons serviceformulier zich aan uw apparaat en merk aan. U krijgt alleen de vragen die voor uw reparatie relevant zijn. Bij Bosch en Siemens vragen we bijvoorbeeld om het E-Nr. en FD-nummer. U kunt ook eenvoudig een foto van het typeplaatje toevoegen. Zo kunnen wij uw aanvraag beter voorbereiden en is de kans groter dat onze monteur direct met de juiste informatie en onderdelen op pad gaat.": "因此，我们的服务表单会根据您的设备和品牌调整，只询问与维修相关的问题。例如，博世和西门子设备需要提供 E-Nr. 和 FD 编号。您也可以轻松添加铭牌照片。这有助于我们提前准备服务申请，让技术人员更有可能携带正确的信息和零件上门。",
+    "Zo zien wij direct het juiste type- en serienummer en, waar van toepassing, het FD-nummer.": "这样我们就能直接查看正确的型号、序列号以及适用时的 FD 编号。",
+    "We controleren de gegevens en nemen zo snel mogelijk contact met u op over het vervolg.": "我们会核对信息，并尽快与您联系，说明后续安排。",
+    "Hoe vollediger uw aanvraag, hoe beter wij ons kunnen voorbereiden. Vul uw contact- en adresgegevens in, geef aan om welk apparaat het gaat en voeg indien mogelijk een foto van het typeplaatje of de storing toe.": "您的申请信息越完整，我们就能准备得越充分。请填写联系方式和地址，说明设备类型，并尽可能附上铭牌或故障照片。",
+    "Dan vragen we om het E-Nr. en FD-nummer. Daarmee kunnen we het exacte apparaat beter identificeren. Een duidelijke foto van het typeplaatje mag ook.": "我们会请您提供 E-Nr. 和 FD 编号，以便更准确地识别设备。您也可以提供清晰的铭牌照片。",
+    "Zakelijke aanvragen worden gericht uitgevraagd op organisatie, locatie, contactpersoon, type aanvraag en dienst. Daarmee kunnen we later automatisch naar de juiste medewerker of servicegroep routeren.": "企业申请会针对机构、地点、联系人、申请类型和服务内容收集信息，以便今后自动转交给合适的工作人员或服务团队。",
+    "Zorginstelling → Miele Professional → storing": "护理机构 → Miele Professional → 故障",
+    "Bedrijf → wifi/netwerk → offerte": "企业 → Wi-Fi／网络 → 报价",
+    "Horeca → beeld & geluid → projectadvies": "餐饮酒店业 → 影音 → 项目咨询",
+    "Organisatie → airco → opname en installatie": "机构 → 空调 → 现场勘查与安装",
+    "Lees meer over Obbink Service, onze servicebeloften, onze maatschappelijke en lokale betrokkenheid en werken bij onze technische organisatie.": "进一步了解 Obbink Service、我们的服务承诺、社会与本地参与，以及在我们技术团队工作的机会。"
+  });
+
+  // Service pages: air conditioning, built-in appliances, networking and energy storage.
+  Object.assign(ZH, {
+    "Airco advies, installatie, onderhoud en service door Obbink Service.": "Obbink Service 提供空调咨询、安装、保养与服务。",
+    "Airco & installatie | Obbink Service": "空调与安装 | Obbink Service",
+    "Obbink Service airco installatie": "Obbink Service 安装空调",
+    "We kijken naar de grootte van de ruimte, ligging, isolatie, gebruik en gewenste functies. Zo voorkomen we dat een unit te klein, onnodig groot of verkeerd geplaatst wordt.": "我们会考察房间大小、朝向、保温情况、使用方式和所需功能，避免设备过小、过大或安装位置不当。",
+    "Een binnenunit en één buitenunit. Geschikt wanneer één ruimte centraal staat.": "一台室内机和一台室外机，适合主要为一个房间提供空调的情况。",
+    "Meerdere binnenunits op één buitenunit. Voor verschillende ruimtes met afzonderlijke regeling.": "多台室内机连接一台室外机，可为不同房间单独调节温度。",
+    "Een inverter-airco kan in veel situaties ook als aanvullende verwarmingsoplossing worden gebruikt.": "在许多情况下，变频空调也可用于辅助供暖。",
+    "Airco laten installeren in vier heldere stappen.": "安装空调的四个清晰步骤。",
+    "U vertelt ons welke ruimte u wilt koelen of verwarmen en wat u belangrijk vindt.": "请告诉我们您希望为哪个房间制冷或供暖，以及您最看重哪些方面。",
+    "We bepalen het passende type, de capaciteit en de beste plaats voor binnen- en buitenunit.": "我们确定合适的类型、容量以及室内机和室外机的最佳安装位置。",
+    "De installatie wordt netjes gemonteerd, aangesloten en in bedrijf gesteld.": "设备会得到整洁安装、正确连接并完成调试。",
+    "Ook na installatie kunt u bij Obbink Service terecht voor onderhoud, vragen en storingen.": "安装后，您仍可联系 Obbink Service 进行保养、咨询或处理故障。",
+    "Hoe beter wij uw situatie kennen, hoe gerichter wij kunnen adviseren. Bekijk welke informatie en foto’s ons helpen om sneller tot een passende oplossing te komen.": "我们越了解您的情况，就越能提供有针对性的建议。了解哪些信息和照片能帮助我们更快找到合适的方案。",
+    "Obbink Service adviseert klanten over een airco-oplossing": "Obbink Service 为客户提供空调方案建议",
+    "Tip:": "提示：",
+    "maak vooraf foto’s van de ruimte, de buitengevel en mogelijke montageplaatsen.": "请提前拍摄房间、外墙和可能的安装位置。",
+    "TWEE KANTEN VAN DEZELFDE SERVICE": "同一项服务的两个方面",
+    "Repareren als het kan. Vernieuwen als het beter is.": "能修则修。更换更合适时再换新。",
+    "Of het nu gaat om een storing aan uw huidige apparaat of om een compleet nieuwe set keukenapparatuur: u krijgt bij Obbink advies én de technische uitvoering via Obbink Service.": "无论是现有设备故障，还是需要整套全新厨房家电，您都能获得 Obbink 的建议，并由 Obbink Service 完成技术实施。",
+    "Persoonlijk advies en professionele installatie van thuisbatterijen en energieopslag door Obbink Service.": "Obbink Service 为家用储能电池与储能系统提供个性化咨询和专业安装。",
+    "Thuisbatterij & energieopslag | Obbink Service": "家用储能电池与储能 | Obbink Service",
+    "Met een thuisbatterij kunt u energie opslaan en op een later moment gebruiken. Dat kan bijvoorbeeld interessant zijn in combinatie met zonnepanelen of een slim energiecontract. Welke oplossing bij u past, hangt af van uw woning, energieverbruik en de manier waarop u energie wilt gebruiken.": "家用储能电池可以储存电能，供日后使用。例如，搭配太阳能电池板或智能电力合同可能有益。哪种方案适合您，取决于您的住宅、用电量以及使用能源的方式。",
+    "Een thuisbatterij slaat elektrische energie tijdelijk op, zodat u die op een later moment kunt gebruiken. Zo kunt u zonnestroom bewaren voor later en energie gebruiken op een ander moment dan waarop deze wordt opgewekt.": "家用储能电池可暂时储存电能，供稍后使用。这样，您可以保留太阳能发电量，在不同于发电的时间用电。",
+    "Gebruik meer van de energie die u zelf opwekt, ook wanneer de zon niet schijnt.": "即使没有阳光，也能更多地使用自己产生的电能。",
+    "Een batterij helpt om het moment van opwekking en verbruik beter op elkaar af te stemmen.": "储能电池有助于更好地协调发电和用电的时间。",
+    "Er zijn mogelijkheden voor slimme energiesturing. Wat verstandig is, hangt af van uw situatie.": "智能能源管理提供了多种可能性。哪种选择合理，取决于您的具体情况。",
+    "Een goede keuze begint niet bij een vast aantal kilowattuur, maar bij de manier waarop uw woning en huishouden energie gebruiken.": "做出正确选择，首先应考虑住宅和家庭的用电方式，而不是预设固定的千瓦时容量。",
+    "ZONNEPANELEN": "太阳能电池板",
+    "Waarom kan een thuisbatterij juist nu interessant zijn?": "为什么现在值得考虑家用储能电池？",
+    "Lees het antwoord →": "查看解答 →",
+    "SLIMME ENERGIE": "智能能源",
+    "Wat maakt een thuisbatterij écht slim?": "家用储能电池的智能体现在哪里？",
+    "ENERGIECONTRACT": "电力合同",
+    "Welk energiecontract past bij een slimme thuisbatterij?": "哪种电力合同适合智能家用储能电池？",
+    "CAPACITEIT": "容量",
+    "Hoe groot moet mijn thuisbatterij zijn?": "我的家用储能电池需要多大容量？",
+    "Geen woning en geen energieverbruik is hetzelfde. Daarom bespreken onze specialisten graag uw persoonlijke situatie met u.": "每套住宅和每个家庭的用电情况都不同。因此，我们的专业人员很乐意与您讨论您的具体情况。",
+    "Advies dat verder gaat dan de batterij": "不只关注电池的咨询建议",
+    "Een thuisbatterij koopt u niet zomaar. Het systeem moet passen bij uw woning, zonnepanelen, energieverbruik én uw plannen voor de toekomst.": "购买家用储能电池需要慎重考虑。系统必须适合您的住宅、太阳能电池板、用电量以及未来计划。",
+    "Bij Obbink krijgt u daarom persoonlijk advies van mensen die begrijpen hoe energie in huis werkt. We kijken niet alleen naar capaciteit en prijs, maar naar wat in uw situatie echt zinvol is.": "在 Obbink，您会获得了解家庭能源使用方式的专业人员提供的个性化建议。我们不仅考虑容量和价格，更关注哪些方案真正适合您的情况。",
+    "Al sinds 1934 zijn we bezig met elektriciteit en techniek. Waar Gerrit Obbink in de jaren dertig stroom bracht bij boeren rond Winterswijk, helpen we huishoudens vandaag om hun eigen energie slimmer op te wekken, op te slaan en te gebruiken.": "自 1934 年起，我们一直从事电力与技术工作。20 世纪 30 年代，Gerrit Obbink 为 Winterswijk 周边的农户接通电力；如今，我们帮助家庭更智能地发电、储能和用电。",
+    "Persoonlijk advies. Duidelijke uitleg. Een oplossing die bij u past.": "个性化建议。清晰讲解。适合您的方案。",
+    "Techniek die werkt. Ook na de aankoop.": "可靠运行的技术，购买后亦然。",
+    "Een goed advies is pas waardevol als de techniek erachter klopt. Daarom stopt onze betrokkenheid niet bij de verkoop.": "只有背后的技术可靠，好的建议才有价值。因此，我们的服务不会止于销售。",
+    "Obbink Service beoordeelt de technische situatie, verzorgt waar nodig de installatie en zorgt voor een correcte oplevering. En ook daarna kunt u op ons rekenen voor service, ondersteuning en technische kennis.": "Obbink Service 会评估技术条件，在需要时完成安装并确保正确交付。此后，您仍可依靠我们的服务、支持与技术知识。",
+    "We combineren bijna een eeuw ervaring met de techniek van vandaag: van de eerste elektriciteitsaansluitingen tot zonnepanelen, slimme energiesturing en thuisbatterijen.": "我们将近一个世纪的经验与当今技术相结合：从最初的电力接入，到太阳能电池板、智能能源管理和家用储能电池。",
+    "Eén vertrouwd adres voor advies, installatie én service.": "咨询、安装与服务，一个值得信赖的选择。",
+    "Sluit uitleg": "关闭说明",
+    "Wifi, netwerk en slimme beveiliging in de Achterhoek. Obbink Service adviseert, installeert en stelt alles gebruiksklaar in voor thuis en zakelijk.": "Achterhoek 地区的 Wi-Fi、网络与智能安防。Obbink Service 为家庭和企业提供咨询、安装与配置，确保设备可以投入使用。",
+    "Wifi, netwerk & beveiliging | Obbink Service Achterhoek": "Wi-Fi、网络与安防 | Obbink Service Achterhoek",
+    "We kijken naar woning of bedrijfspand, gebruik, apparatuur, bekabeling en de plekken waar bereik of capaciteit nodig is. Daarna adviseren, installeren en configureren we de passende oplossing.": "我们会考察住宅或商业场所、使用方式、设备、布线，以及需要信号覆盖或网络容量的位置。随后，我们提供建议并安装、配置合适的方案。",
+    "Van een zwakke wifi-verbinding op zolder tot een stabiel netwerk voor meerdere werkplekken, schermen, camera’s of audio-oplossingen. We combineren advies, installatie en uitleg in één traject.": "从阁楼上薄弱的 Wi-Fi 信号，到为多个工作位、屏幕、摄像头或音响设备提供稳定网络，我们将咨询、安装和使用说明结合在同一服务流程中。",
+    "Een dekkend netwerk met strategisch geplaatste wifi-punten, afgestemd op woning, gebruik en bereik.": "根据住宅、使用方式和覆盖需求，合理布置 Wi-Fi 接入点，实现全面网络覆盖。",
+    "Netwerkaansluitingen voor onder meer smart-tv, audio, werkplekken en apparatuur waarvoor een vaste verbinding de beste keuze is.": "为智能电视、音响、工作位，以及更适合使用有线连接的设备提供网络接口。",
+    "Installatie en configuratie van slimme camera’s en videodeurbellen, inclusief koppeling met smartphone of tablet.": "安装和配置智能摄像头与可视门铃，并连接智能手机或平板电脑。",
+    "Daarom kijken we niet alleen naar apparatuur. Kabels worden waar mogelijk netjes weggewerkt, instellingen worden gecontroleerd en we leggen uit hoe u het netwerk, de camera of de app zelf gebruikt.": "因此，我们不仅关注设备，还会尽可能整洁地隐藏线缆，检查设置，并向您说明如何自行使用网络、摄像头或应用程序。",
+    "Heeft u al wifi-punten, bekabeling of camera’s maar werkt het niet zoals u verwacht? Dan kunnen we eerst de bestaande situatie beoordelen voordat er nieuwe apparatuur wordt geadviseerd.": "您已有 Wi-Fi 接入点、布线或摄像头，但使用效果不符合预期？我们可以先评估现有情况，再建议是否需要新设备。",
+    "Waar zitten de problemen en wat moet het netwerk kunnen?": "问题出在哪里，网络需要具备哪些功能？",
+    "We bepalen de passende combinatie van wifi, bekabeling en apparatuur.": "我们确定 Wi-Fi、布线与设备的合适组合。",
+    "We monteren, sluiten aan en configureren de oplossing.": "我们完成设备安装、连接与配置。",
+    "We controleren de werking en leggen uit hoe alles gebruikt wordt.": "我们检查运行情况，并说明如何使用各项功能。",
+    "Voor bedrijven, organisaties en professionele omgevingen kijken we ook naar capaciteit, bekabeling, access points, betrouwbare verbindingen en de verdeling van gebruikers en apparatuur. Zo ontstaat een netwerk dat past bij het dagelijks gebruik.": "对于企业、机构和专业场所，我们还会考虑网络容量、布线、接入点、连接可靠性，以及用户和设备的分布，从而建立适合日常使用的网络。",
+    "Onze monteurs werken dagelijks in de regio. Vanuit ons Service Center in Lichtenvoorde ondersteunen we klanten onder meer in Lichtenvoorde, Winterswijk, Aalten, Eibergen, Borculo, Ruurlo, Varsseveld en Doetinchem.": "我们的技术人员每天都在本地区工作。从 Lichtenvoorde 的服务中心出发，我们为 Lichtenvoorde、Winterswijk、Aalten、Eibergen、Borculo、Ruurlo、Varsseveld 和 Doetinchem 等地的客户提供支持。",
+    "Vertel ons waar u tegenaan loopt. Dan bekijken we of een servicebezoek, uitbreiding of compleet nieuw netwerk de beste route is.": "请告诉我们您遇到的问题，我们会评估上门服务、网络扩展还是全新网络最为合适。",
+    "Zonnepanelen produceren vooral energie op momenten dat de zon schijnt. Dat is niet altijd hetzelfde moment waarop u thuis de meeste elektriciteit gebruikt. Met een thuisbatterij kunt u een deel van de opgewekte energie opslaan en later gebruiken, bijvoorbeeld in de avond.": "太阳能电池板主要在有阳光时发电，这不一定是您家中用电最多的时候。家用储能电池可以储存部分发电量，供稍后使用，例如在晚上。",
+    "Daardoor kunt u meer van uw eigen opgewekte energie zelf gebruiken en hoeft u minder direct terug te leveren aan het elektriciteitsnet.": "这样，您可以使用更多自己产生的电能，并减少直接回送电网的电量。",
+    "Of een thuisbatterij voor u financieel en praktisch interessant is, hangt onder andere af van uw energieverbruik, zonnepanelen, teruglevering, energiecontract en de gekozen batterijcapaciteit.": "家用储能电池在经济和实际使用方面是否适合您，取决于用电量、太阳能电池板、回送电量、电力合同以及所选电池容量等因素。",
+    "Een slimme thuisbatterij doet meer dan alleen elektriciteit opslaan.": "智能家用储能电池不仅仅用于储存电能。",
+    "Slimme energiesturing kan bepalen wanneer het verstandig is om energie op te slaan en wanneer deze weer gebruikt wordt. Daarbij kan het systeem rekening houden met bijvoorbeeld de opbrengst van zonnepanelen, het energieverbruik in de woning en energietarieven.": "智能能源管理可以确定何时适合储存电能、何时再次使用，并考虑太阳能发电量、家庭用电量和电价等因素。",
+    "Juist de combinatie van batterij, energiemeting en slimme software bepaalt hoe efficiënt het systeem met energie omgaat. ANKER SOLIX is een voorbeeld van een oplossing waarbij die combinatie en het passende advies samenkomen.": "电池、能源计量与智能软件的组合决定了系统利用能源的效率。ANKER SOLIX 就是一种将这些要素与合适的咨询建议相结合的解决方案。",
+    "Een thuisbatterij kan gebruikt worden in combinatie met een vast, variabel of dynamisch energiecontract.": "家用储能电池可搭配固定、浮动或动态电价合同使用。",
+    "Bij een dynamisch energiecontract veranderen de stroomprijzen gedurende de dag. Een slim batterijsysteem kan daardoor extra mogelijkheden bieden om energie op gunstige momenten op te slaan en op andere momenten te gebruiken.": "动态电价合同的电价会在一天内变化。因此，智能电池系统可以提供更多机会，在合适的时段储存电能，并在其他时段使用。",
+    "Dat betekent niet dat een dynamisch contract automatisch voor iedereen de beste keuze is. Uw verbruik, zonnepanelen, persoonlijke voorkeur en de mogelijkheden van het batterijsysteem spelen allemaal een rol.": "这并不意味着动态电价合同自动成为所有人的最佳选择。您的用电量、太阳能电池板、个人偏好以及电池系统的功能都很重要。",
+    "Laat u daarom adviseren over de combinatie van batterij en energiecontract.": "因此，请就电池与电力合同的组合寻求专业建议。",
+    "Een grotere batterij is niet automatisch een betere batterij.": "容量更大的电池并不一定更好。",
+    "De juiste capaciteit hangt onder andere af van:": "合适的容量取决于以下因素：",
+    "uw jaarlijkse elektriciteitsverbruik;": "您的年用电量；",
+    "het aantal zonnepanelen;": "太阳能电池板的数量；",
+    "hoeveel energie u overdag opwekt;": "白天的发电量；",
+    "hoeveel energie u teruglevert;": "回送电网的电量；",
+    "wanneer u thuis energie gebruikt;": "您在家中用电的时间；",
+    "wat u met de batterij wilt bereiken.": "您希望通过储能电池实现的目标。",
+    "Een batterij die goed aansluit bij uw werkelijke energiegebruik is meestal belangrijker dan simpelweg zoveel mogelijk opslagcapaciteit kiezen.": "选择符合实际用电情况的电池，通常比单纯追求更大的储能容量更重要。",
+    "Onze specialisten in de Obbink-winkel kijken graag samen met u welke capaciteit bij uw woning en energiegebruik past.": "Obbink 门店的专业人员很乐意与您一起确定适合住宅和用电情况的容量。",
+    "LG split-airco voor één ruimte": "适用于单个房间的 LG 分体式空调",
+    "LG ARTCOOL airco voor extra comfort": "提升舒适度的 LG ARTCOOL 空调",
+    "LG multi-split met één buitenunit en twee binnenunits": "配有一台室外机和两台室内机的 LG 多联式空调",
+    "ANKER SOLIX energieopslag voor thuis": "ANKER SOLIX 家用储能系统",
+    "ANKER SOLIX thuisbatterij": "ANKER SOLIX 家用储能电池",
+    "ANKER SOLIX is onze belangrijkste oplossing voor energieopslag. Het systeem biedt slimme energieopslag met verschillende oplossingen en capaciteiten. Welk systeem passend is, hangt af van uw woning, installatie en energiegebruik; persoonlijk advies blijft daarom belangrijk.": "ANKER SOLIX 是我们主要的储能解决方案。该系统提供不同方案和容量的智能储能选择。适合的系统取决于您的住宅、现有安装条件和用电情况，因此个性化咨询仍然十分重要。"
+  });
+  Object.assign(ZH, {
+    'Bekijk onze diensten': '查看我们的服务',
+    'Voor thuis': '家庭服务',
+    'Voor zakelijk': '企业服务',
+    'Ik heb een storing': '我的设备发生故障',
+    'Ik wil een airco': '我想安装空调',
+    'Mijn wifi kan beter': '我想改善无线网络',
+    'Ik wil energie opslaan': '我想储存电能',
+    'Ik heb een zakelijke aanvraag': '我有企业服务需求'
+  });
+  Object.assign(ZH, {
+    'Technische service sinds 1934': '自1934年起提供技术服务',
+    'WIST JE DAT…': '你知道吗……',
+    'Wij garantie-reparaties uitvoeren voor veel grote A-merken?': '我们为众多知名品牌提供保修维修服务？',
+    'Je bij Obbink terechtkunt voor advies, aankoop, installatie, reparatie én onderhoud?': 'Obbink可以为您提供咨询、选购、安装、维修及保养服务？',
+    'We in de Achterhoek 9 winkels en een eigen Service Center hebben?': '我们在阿赫特胡克地区拥有9家门店和自己的服务中心？',
+    'Obbink al sinds 1934 met techniek en service bezig is?': 'Obbink自1934年起就一直从事技术与服务工作？'
+  });
+  Object.assign(ZH, {
+    'Airco nodig?': '需要空调吗？',
+    'Installatie, onderhoud en service door Obbink Service.': '由Obbink Service提供安装、保养及服务。'
+  });
+  // Miele page only; keep other pages unchanged.
+  if (document.body.classList.contains("miele-page")) Object.assign(ZH, {
+  "Miele Professional bij Obbink Service.": "Obbink Service 为您提供 Miele Professional 专业设备。",
+  "Professionele apparatuur voor organisaties waar dagelijks gebruik, continuïteit en technische betrouwbaarheid tellen. Obbink Service helpt bij keuze, levering, installatie, ingebruikname, onderhoud en service.": "专业设备，满足机构日常使用、持续运营和技术可靠性的需求。Obbink Service 提供设备选型、交付、安装、调试、维护及售后服务。",
+  "Vraag zakelijk advies aan": "咨询专业设备方案",
+  "Terug naar professioneel witgoed": "返回商用设备概览",
+  "PROFESSIONEEL WASSEN, DROGEN EN AFWASSEN": "专业洗衣、烘干与洗碗设备",
+  "Apparatuur afgestemd op professioneel gebruik.": "为专业用途量身选择的设备。",
+  "De juiste keuze begint bij de toepassing. Hoe vaak draait de machine, hoeveel capaciteit is nodig, hoe snel moet een programma klaar zijn en wat betekent uitval voor uw organisatie?": "选择合适的设备，首先要明确用途。机器每天运行多少次，需要多大容量，程序需要多快完成，设备停机会对您的机构造成什么影响？",
+  "Professionele wasmachines": "专业洗衣机",
+  "Voor organisaties die dagelijks betrouwbaar moeten kunnen wassen. We kijken naar capaciteit, gebruiksfrequentie, programma's, aansluiting en plaatsing.": "适用于每天都需要可靠洗衣服务的机构。我们综合考虑容量、使用频率、程序、管线连接及安装位置。",
+  "Wassen & drogen": "洗衣与烘干",
+  "Professionele was- en droogoplossingen, ook wanneer ruimte, doorlooptijd en continuïteit belangrijke factoren zijn.": "专业洗衣与烘干方案，兼顾空间、周转时间和持续运营等重要需求。",
+  "Professionele vaatwassers": "专业洗碗机",
+  "Voor omgevingen waar vaat snel, frequent en betrouwbaar verwerkt moet worden. Advies begint bij gebruik, capaciteit en gewenste doorlooptijd.": "适用于需要快速、频繁且可靠清洗餐具的场所。我们根据使用情况、容量需求和期望的周转时间提供建议。",
+  "OBBINK SERVICE ERACHTER": "Obbink Service 为您提供支持",
+  "Niet alleen leveren, maar ook technisch begeleiden.": "不仅提供设备，更提供技术支持。",
+  "Professioneel witgoed is onderdeel van een bedrijfsproces. Daarom moet ook de technische ondersteuning kloppen.": "商用设备是业务流程的一部分，因此可靠的技术支持同样不可或缺。",
+  "VOOR ZORG, RECREATIE EN BEDRIJVEN": "适用于护理、休闲及企业场所",
+  "Welke Miele Professional-oplossing past bij uw organisatie?": "哪种 Miele Professional 方案适合您的机构？",
+  "Vertel ons waar de apparatuur wordt gebruikt, hoe intensief en welke capaciteit u nodig heeft. Dan kijken we samen naar een passende professionele oplossing.": "请告诉我们设备的使用场所、使用强度和所需容量。我们将与您共同选择合适的专业解决方案。",
+  "Zakelijk advies aanvragen": "申请专业咨询",
+  "Professioneel witgoed": "商用设备",
+  "Miele Professional | Professioneel witgoed | Obbink Service": "Miele Professional | 商用设备 | Obbink Service",
+  "Miele Professional bij Obbink Service: professionele wasmachines, drogers, was-droogzuilen en vaatwassers met advies, installatie, onderhoud en service.": "Obbink Service 提供 Miele Professional 专业洗衣机、烘干机、洗烘叠放组合及洗碗机，并提供咨询、安装、维护和售后服务。",
+  "Miele Professional apparatuur": "Miele Professional 专业设备",
+  "Miele Professional wasmachine": "Miele Professional 洗衣机",
+  "Miele Professional was-droogzuil": "Miele Professional 洗衣与烘干设备",
+  "Miele Professional vaatwasser": "Miele Professional 洗碗机",
+  "Binnenzijde van een Miele Professional vaatwasser tijdens het afwassen": "Miele Professional 洗碗机清洗过程中的内部视图",
+  "Obbink Service-monteur met tablet bij de geopende servicebus": "Obbink Service 技师手持平板电脑，站在打开车门的服务车旁",
+  "Obbink Service home": "Obbink Service 首页",
+  "INNOVATIE & RESULTAAT": "创新与成果",
+  "Professionele vaatwastechniek": "专业洗碗技术",
+  "Miele Professional vaatwassers zijn ontwikkeld voor snelheid, capaciteit en een betrouwbaar afwasresultaat. Voor horeca, zorg en andere professionele omgevingen kijken we samen welke oplossing het beste past bij het gebruik, de belasting en de gewenste doorlooptijd.": "Miele Professional 洗碗机专为速度、容量和可靠的清洗效果而设计。针对餐饮、护理及其他专业环境，我们与您共同选择符合使用方式、工作负荷和所需周转时间的解决方案。",
+  "SERVICE & ONDERSTEUNING": "服务与支持",
+  "Obbink Service als vaste partner": "Obbink Service，您的长期合作伙伴",
+  "Bij professioneel witgoed stopt het niet bij de keuze van het toestel. Obbink Service ondersteunt bij advies, levering, plaatsing, ingebruikname, onderhoud en service. Zo heeft u één aanspreekpunt voor zowel de apparatuur als de continuïteit van uw organisatie.": "专业设备的服务不止于选购。Obbink Service 为您提供咨询、交付、安装、调试、维护和服务支持，让您在设备使用和机构持续运营方面拥有统一的联系窗口。",
+  "Advies op locatie": "现场咨询",
+  "Installatie en ingebruikname": "安装与调试",
+  "Onderhoud en service": "维护与服务"
+});
+  const translate = (value) => ZH[value] || value;
+  window.obbinkT = translate;
+  window.OBBINK_LANGUAGE = 'zh';
+  localStorage.setItem('obbink-language', 'zh');
+  document.documentElement.lang = 'zh-CN';
+
+  // Match the metadata handling in i18n.js; keep page-specific translations.
+  document.title = translate(document.title);
+  const description = document.querySelector('meta[name="description"]');
+  if (description) description.content = translate(description.content);
+
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+  const nodes = [];
+  while (walker.nextNode()) nodes.push(walker.currentNode);
+  nodes.forEach((node) => {
+    const parent = node.parentElement;
+    if (!parent || ['SCRIPT','STYLE'].includes(parent.tagName)) return;
+    const raw = node.nodeValue;
+    const trimmed = raw.trim();
+    if (!trimmed) return;
+    let replacement = translate(trimmed);
+    if (replacement === trimmed) {
+      if (/^\d+ verenigingen & initiatieven$/.test(trimmed)) replacement = trimmed.replace('verenigingen & initiatieven','个协会与项目');
+      else if (/^\d+ verenigingen & evenementen$/.test(trimmed)) replacement = trimmed.replace('verenigingen & evenementen','个协会与活动');
+      else if (/^\d+ verenigingen$/.test(trimmed)) replacement = trimmed.replace('verenigingen','个协会');
+    }
+    if (replacement !== trimmed) node.nodeValue = raw.replace(trimmed, replacement);
+  });
+
+  ['placeholder','aria-label','alt','title'].forEach((attr) => {
+    document.querySelectorAll(`[${attr}]`).forEach((el) => {
+      const value = el.getAttribute(attr);
+      if (value && ZH[value]) el.setAttribute(attr, ZH[value]);
+    });
+  });
+  document.querySelectorAll('datalist option').forEach((option) => { if (ZH[option.value]) option.value = ZH[option.value]; });
+
+  const nav = document.querySelector('#main-nav');
+  if (nav) {
+    const style = document.createElement('style');
+    style.textContent = `.language-switcher{display:flex;align-items:center;gap:2px;padding:3px;border:1px solid #dde3e7;border-radius:999px;background:#f7f9fa;margin-left:auto}.language-switcher button{border:0;background:transparent;color:#657078;font:inherit;font-size:12px;font-weight:900;letter-spacing:.02em;padding:7px 9px;border-radius:999px;cursor:pointer}.language-switcher button:hover{background:#fff;color:#1f2529}.language-switcher button.active{background:#1f2529;color:#fff}@media(max-width:980px){.language-switcher{margin-left:0}.language-switcher button{padding:8px 10px}}`;
+    document.head.appendChild(style);
+    const sw = document.createElement('div');
+    sw.className = 'language-switcher'; sw.setAttribute('aria-label','选择语言');
+    [['nl','NL'],['de','DE'],['en','EN'],['fr','FR'],['zh','中文']].forEach(([code,label]) => {
+      const b=document.createElement('button'); b.type='button'; b.textContent=label; b.className=code==='zh'?'active':'';
+      b.setAttribute('aria-pressed', String(code === 'zh'));
+      b.addEventListener('click',()=>{ localStorage.setItem('obbink-language',code); const u=new URL(location.href); if(code==='nl')u.searchParams.delete('lang');else u.searchParams.set('lang',code); location.href=u.toString(); });
+      sw.appendChild(b);
+    });
+    const cta=nav.querySelector('.button'); nav.insertBefore(sw,cta||null);
+  }
+
+  document.querySelectorAll('a[href]').forEach((link) => {
+    const raw=link.getAttribute('href');
+    if(!raw||raw.startsWith('#')||raw.startsWith('tel:')||raw.startsWith('mailto:')||raw.startsWith('http://')||raw.startsWith('https://')||raw.startsWith('//')) return;
+    try { const u=new URL(raw,location.href); if(u.origin!==location.origin)return; u.searchParams.set('lang','zh'); link.setAttribute('href',`${u.pathname.split('/').pop()||'index.html'}${u.search}${u.hash}`); } catch(_){}
+  });
+})();

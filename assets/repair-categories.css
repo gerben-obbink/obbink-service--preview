@@ -1,0 +1,34 @@
+/* Scoped to the repair category chooser; shared modal card keeps the site style. */
+.repair-chooser .section-heading { max-width: 960px; }
+.repair-chooser .section-heading h2 { font-size: clamp(30px, 3.5vw, 44px); line-height: 1.12; }
+.repair-chooser .section-heading > .repair-chooser-hint { margin-top: 20px; font-size: 15px; }
+.repair-category-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.repair-category-button { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 88px; padding: 22px 24px; border: 1px solid var(--ink); border-radius: var(--radius-sm); background: var(--ink); color: #fff; font: inherit; font-weight: 800; line-height: 1.4; text-align: left; cursor: pointer; transition: background .15s, border-color .15s; }
+.repair-category-button > span:first-child { min-width: 0; overflow-wrap: anywhere; }
+.repair-category-button > span:last-child { flex-shrink: 0; }
+.repair-category-button:hover, .repair-category-button:focus-visible, .repair-category-button[aria-expanded="true"] { background: var(--blue); border-color: var(--blue); }
+.repair-category-contact { margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--line); }
+.repair-category-contact h3 { margin: 0 0 8px; font-size: 22px; }
+.repair-category-contact p { max-width: 820px; margin: 0 0 18px; color: var(--muted); }
+.repair-category-dialog { position: fixed; inset: 0; margin: auto; width: min(760px, calc(100% - 48px)); max-width: none; height: fit-content; border: 0; color: var(--ink); max-height: calc(100dvh - 48px); }
+.repair-category-dialog::backdrop { background: rgba(11, 31, 51, .78); }
+.repair-category-dialog > .eyebrow { padding-right: 44px; }
+.repair-category-dialog h2 { margin: 0 0 20px; font-size: clamp(28px, 4vw, 42px); line-height: 1.12; letter-spacing: -.03em; hyphens: auto; }
+.repair-category-dialog > p:not(.eyebrow), .repair-category-dialog li { color: var(--muted); font-size: 17px; line-height: 1.6; }
+.repair-category-dialog ul { margin: 20px 0 28px; padding-left: 22px; }
+.repair-category-dialog li + li { margin-top: 7px; }
+.repair-category-dialog .checklist-close { width: 44px; height: 44px; }
+.repair-dialog-open { overflow: hidden; }
+@media (min-width: 641px) and (max-width: 959px) {
+  .repair-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .repair-category-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .repair-category-button { min-height: 64px; padding: 18px; }
+  .repair-category-dialog { width: calc(100% - 20px); max-height: calc(100dvh - 20px); }
+  .repair-category-dialog h2 { font-size: clamp(24px, 7vw, 32px); }
+  .repair-category-dialog .button { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .repair-category-button { transition: none; }
+}

@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reparatie van stofzuigers, kleinhuishoudelijke apparaten, koffie- en bonenmachines en audioapparatuur door Obbink Service.">
+  <title>Reparatie stofzuigers, koffiemachines & audio | Obbink Service</title>
+  <link rel="stylesheet" href="assets/styles.css">
+  <link rel="stylesheet" href="assets/repair-categories.css">
+  <style>
+    .repair-intro .page-hero-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:center;gap:40px}
+    .repair-intro h1{font-size:clamp(40px,4.2vw,60px)}
+    .repair-title-line{display:block;white-space:nowrap}
+    .repair-collage{display:grid;grid-template-columns:1fr 1.1fr;grid-template-rows:repeat(3,minmax(0,1fr));gap:12px;aspect-ratio:1;min-width:0}
+    .repair-collage img{display:block;width:100%;height:100%;min-height:0;object-fit:cover;border-radius:18px}
+    .repair-collage img:first-child{grid-row:span 2;object-position:45% center}
+    .repair-collage img:last-child{grid-column:1 / -1;object-position:center 55%}
+    @media(max-width:959px){.repair-intro .page-hero-grid{grid-template-columns:minmax(0,1fr);gap:32px}.repair-collage{width:100%;max-width:760px;margin-inline:auto}.repair-title-line{display:inline;white-space:normal}}
+    @media(max-width:640px){.repair-intro h1{font-size:clamp(34px,9vw,47px)}.repair-collage{gap:8px}.repair-collage img{border-radius:12px}}
+    .repair-hero-card{padding:clamp(30px,5vw,54px);background:linear-gradient(145deg,#20272c,#35434b);color:#fff;box-shadow:var(--shadow);border-radius:28px;display:flex;flex-direction:column;justify-content:center;min-height:390px}
+    .repair-hero-card .eyebrow{color:#ff9b67}.repair-hero-card h2{color:#fff;font-size:clamp(32px,4vw,50px);line-height:1.04;margin:8px 0 18px}.repair-hero-card p{color:#dce6eb;font-size:18px;line-height:1.65}.repair-quote{font-size:clamp(25px,3vw,34px);font-weight:900;line-height:1.15;border-left:4px solid var(--orange);padding-left:18px;margin:22px 0 0}
+    .repair-categories{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:30px}.repair-category{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px;box-shadow:var(--shadow);position:relative;overflow:hidden}.repair-number{display:inline-grid;place-items:center;width:46px;height:46px;border-radius:14px;background:var(--orange-soft);color:var(--orange);font-weight:900;margin-bottom:18px}.repair-category h3{font-size:clamp(25px,3vw,34px);margin:0 0 12px}.repair-category p{color:var(--ink-2);font-size:17px;line-height:1.65;margin:0}.repair-category ul{padding-left:20px;margin:18px 0 0;color:var(--ink-2);line-height:1.7}
+    .repair-warranty-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:42px;align-items:center}.repair-warranty-card{background:#fff;border-radius:24px;padding:28px;color:var(--ink);box-shadow:var(--shadow)}.repair-warranty-card div+div{border-top:1px solid var(--line);margin-top:18px;padding-top:18px}.repair-warranty-card strong{display:block;font-size:19px;margin-bottom:6px}.repair-warranty-card p{margin:0;color:var(--ink-2);line-height:1.55}
+    .repair-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}.repair-step{padding:26px;border:1px solid var(--line);border-radius:20px;background:#fff}.repair-step span{display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:var(--orange);color:#fff;font-weight:900;margin-bottom:14px}.repair-step strong{display:block;font-size:20px;margin-bottom:8px}.repair-step p{color:var(--ink-2);margin:0;line-height:1.55}
+    .repair-history{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.repair-history-card{background:linear-gradient(145deg,#eef7fb,#fff);border:1px solid #dbeaf0;border-radius:24px;padding:34px}.repair-history-card strong{font-size:clamp(27px,3vw,40px);line-height:1.08;display:block;margin-bottom:14px}.repair-history-card p{color:var(--ink-2);line-height:1.65;margin:0}
+    @media(max-width:900px){.repair-categories,.repair-warranty-grid,.repair-history{grid-template-columns:1fr}.repair-steps{grid-template-columns:1fr}.repair-hero-card{min-height:0}}
+    @media(max-width:560px){.repair-category,.repair-warranty-card,.repair-history-card{padding:24px}.repair-hero-card{border-radius:20px}}
+
+    /* Cropping and monochrome display only; supplied logo files stay untouched. */
+    .repair-brands{margin-top:64px;padding-top:36px;border-top:1px solid rgba(255,255,255,.16);text-align:center}
+    .repair-brands h3{margin:0 0 32px;color:#e0e8ef;font-size:16px;font-weight:600;letter-spacing:.025em}
+    .repair-brand-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px 30px;list-style:none;padding:0;margin:0}
+    .repair-brand-grid li{display:flex;align-items:center;justify-content:center;min-width:0;min-height:64px}
+    .repair-brand-logo{display:block;position:relative;overflow:hidden;width:min(100%,var(--logo-width));flex-shrink:1;mix-blend-mode:screen}
+    .repair-brand-logo img{position:absolute;max-width:none;height:auto;display:block}
+    .repair-brand-dark{filter:grayscale(1) invert(1) contrast(1.6) brightness(2)}
+    .repair-brand-light{filter:grayscale(1) contrast(1.8)}
+    .repair-brand-alpha{filter:brightness(0) invert(1)}
+    .repair-brands .repair-brands-note{max-width:760px;margin:30px auto 0;font-size:13px;line-height:1.6;color:#c5d1dd}
+    @media(max-width:900px){.repair-brand-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 26px}.repair-brands{margin-top:44px}}
+    @media(max-width:560px){.repair-brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 28px}.repair-brands{padding-top:28px}.repair-brands h3{margin-bottom:24px}.repair-brand-grid li{min-height:56px}}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-wrap">
+    <a class="brand" href="index.html" aria-label="Obbink Service home"><img src="assets/obbinkservice.png" alt="Obbink Service"></a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Hoofdnavigatie">
+      <a href="index.html#diensten">Oplossingen</a><a href="index.html#reparatie">Reparatie</a><a href="index.html#zakelijk">Zakelijk</a><a href="organisatie.html">Organisatie</a><a class="button button-small" href="index.html#aanvragen">Service aanvragen</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero energy-page-hero repair-intro">
+    <div class="container page-hero-grid">
+      <div>
+        <p class="eyebrow" data-repair-i18n="hero.eyebrow">REPARATIE & TECHNIEK</p>
+        <h1 data-repair-i18n="hero.title"><span class="repair-title-line">Reparatie van</span> <span class="repair-title-line">bonenmachines,</span> <span class="repair-title-line">stofzuigers &amp;</span> <span class="repair-title-line">elektronica</span></h1>
+        <p class="page-hero-copy" data-repair-i18n="hero.body">Niet ieder defect apparaat hoeft vervangen te worden. Obbink Service onderzoekt wat er aan de hand is en kijkt eerst of reparatie technisch en economisch verstandig is. Van stofzuiger en keukenapparaat tot bonenmachine en audioapparatuur.</p>
+        <div class="actions"><a class="button" href="index.html#aanvragen" data-repair-i18n="hero.cta1">Reparatie aanvragen</a><a class="button button-secondary" href="#categorieen" data-repair-i18n="hero.cta2">Bekijk reparatiecategorieën</a></div>
+        <div class="hero-points airco-points"><span data-repair-i18n="hero.point1">Eigen technische organisatie</span><span data-repair-i18n="hero.point2">Diagnose vóór vervangen</span><span data-repair-i18n="hero.point3">Geselecteerde garantiereparaties</span><span data-repair-i18n="hero.point4">Techniek sinds 1934</span></div>
+      </div>
+      <div class="repair-collage">
+        <img src="assets/reparatie-monteur.webp" alt="Obbink Service-monteur repareert een apparaat met een schroevendraaier" decoding="async">
+        <img src="assets/reparatie-printplaat-meting.webp" alt="Een monteur meet een printplaat door" decoding="async">
+        <img src="assets/reparatie-stofzuiger.webp" alt="Obbink Service-monteur werkt aan een geopende stofzuiger" decoding="async">
+        <img src="assets/reparatie-elektronica.webp" alt="Reparatiewerk aan de elektronica van een geopend beeldscherm" decoding="async">
+      </div>
+    </div>
+  </section>
+
+  <section id="categorieen" class="section repair-chooser">
+    <div class="container">
+      <div class="section-heading">
+<h2 data-repair-i18n="chooser.title">SERVICE VOOR BIJNA ALLES MET EEN STEKKER</h2>
+<p data-repair-i18n="chooser.intro">Obbink Service repareert, onderhoudt en onderzoekt een breed assortiment elektrische apparaten en elektronica. Van stofzuigers en bonenmachines tot televisies, audio, computers, laptops, witgoed en inbouwapparatuur. Onze eigen technische organisatie onderzoekt de storing, beoordeelt de reparatiemogelijkheden en kijkt of herstel technisch en economisch verantwoord is.</p>
+<p data-repair-i18n="chooser.hint" class="repair-chooser-hint">Kies hieronder uw apparaatcategorie voor meer informatie over onze reparatie- en servicemogelijkheden.</p>
+      </div>
+      <div class="repair-category-grid">
+        <button type="button" class="repair-category-button" data-repair-dialog="repair-category-0" aria-haspopup="dialog" aria-controls="repair-category-0"><span data-repair-i18n="chooser.0.title">Koffie &amp; bonenmachines</span><span aria-hidden="true">→</span></button>
+        <button type="button" class="repair-category-button" data-repair-dialog="repair-category-1" aria-haspopup="dialog" aria-controls="repair-category-1"><span data-repair-i18n="chooser.1.title">Stofzuigers &amp; stoomreinigers</span><span aria-hidden="true">→</span></button>
+        <button type="button" class="repair-category-button" data-repair-dialog="repair-category-2" aria-haspopup="dialog" aria-controls="repair-category-2"><span data-repair-i18n="chooser.2.title">Kleinhuishoudelijke apparaten</span><span aria-hidden="true">→</span></button>
+        <button type="button" class="repair-category-button" data-repair-dialog="repair-category-3" aria-haspopup="dialog" aria-controls="repair-category-3"><span data-repair-i18n="chooser.3.title">TV, audio &amp; elektronica</span><span aria-hidden="true">→</span></button>
+        <button type="button" class="repair-category-button" data-repair-dialog="repair-category-4" aria-haspopup="dialog" aria-controls="repair-category-4"><span data-repair-i18n="chooser.4.title">Computers &amp; laptops</span><span aria-hidden="true">→</span></button>
+        <button type="button" class="repair-category-button" data-repair-dialog="repair-category-5" aria-haspopup="dialog" aria-controls="repair-category-5"><span data-repair-i18n="chooser.5.title">Witgoed &amp; inbouwapparatuur</span><span aria-hidden="true">→</span></button>
+      </div>
+      <div class="repair-category-contact">
+<h3 data-repair-i18n="chooser.contactTitle">Staat uw apparaat er niet tussen?</h3>
+<p data-repair-i18n="chooser.contactBody">Onze technische service is breder dan deze zes categorieën. Neem contact met ons op en stuur indien mogelijk merk, type en een korte omschrijving van de storing mee.</p>
+<a data-repair-i18n="chooser.contactCta" class="button button-secondary" href="index.html#aanvragen">Vraag het ons</a>
+      </div>
+    </div>
+    <dialog id="repair-category-0" class="energy-topic-modal-card repair-category-dialog" aria-labelledby="repair-category-title-0">
+      <button type="button" class="checklist-close" data-repair-close aria-label="Sluiten" autofocus>×</button>
+<p data-repair-i18n="chooser.label" class="eyebrow">REPARATIE &amp; SERVICE</p>
+<h2 data-repair-i18n="chooser.0.title" id="repair-category-title-0">Koffie &amp; bonenmachines</h2>
+<p data-repair-i18n="chooser.0.body">Een bonenmachine, koffievolautomaat of espressomachine bevat techniek die regelmatig onderhoud en een deskundige diagnose vraagt. Obbink Service onderzoekt storingen en beoordeelt welke reparatie technisch en economisch verantwoord is.</p>
+      <ul>
+<li data-repair-i18n="chooser.0.bullet0">Koffievolautomaten en bonenmachines</li>
+<li data-repair-i18n="chooser.0.bullet1">Espresso- en koffiemachines</li>
+<li data-repair-i18n="chooser.0.bullet2">Storingen, onderhoud en technische diagnose</li>
+<li data-repair-i18n="chooser.0.bullet3">Beoordeling van onderdelen en reparatiemogelijkheden</li>
+      </ul>
+<a data-repair-i18n="chooser.0.cta" class="button" href="index.html#aanvragen">Reparatie aanvragen</a>
+    </dialog>
+    <dialog id="repair-category-1" class="energy-topic-modal-card repair-category-dialog" aria-labelledby="repair-category-title-1">
+      <button type="button" class="checklist-close" data-repair-close aria-label="Sluiten" autofocus>×</button>
+<p data-repair-i18n="chooser.label" class="eyebrow">REPARATIE &amp; SERVICE</p>
+<h2 data-repair-i18n="chooser.1.title" id="repair-category-title-1">Stofzuigers &amp; stoomreinigers</h2>
+<p data-repair-i18n="chooser.1.body">Werkt uw stofzuiger of stoomreiniger niet meer goed, maakt het apparaat vreemde geluiden of is de werking verminderd? Obbink Service onderzoekt de storing en bekijkt of reparatie mogelijk en zinvol is.</p>
+      <ul>
+<li data-repair-i18n="chooser.1.bullet0">Slede- en steelstofzuigers</li>
+<li data-repair-i18n="chooser.1.bullet1">Stoomreinigers</li>
+<li data-repair-i18n="chooser.1.bullet2">Storingen en technische diagnose</li>
+<li data-repair-i18n="chooser.1.bullet3">Onderdelen en reparatiemogelijkheden</li>
+      </ul>
+<a data-repair-i18n="chooser.1.cta" class="button" href="index.html#aanvragen">Reparatie aanvragen</a>
+    </dialog>
+    <dialog id="repair-category-2" class="energy-topic-modal-card repair-category-dialog" aria-labelledby="repair-category-title-2">
+      <button type="button" class="checklist-close" data-repair-close aria-label="Sluiten" autofocus>×</button>
+<p data-repair-i18n="chooser.label" class="eyebrow">REPARATIE &amp; SERVICE</p>
+<h2 data-repair-i18n="chooser.2.title" id="repair-category-title-2">Kleinhuishoudelijke apparaten</h2>
+<p data-repair-i18n="chooser.2.body">Ook voor diverse elektrische huishoudelijke apparaten kunt u bij Obbink Service terecht. We onderzoeken eerst het defect en beoordelen of reparatie technisch en economisch verantwoord is.</p>
+      <ul>
+<li data-repair-i18n="chooser.2.bullet0">Keuken- en huishoudelijke apparaten</li>
+<li data-repair-i18n="chooser.2.bullet1">Elektrische kleinapparatuur</li>
+<li data-repair-i18n="chooser.2.bullet2">Diagnose van technische storingen</li>
+<li data-repair-i18n="chooser.2.bullet3">Repareren of vervangen beoordelen</li>
+      </ul>
+<a data-repair-i18n="chooser.2.cta" class="button" href="index.html#aanvragen">Reparatie aanvragen</a>
+    </dialog>
+    <dialog id="repair-category-3" class="energy-topic-modal-card repair-category-dialog" aria-labelledby="repair-category-title-3">
+      <button type="button" class="checklist-close" data-repair-close aria-label="Sluiten" autofocus>×</button>
+<p data-repair-i18n="chooser.label" class="eyebrow">REPARATIE &amp; SERVICE</p>
+<h2 data-repair-i18n="chooser.3.title" id="repair-category-title-3">TV, audio &amp; elektronica</h2>
+<p data-repair-i18n="chooser.3.body">Bij elektronica begint goede service met een heldere diagnose. Obbink Service onderzoekt storingen en beoordeelt welke reparatie of technische vervolgstap passend is.</p>
+      <ul>
+<li data-repair-i18n="chooser.3.bullet0">Televisies</li>
+<li data-repair-i18n="chooser.3.bullet1">Soundbars en speakers</li>
+<li data-repair-i18n="chooser.3.bullet2">Receivers en audiosystemen</li>
+<li data-repair-i18n="chooser.3.bullet3">Overige consumentenelektronica</li>
+<li data-repair-i18n="chooser.3.bullet4">Diagnose en technische service</li>
+      </ul>
+<a data-repair-i18n="chooser.3.cta" class="button" href="index.html#aanvragen">Reparatie aanvragen</a>
+    </dialog>
+    <dialog id="repair-category-4" class="energy-topic-modal-card repair-category-dialog" aria-labelledby="repair-category-title-4">
+      <button type="button" class="checklist-close" data-repair-close aria-label="Sluiten" autofocus>×</button>
+<p data-repair-i18n="chooser.label" class="eyebrow">REPARATIE &amp; SERVICE</p>
+<h2 data-repair-i18n="chooser.4.title" id="repair-category-title-4">Computers &amp; laptops</h2>
+<p data-repair-i18n="chooser.4.body">Voor computers en laptops onderzoeken we hardwareproblemen, defecte onderdelen en andere technische storingen. Eerst stellen we vast wat er aan de hand is en welke reparatie zinvol is.</p>
+      <ul>
+<li data-repair-i18n="chooser.4.bullet0">Laptops en desktops</li>
+<li data-repair-i18n="chooser.4.bullet1">Hardwarediagnose</li>
+<li data-repair-i18n="chooser.4.bullet2">Voeding, opslag en aansluitingen</li>
+<li data-repair-i18n="chooser.4.bullet3">Vervanging of reparatie van onderdelen</li>
+      </ul>
+<a data-repair-i18n="chooser.4.cta" class="button" href="index.html#aanvragen">Reparatie aanvragen</a>
+    </dialog>
+    <dialog id="repair-category-5" class="energy-topic-modal-card repair-category-dialog" aria-labelledby="repair-category-title-5">
+      <button type="button" class="checklist-close" data-repair-close aria-label="Sluiten" autofocus>×</button>
+<p data-repair-i18n="chooser.label" class="eyebrow">REPARATIE &amp; SERVICE</p>
+<h2 data-repair-i18n="chooser.5.title" id="repair-category-title-5">Witgoed &amp; inbouwapparatuur</h2>
+<p data-repair-i18n="chooser.5.body">Voor witgoed en inbouwapparatuur komt Obbink Service bij u thuis. Onze monteur stelt de diagnose op locatie en beoordeelt of reparatie mogelijk en verantwoord is.</p>
+      <ul>
+<li data-repair-i18n="chooser.5.bullet0">Wasmachines en drogers</li>
+<li data-repair-i18n="chooser.5.bullet1">Vaatwassers</li>
+<li data-repair-i18n="chooser.5.bullet2">Koelkasten en vriezers</li>
+<li data-repair-i18n="chooser.5.bullet3">Ovens, kookplaten en andere inbouwapparatuur</li>
+<li data-repair-i18n="chooser.5.bullet4">Diagnose en reparatie aan huis</li>
+      </ul>
+<a data-repair-i18n="chooser.5.cta" class="button" href="index.html#aanvragen">Service aan huis aanvragen</a>
+    </dialog>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container repair-warranty-grid">
+      <div>
+        <p class="eyebrow" data-repair-i18n="warranty.eyebrow">GARANTIE & AUTORISATIE</p>
+        <h2 data-repair-i18n="warranty.title">Geautoriseerde reparatie, waar dat voor merk en product geldt.</h2>
+        <p data-repair-i18n="warranty.body">Obbink Service is voor verschillende fabrikanten geautoriseerd om reparaties uit te voeren. Daardoor kunnen we bij geselecteerde merken en productcategorieën ook service binnen de fabrieksgarantie verzorgen. Of een reparatie onder garantie valt, hangt altijd af van merk, product, aankoopdatum en garantievoorwaarden.</p>
+        <div class="actions"><a class="button" href="index.html#aanvragen" data-repair-i18n="warranty.cta">Serviceaanvraag starten</a></div>
+      </div>
+      <div class="repair-warranty-card">
+        <div><strong data-repair-i18n="warranty.card1Title">Binnen fabrieksgarantie</strong><p data-repair-i18n="warranty.card1Body">Waar wij voor het betreffende merk en product geautoriseerd zijn, kunnen we de garantieprocedure volgens de fabrikant uitvoeren.</p></div>
+        <div><strong data-repair-i18n="warranty.card2Title">Buiten garantie</strong><p data-repair-i18n="warranty.card2Body">Ook buiten garantie beoordelen we eerst of repareren technisch en economisch verstandig is.</p></div>
+        <div><strong data-repair-i18n="warranty.card3Title">Eerst de juiste gegevens</strong><p data-repair-i18n="warranty.card3Body">Merk, typenummer, serienummer en een duidelijke omschrijving van de klacht helpen ons om sneller de juiste route te bepalen.</p></div>
+      </div>
+    </div>
+
+    <div class="container repair-brands" aria-labelledby="repair-brands-title">
+      <h3 id="repair-brands-title" data-repair-i18n="warranty.brandsTitle">Geautoriseerd voor onder meer</h3>
+      <ul class="repair-brand-grid" role="list">
+        <li><span class="repair-brand-logo repair-brand-light" style="--logo-width:130px;aspect-ratio:603/112"><img src="assets/miele.png" alt="Miele" width="800" height="451" loading="lazy" style="width:132.6700%;left:-16.5837%;top:-150.0000%"></span></li>
+        <li><span class="repair-brand-logo repair-brand-dark" style="--logo-width:152px;aspect-ratio:790/201"><img src="assets/bosch.png" alt="Bosch" width="920" height="279" loading="lazy" style="width:116.4557%;left:-7.5949%;top:-17.9104%"></span></li>
+        <li><span class="repair-brand-logo repair-brand-dark" style="--logo-width:160px;aspect-ratio:863/139"><img src="assets/siemens.png" alt="Siemens" width="920" height="307" loading="lazy" style="width:106.6049%;left:-3.2445%;top:-60.4317%"></span></li>
+        <li><span class="repair-brand-logo repair-brand-light" style="--logo-width:160px;aspect-ratio:840/135"><img src="assets/samsung-logo.webp" alt="Samsung" width="960" height="256" loading="lazy" style="width:114.2857%;left:-7.1429%;top:-44.4444%"></span></li>
+        <li><span class="repair-brand-logo repair-brand-light" style="--logo-width:105px;aspect-ratio:370/118"><img src="assets/aeg-logo.gif" alt="AEG" width="600" height="400" loading="lazy" style="width:162.1622%;left:-29.7297%;top:-114.4068%"></span></li>
+        <li><span class="repair-brand-logo repair-brand-dark" style="--logo-width:150px;aspect-ratio:578/95"><img src="assets/hisense-logo.webp" alt="Hisense" width="768" height="768" loading="lazy" style="width:132.8720%;left:-16.6090%;top:-353.6842%"></span></li>
+        <li><span class="repair-brand-logo repair-brand-dark" style="--logo-width:132px;aspect-ratio:144/31"><img src="assets/ocean.jpg" alt="OCEAN" width="150" height="150" loading="lazy" style="width:104.1667%;left:-2.0833%;top:-190.3226%"></span></li>
+        <li><span class="repair-brand-logo repair-brand-alpha" style="--logo-width:140px;aspect-ratio:1207/400"><img src="assets/whirlpool.png" alt="Whirlpool" width="1207" height="400" loading="lazy" style="width:100.0000%;left:0.0000%;top:0.0000%"></span></li>
+        <li><span class="repair-brand-logo repair-brand-dark" style="--logo-width:162px;aspect-ratio:721/89"><img src="assets/blaupunkt.png" alt="Blaupunkt" width="840" height="859" loading="lazy" style="width:116.5049%;left:-8.3218%;top:-432.5843%"></span></li>
+        <li><span class="repair-brand-logo repair-brand-light" style="--logo-width:154px;aspect-ratio:398/96"><img src="assets/smarttech.png" alt="SmartTech" width="447" height="447" loading="lazy" style="width:112.3116%;left:-6.2814%;top:-177.0833%"></span></li>
+      </ul>
+      <p class="repair-brands-note" data-repair-i18n="warranty.brandsNote">Autorisatie kan verschillen per merk, productcategorie en garantievoorwaarde.</p>
+    </div>
+  </section>
+
+  <section class="section section-light">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow" data-repair-i18n="process.eyebrow">ZO WERKT HET</p>
+        <h2 data-repair-i18n="process.title">Van storing naar een duidelijke vervolgstap.</h2>
+        <p data-repair-i18n="process.body">Een goede reparatie begint met informatie. Hoe beter we weten welk apparaat u heeft en wat de klacht is, hoe gerichter we de service kunnen voorbereiden.</p>
+      </div>
+      <div class="repair-steps">
+        <div class="repair-step"><span>1</span><strong data-repair-i18n="process.step1Title">Meld apparaat en klacht</strong><p data-repair-i18n="process.step1Body">Vermeld merk, type en wat het apparaat wel of niet meer doet. Voeg indien mogelijk een foto van het typeplaatje toe.</p></div>
+        <div class="repair-step"><span>2</span><strong data-repair-i18n="process.step2Title">Wij beoordelen de route</strong><p data-repair-i18n="process.step2Body">We bekijken welke technische informatie nodig is en of het om garantie, reparatie of verdere diagnose gaat.</p></div>
+        <div class="repair-step"><span>3</span><strong data-repair-i18n="process.step3Title">Repareren als dat verstandig is</strong><p data-repair-i18n="process.step3Body">Als reparatie passend is, zetten we de volgende stap. Is vervangen verstandiger, dan geven we daar duidelijkheid over.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container repair-history">
+      <div>
+        <p class="eyebrow" data-repair-i18n="history.eyebrow">SINDS 1934</p>
+        <h2 data-repair-i18n="history.title">Service zit al generaties in Obbink.</h2>
+        <p data-repair-i18n="history.body">Obbink begon in 1934 met techniek en service. Die gedachte is nog steeds actueel: een apparaat verkopen is één ding, begrijpen hoe het werkt en wat er mis kan gaan is iets anders. Obbink Service houdt die technische kennis in eigen huis.</p>
+        <div class="actions"><a class="button" href="index.html#aanvragen" data-repair-i18n="history.cta">Reparatie aanvragen</a></div>
+      </div>
+      <div class="repair-history-card"><strong data-repair-i18n="history.cardTitle">Niet automatisch vervangen als repareren nog kan.</strong><p data-repair-i18n="history.cardBody">We kijken naar de technische staat, de aard van de storing en wat economisch verantwoord is. Zo krijgt u eerst een onderbouwde reparatieroute in plaats van automatisch een nieuw apparaat.</p></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div><img src="assets/obbinkservice.png" alt="Obbink Service" class="footer-logo"><p>Technische service voor thuis en zakelijk.</p></div>
+    <div><strong>Service</strong><a href="index.html#aanvragen">Reparatie aanvragen</a><a href="index.html#diensten">Installatie & oplossingen</a><a href="index.html#reparatie">Serviceproces</a></div>
+    <div><strong>Organisatie</strong><a href="organisatie.html">Overzicht</a><a href="betrokkenheid.html">Betrokken bij de regio</a><a href="werken-bij.html">Werken bij</a></div>
+  </div>
+</footer>
+<script src="assets/app.js"></script>
+<script src="assets/repair-categories.js"></script>
+<script>
+(() => {
+  const language = new URLSearchParams(window.location.search).get('lang') || localStorage.getItem('obbink-language') || 'nl';
+  if (language === 'nl') return;
+  const translations = {
+    de: {
+      'hero.eyebrow':'REPARATUR & TECHNIK','hero.title':'Reparatur von Kaffeevollautomaten, Staubsaugern & Elektronik','hero.body':'Nicht jedes defekte Gerät muss ersetzt werden. Obbink Service untersucht die Ursache und prüft zuerst, ob eine Reparatur technisch und wirtschaftlich sinnvoll ist – vom Staubsauger und Haushaltsgerät bis zur Kaffeevollautomatik und Audioanlage.','hero.cta1':'Reparatur anfragen','hero.cta2':'Reparaturkategorien ansehen','hero.point1':'Eigene technische Organisation','hero.point2':'Diagnose vor Austausch','hero.point3':'Ausgewählte Garantiereparaturen','hero.point4':'Technik seit 1934','hero.cardEyebrow':'VERKAUFEN UND REPARIEREN','hero.cardTitle':'Technik zu verstehen gehört zu gutem Service.','hero.cardBody':'Obbink Service verfügt über eine eigene technische Organisation für Diagnose, Reparatur und Service. So können wir weiter schauen als nur bis zum Verkauf eines neuen Geräts.','hero.quote':'Kaufen Sie bei dem Fachmann, der es auch reparieren kann.',
+      'categories.eyebrow':'WAS REPARIEREN WIR?','categories.title':'Vier Reparaturgruppen, eine technische Organisation.','categories.body':'Geben Sie bei Ihrer Anfrage immer Marke, Typ und Fehlerbild an. Ein Foto des Typenschilds hilft uns, das Gerät schneller zu identifizieren und den Service besser vorzubereiten.','vacuum.title':'Staubsauger','vacuum.body':'Reparatur und Diagnose von Staubsaugern, wenn eine Instandsetzung technisch sinnvoll ist. Wir beurteilen Fehler, Gerät und Reparaturmöglichkeiten.','vacuum.item1':'Bodenstaubsauger','vacuum.item2':'Akkustaubsauger','vacuum.item3':'Störungen, Teile und Diagnose','small.title':'Kleine Haushaltsgeräte','small.body':'Bei verschiedenen elektrischen Haushaltsgeräten prüfen wir je nach Produkt, Marke, Ersatzteilen und technischem Zustand, ob eine Reparatur möglich und sinnvoll ist.','small.item1':'Küchen- und Haushaltsgeräte','small.item2':'Elektrische Kleingeräte','small.item3':'Bewertung: reparieren oder ersetzen','coffee.title':'Kaffee- & Vollautomaten','coffee.body':'Ein Vollautomat oder eine Espressomaschine benötigt Wartung und fachkundige Diagnose. Wir untersuchen Störungen und bestimmen den passenden Reparaturweg.','coffee.item1':'Kaffeevollautomaten','coffee.item2':'Espresso- und Kaffeemaschinen','coffee.item3':'Störung, Wartung und technische Beurteilung','audio.title':'Audiogeräte','audio.body':'Auch bei Audiogeräten beginnt guter Service mit einer klaren Diagnose. Wir beurteilen je Gerät, welche Reparatur oder welcher nächste Schritt technisch sinnvoll ist.','audio.item1':'Lautsprecher und Soundbars','audio.item2':'Receiver und Audiosysteme','audio.item3':'Diagnose und technischer Service',
+      'warranty.brandsTitle':'Unter anderem autorisiert für','warranty.brandsNote':'Die Autorisierung kann je nach Marke, Produktkategorie und Garantiebedingungen variieren.','warranty.eyebrow':'GARANTIE & AUTORISIERUNG','warranty.title':'Autorisierte Reparatur, wo dies für Marke und Produkt gilt.','warranty.body':'Obbink Service ist von verschiedenen Herstellern für Reparaturen autorisiert. Bei ausgewählten Marken und Produktkategorien können wir deshalb auch Service innerhalb der Herstellergarantie ausführen. Ob eine Reparatur unter Garantie fällt, hängt immer von Marke, Produkt, Kaufdatum und Garantiebedingungen ab.','warranty.cta':'Serviceanfrage starten','warranty.card1Title':'Innerhalb der Herstellergarantie','warranty.card1Body':'Wo wir für die betreffende Marke und das Produkt autorisiert sind, können wir das Garantieverfahren nach Herstellervorgaben durchführen.','warranty.card2Title':'Außerhalb der Garantie','warranty.card2Body':'Auch außerhalb der Garantie prüfen wir zuerst, ob eine Reparatur technisch und wirtschaftlich sinnvoll ist.','warranty.card3Title':'Zuerst die richtigen Daten','warranty.card3Body':'Marke, Typnummer, Seriennummer und eine klare Fehlerbeschreibung helfen uns, schneller den richtigen Weg zu bestimmen.',
+      'process.eyebrow':'SO FUNKTIONIERT ES','process.title':'Von der Störung zum klaren nächsten Schritt.','process.body':'Eine gute Reparatur beginnt mit Informationen. Je besser wir wissen, welches Gerät Sie haben und was der Fehler ist, desto gezielter können wir den Service vorbereiten.','process.step1Title':'Gerät und Fehler melden','process.step1Body':'Nennen Sie Marke, Typ und was das Gerät noch oder nicht mehr macht. Fügen Sie nach Möglichkeit ein Foto des Typenschilds hinzu.','process.step2Title':'Wir bestimmen den Serviceweg','process.step2Body':'Wir prüfen, welche technischen Informationen nötig sind und ob es um Garantie, Reparatur oder weitere Diagnose geht.','process.step3Title':'Reparieren, wenn es sinnvoll ist','process.step3Body':'Wenn eine Reparatur passt, gehen wir den nächsten Schritt. Ist ein Austausch sinnvoller, sagen wir das klar.','history.eyebrow':'SEIT 1934','history.title':'Service steckt seit Generationen in Obbink.','history.body':'Obbink begann 1934 mit Technik und Service. Dieser Gedanke gilt noch immer: Ein Gerät zu verkaufen ist das eine, zu verstehen, wie es funktioniert und was ausfallen kann, etwas anderes. Obbink Service hält dieses technische Wissen im eigenen Haus.','history.cta':'Reparatur anfragen','history.cardTitle':'Nicht automatisch ersetzen, wenn Reparieren noch möglich ist.','history.cardBody':'Wir betrachten den technischen Zustand, die Art der Störung und die wirtschaftliche Vernunft. So erhalten Sie zuerst einen fundierten Reparaturweg statt automatisch ein neues Gerät.'
+    },
+    en: {
+      'hero.eyebrow':'REPAIR & TECHNOLOGY','hero.title':'Repair of bean-to-cup coffee machines, vacuum cleaners & electronics','hero.body':'Not every faulty appliance needs to be replaced. Obbink Service investigates the problem and first considers whether repair makes technical and economic sense, from vacuum cleaners and household appliances to bean-to-cup machines and audio equipment.','hero.cta1':'Request a repair','hero.cta2':'View repair categories','hero.point1':'In-house technical organisation','hero.point2':'Diagnosis before replacement','hero.point3':'Selected warranty repairs','hero.point4':'Technology since 1934','hero.cardEyebrow':'SELLING AND REPAIRING','hero.cardTitle':'Understanding technology is part of good service.','hero.cardBody':'Obbink Service has its own technical organisation for diagnosis, repair and service. That means we can look beyond simply selling a new appliance.','hero.quote':'Buy from the people who can also repair it.',
+      'categories.eyebrow':'WHAT DO WE REPAIR?','categories.title':'Four repair groups, one technical organisation.','categories.body':'Always include the brand, model and fault in your request. A photo of the rating plate helps us identify the appliance faster and prepare the service more effectively.','vacuum.title':'Vacuum cleaners','vacuum.body':'Repair and diagnosis of vacuum cleaners when restoration makes technical sense. We assess the fault, the appliance and the available repair options.','vacuum.item1':'Cylinder vacuum cleaners','vacuum.item2':'Cordless stick vacuums','vacuum.item3':'Faults, parts and diagnosis','small.title':'Small household appliances','small.body':'For various electrical household appliances, we assess whether repair is possible and responsible, depending on the product, brand, parts availability and technical condition.','small.item1':'Kitchen and household appliances','small.item2':'Small electrical appliances','small.item3':'Assessment: repair or replace','coffee.title':'Coffee & bean-to-cup machines','coffee.body':'A bean-to-cup or espresso machine contains technology that requires maintenance and skilled diagnosis. We investigate faults and determine the appropriate repair route.','coffee.item1':'Bean-to-cup machines','coffee.item2':'Espresso and coffee machines','coffee.item3':'Faults, maintenance and technical assessment','audio.title':'Audio equipment','audio.body':'Good service for audio equipment also starts with a clear diagnosis. We assess for each device which repair or next step is technically appropriate.','audio.item1':'Speakers and soundbars','audio.item2':'Receivers and audio systems','audio.item3':'Diagnosis and technical service',
+      'warranty.brandsTitle':'Authorised for brands including','warranty.brandsNote':'Authorisation may vary by brand, product category and warranty terms.','warranty.eyebrow':'WARRANTY & AUTHORISATION','warranty.title':'Authorised repair where this applies to the brand and product.','warranty.body':'Obbink Service is authorised by various manufacturers to carry out repairs. For selected brands and product categories, we can therefore also provide service within the manufacturer warranty. Whether a repair is covered always depends on the brand, product, purchase date and warranty conditions.','warranty.cta':'Start a service request','warranty.card1Title':'Within manufacturer warranty','warranty.card1Body':'Where we are authorised for the relevant brand and product, we can handle the warranty procedure in line with the manufacturer.','warranty.card2Title':'Outside warranty','warranty.card2Body':'Outside warranty, we also first assess whether repair makes technical and economic sense.','warranty.card3Title':'The right information first','warranty.card3Body':'Brand, model number, serial number and a clear description of the fault help us determine the right route faster.',
+      'process.eyebrow':'HOW IT WORKS','process.title':'From fault to a clear next step.','process.body':'A good repair starts with information. The better we know which appliance you have and what the problem is, the more effectively we can prepare the service.','process.step1Title':'Report the appliance and fault','process.step1Body':'Include the brand, model and what the appliance still does or no longer does. Add a photo of the rating plate if possible.','process.step2Title':'We assess the route','process.step2Body':'We determine what technical information is needed and whether the case concerns warranty, repair or further diagnosis.','process.step3Title':'Repair when it makes sense','process.step3Body':'If repair is appropriate, we take the next step. If replacement is more sensible, we make that clear.','history.eyebrow':'SINCE 1934','history.title':'Service has been part of Obbink for generations.','history.body':'Obbink started in 1934 with technology and service. That idea still applies today: selling an appliance is one thing; understanding how it works and what can go wrong is another. Obbink Service keeps that technical knowledge in-house.','history.cta':'Request a repair','history.cardTitle':'Do not automatically replace when repair is still possible.','history.cardBody':'We consider the technical condition, the nature of the fault and what makes economic sense. That gives you a well-founded repair route before automatically buying a new appliance.'
+    },
+    fr: {
+      'hero.eyebrow':'RÉPARATION & TECHNIQUE','hero.title':'Réparation de machines à café à grains, aspirateurs et appareils électroniques','hero.body':'Un appareil en panne ne doit pas toujours être remplacé. Obbink Service recherche la cause et vérifie d’abord si une réparation est pertinente sur les plans technique et économique, de l’aspirateur et du petit électroménager à la machine à grains et au matériel audio.','hero.cta1':'Demander une réparation','hero.cta2':'Voir les catégories de réparation','hero.point1':'Organisation technique interne','hero.point2':'Diagnostic avant remplacement','hero.point3':'Certaines réparations sous garantie','hero.point4':'Technique depuis 1934','hero.cardEyebrow':'VENDRE ET RÉPARER','hero.cardTitle':'Comprendre la technique fait partie d’un bon service.','hero.cardBody':'Obbink Service dispose de sa propre organisation technique pour le diagnostic, la réparation et le service. Nous pouvons ainsi aller plus loin que la simple vente d’un nouvel appareil.','hero.quote':'Achetez chez le spécialiste qui sait aussi réparer.',
+      'categories.eyebrow':'QUE RÉPARONS-NOUS ?','categories.title':'Quatre groupes de réparation, une seule organisation technique.','categories.body':'Indiquez toujours la marque, le modèle et la panne dans votre demande. Une photo de la plaque signalétique nous aide à identifier plus vite l’appareil et à mieux préparer le service.','vacuum.title':'Aspirateurs','vacuum.body':'Réparation et diagnostic d’aspirateurs lorsque la remise en état est techniquement pertinente. Nous évaluons la panne, l’appareil et les possibilités de réparation.','vacuum.item1':'Aspirateurs traîneaux','vacuum.item2':'Aspirateurs balais','vacuum.item3':'Pannes, pièces et diagnostic','small.title':'Petit électroménager','small.body':'Pour divers appareils électriques domestiques, nous vérifions si une réparation est possible et raisonnable selon le produit, la marque, les pièces et l’état technique.','small.item1':'Appareils de cuisine et ménagers','small.item2':'Petit équipement électrique','small.item3':'Évaluation : réparer ou remplacer','coffee.title':'Machines à café & à grains','coffee.body':'Une machine automatique ou espresso contient une technique qui exige entretien et diagnostic qualifié. Nous recherchons les pannes et déterminons la voie de réparation adaptée.','coffee.item1':'Machines automatiques à grains','coffee.item2':'Machines espresso et café','coffee.item3':'Panne, entretien et évaluation technique','audio.title':'Matériel audio','audio.body':'Pour l’audio aussi, un bon service commence par un diagnostic clair. Nous évaluons pour chaque appareil quelle réparation ou quelle étape suivante est techniquement adaptée.','audio.item1':'Enceintes et barres de son','audio.item2':'Récepteurs et systèmes audio','audio.item3':'Diagnostic et service technique',
+      'warranty.brandsTitle':'Agréé notamment pour','warranty.brandsNote':'L’agrément peut varier selon la marque, la catégorie de produits et les conditions de garantie.','warranty.eyebrow':'GARANTIE & AGRÉMENT','warranty.title':'Réparation agréée lorsque cela s’applique à la marque et au produit.','warranty.body':'Obbink Service est agréé par plusieurs fabricants pour effectuer des réparations. Pour certaines marques et catégories de produits, nous pouvons donc aussi intervenir pendant la garantie constructeur. La prise en charge dépend toujours de la marque, du produit, de la date d’achat et des conditions de garantie.','warranty.cta':'Démarrer une demande de service','warranty.card1Title':'Pendant la garantie constructeur','warranty.card1Body':'Lorsque nous sommes agréés pour la marque et le produit concernés, nous pouvons suivre la procédure de garantie du fabricant.','warranty.card2Title':'Hors garantie','warranty.card2Body':'Hors garantie également, nous vérifions d’abord si la réparation est pertinente techniquement et économiquement.','warranty.card3Title':'Les bonnes données d’abord','warranty.card3Body':'Marque, numéro de modèle, numéro de série et description claire de la panne nous aident à déterminer plus vite la bonne voie.',
+      'process.eyebrow':'COMMENT ÇA MARCHE','process.title':'De la panne à une prochaine étape claire.','process.body':'Une bonne réparation commence par de bonnes informations. Plus nous connaissons précisément votre appareil et sa panne, mieux nous pouvons préparer le service.','process.step1Title':'Signalez l’appareil et la panne','process.step1Body':'Indiquez la marque, le modèle et ce que l’appareil fait encore ou ne fait plus. Ajoutez si possible une photo de la plaque signalétique.','process.step2Title':'Nous évaluons la voie à suivre','process.step2Body':'Nous vérifions quelles informations techniques sont nécessaires et s’il s’agit de garantie, de réparation ou d’un diagnostic complémentaire.','process.step3Title':'Réparer lorsque c’est pertinent','process.step3Body':'Si la réparation est adaptée, nous poursuivons. Si le remplacement est plus judicieux, nous vous l’indiquons clairement.','history.eyebrow':'DEPUIS 1934','history.title':'Le service fait partie d’Obbink depuis des générations.','history.body':'Obbink a commencé en 1934 avec la technique et le service. Cette idée reste actuelle : vendre un appareil est une chose, comprendre son fonctionnement et ses pannes en est une autre. Obbink Service conserve ce savoir technique en interne.','history.cta':'Demander une réparation','history.cardTitle':'Ne pas remplacer automatiquement si une réparation reste possible.','history.cardBody':'Nous regardons l’état technique, la nature de la panne et ce qui est économiquement responsable. Vous obtenez ainsi d’abord une voie de réparation argumentée plutôt qu’un remplacement automatique.'
+    },
+    zh: {
+      'hero.eyebrow':'维修与技术','hero.title':'全自动咖啡机、吸尘器与电子设备维修','hero.body':'设备出现故障，并不一定需要立即更换。Obbink Service 会先查明问题，并判断维修在技术和经济上是否合理，范围包括吸尘器、家用小电器、全自动咖啡机以及音响设备。','hero.cta1':'申请维修','hero.cta2':'查看维修类别','hero.point1':'自有技术团队','hero.point2':'先诊断，再决定是否更换','hero.point3':'部分品牌可提供保修期内维修','hero.point4':'技术服务始于1934年','hero.cardEyebrow':'销售，也懂维修','hero.cardTitle':'真正的服务，建立在理解技术之上。','hero.cardBody':'Obbink Service 拥有自己的技术团队，负责检测、维修和服务。因此，我们不仅仅提供新设备销售，也能从技术角度解决问题。','hero.quote':'从既懂销售、也懂维修的人那里购买。',
+      'categories.eyebrow':'我们维修什么？','categories.title':'四类维修服务，由同一个技术团队负责。','categories.body':'提交申请时，请尽量提供品牌、型号和故障描述。设备铭牌照片有助于我们更快识别产品并做好维修准备。','vacuum.title':'吸尘器','vacuum.body':'当维修在技术上合理时，我们为吸尘器提供检测和维修，并评估故障、设备状态及可行的维修方案。','vacuum.item1':'卧式吸尘器','vacuum.item2':'无线手持/杆式吸尘器','vacuum.item3':'故障、零件与检测','small.title':'家用小电器','small.body':'对于多种电动家用小电器，我们会根据产品、品牌、零件供应和技术状态判断是否适合维修。','small.item1':'厨房及家用电器','small.item2':'电动小家电','small.item3':'评估维修还是更换','coffee.title':'咖啡机与全自动豆机','coffee.body':'全自动咖啡机和意式咖啡机需要专业维护与检测。我们会查明故障并确定合适的维修路径。','coffee.item1':'全自动咖啡豆机','coffee.item2':'意式及普通咖啡机','coffee.item3':'故障、维护与技术评估','audio.title':'音响设备','audio.body':'音响设备的良好服务同样从清晰诊断开始。我们会根据具体设备判断适合的维修方案或下一步。','audio.item1':'音箱与回音壁','audio.item2':'功放与音响系统','audio.item3':'检测与技术服务',
+      'warranty.brandsTitle':'授权品牌包括','warranty.brandsNote':'授权范围可能因品牌、产品类别和保修条款而异。','warranty.eyebrow':'保修与授权','warranty.title':'在品牌和产品适用的情况下提供授权维修。','warranty.body':'Obbink Service 获得多家制造商授权，可执行维修服务。因此，对于部分品牌和产品类别，我们也能在制造商保修期内提供服务。是否属于保修范围，始终取决于品牌、产品、购买日期及保修条款。','warranty.cta':'开始服务申请','warranty.card1Title':'制造商保修期内','warranty.card1Body':'如果我们获得相应品牌和产品的授权，就可以按照制造商流程处理保修维修。','warranty.card2Title':'保修期外','warranty.card2Body':'即使已过保修期，我们也会先判断维修在技术和经济上是否合理。','warranty.card3Title':'先提供正确资料','warranty.card3Body':'品牌、型号、序列号以及清晰的故障描述，有助于我们更快确定正确处理方式。',
+      'process.eyebrow':'服务流程','process.title':'从故障到明确的下一步。','process.body':'良好的维修始于准确的信息。我们越清楚您的设备型号和故障情况，就越能有针对性地准备服务。','process.step1Title':'提交设备和故障信息','process.step1Body':'请提供品牌、型号以及设备还能做什么或已经无法做什么。如有可能，请附上铭牌照片。','process.step2Title':'我们评估处理路径','process.step2Body':'我们判断需要哪些技术信息，并确认属于保修、维修还是需要进一步检测。','process.step3Title':'值得修，就维修','process.step3Body':'如果维修合适，我们继续处理；如果更换更合理，我们也会明确说明。','history.eyebrow':'始于1934年','history.title':'服务精神在 Obbink 传承了几代人。','history.body':'Obbink 于1934年从技术与服务起步。这个理念至今没有改变：销售设备是一回事，理解它如何工作以及为何故障是另一回事。Obbink Service 始终把技术知识留在自己的团队中。','history.cta':'申请维修','history.cardTitle':'能修的时候，不必自动更换。','history.cardBody':'我们会综合考虑技术状态、故障性质以及经济合理性，让客户先得到有依据的维修方案，而不是直接购买新设备。'
+    }
+  };
+  const dict = { ...translations[language], ...window.REPAIR_CATEGORY_TRANSLATIONS?.[language] };
+  if (!dict) return;
+  document.querySelectorAll('[data-repair-i18n]').forEach((element) => {
+    const value = dict[element.dataset.repairI18n];
+    if (value) element.textContent = value;
+  });
+  const titleMap = {de:'Reparatur Staubsauger, Kaffeemaschinen & Audio | Obbink Service',en:'Vacuum cleaner, coffee machine & audio repair | Obbink Service',fr:'Réparation aspirateurs, machines à café & audio | Obbink Service',zh:'吸尘器、咖啡机与音响维修 | Obbink Service'};
+  const metaMap = {de:'Reparatur von Staubsaugern, kleinen Haushaltsgeräten, Kaffeevollautomaten und Audiogeräten durch Obbink Service.',en:'Repair of vacuum cleaners, small household appliances, coffee and bean-to-cup machines and audio equipment by Obbink Service.',fr:'Réparation d’aspirateurs, petit électroménager, machines à café et matériel audio par Obbink Service.',zh:'Obbink Service 提供吸尘器、家用小电器、咖啡机与音响设备维修服务。'};
+  if (titleMap[language]) document.title = titleMap[language];
+  const meta = document.querySelector('meta[name="description"]');
+  if (meta && metaMap[language]) meta.setAttribute('content', metaMap[language]);
+})();
+</script>
+</body>
+</html>
