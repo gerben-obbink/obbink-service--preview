@@ -44,9 +44,9 @@
     <section class="home-facts" aria-label="Waarom Obbink Service">
       <div class="container home-facts-grid">
         <div><strong>WIST JE DAT…</strong><p>Wij garantie-reparaties uitvoeren voor veel grote A-merken?</p></div>
-        <div><strong>WIST JE DAT…</strong><p>Je bij Obbink terechtkunt voor advies, aankoop, installatie, reparatie én onderhoud?</p></div>
-        <div><strong>WIST JE DAT…</strong><p>We in de Achterhoek 9 winkels en een eigen Service Center hebben?</p></div>
-        <div><strong>WIST JE DAT…</strong><p>Obbink al sinds 1934 met techniek en service bezig is?</p></div>
+        <div><p>Je bij Obbink terechtkunt voor advies, aankoop, installatie, reparatie én onderhoud?</p></div>
+        <div><p>We in de Achterhoek 9 winkels en een eigen Service Center hebben?</p></div>
+        <div><p>Obbink al sinds 1934 met techniek en service bezig is?</p></div>
       </div>
     </section>
 
@@ -119,16 +119,16 @@
           <h2>Vertel ons wat er aan de hand is.</h2>
           <p>Hoe vollediger uw aanvraag, hoe beter wij ons kunnen voorbereiden. Vul uw contact- en adresgegevens in, geef aan om welk apparaat het gaat en voeg indien mogelijk een foto van het typeplaatje of de storing toe.</p>
           <div class="info-box"><strong>Bosch of Siemens?</strong><p>Dan vragen we om het E-Nr. en FD-nummer. Daarmee kunnen we het exacte apparaat beter identificeren. Een duidelijke foto van het typeplaatje mag ook.</p></div>
-          <a class="whatsapp-card" href="https://wa.me/31655165560?text=Hallo%20Obbink%20Service%2C%20ik%20heb%20een%20vraag%20over%20een%20serviceaanvraag." target="_blank" rel="noopener" aria-label="Neem contact op via WhatsApp">
+          <a class="whatsapp-card" href="https://wa.me/31657081028?text=Hallo%20Obbink%20Service%2C%20ik%20heb%20een%20vraag%20over%20service." target="_blank" rel="noopener" aria-label="WhatsApp de receptie van Obbink Service op +31 6 57081028">
             <span class="whatsapp-icon" aria-hidden="true">☎</span>
             <span><strong>Liever direct contact?</strong><small>Stuur ons een WhatsApp-bericht</small></span>
           </a>
-          <a class="whatsapp-card" style="background:var(--blue-soft);border-color:#bfdff2" href="tel:+31544394878" aria-label="Bel Obbink Service op 0544 394878">
+          <a class="whatsapp-card" style="background:var(--blue-soft);border-color:#bfdff2" href="tel:+31657081028" aria-label="Bel de receptie van Obbink Service op +31 6 57081028">
             <span class="whatsapp-icon" style="background:var(--blue)" aria-hidden="true">☎</span>
-            <span><strong style="color:var(--blue-dark)">Liever bellen?</strong><small style="color:var(--blue-dark)">0544 394878</small></span>
+            <span><strong style="color:var(--blue-dark)">Liever bellen?</strong><small style="color:var(--blue-dark)">+31 6 57081028</small></span>
           </a>
         </div>
-        <form id="service-form" class="service-form">
+        <form id="service-form" class="service-form" action="/api/service-requests" method="post" enctype="multipart/form-data" novalidate>
           <div class="field-row">
             <label>Naam *<input name="name" autocomplete="name" required></label>
             <label>Telefoonnummer *<input name="phone" type="tel" autocomplete="tel" required placeholder="Bijv. 06 12345678"></label>
@@ -160,10 +160,15 @@
           </div>
           <div id="bsh-fields" class="conditional-fields" hidden><div class="field-row"><label>E-Nr.<input name="enr" placeholder="Bijv. WGG.../01"></label><label>FD-nummer<input name="fd" placeholder="Bijv. FD 0312"></label></div><p class="field-help">Tip: maak een duidelijke foto van het typeplaatje. Zo kunnen wij de gegevens controleren.</p></div>
           <div id="miele-fields" class="conditional-fields" hidden><label>Serienummer / type<input name="miele_serial" placeholder="Vul in wat op het typeplaatje staat"></label></div>
+          <div class="field-row">
+            <label>Type aanvraag<select name="request_type"><option value="repair">Reparatie &amp; service</option><option value="installation">Installatie</option><option value="maintenance">Onderhoud</option><option value="advice">Advies</option><option value="quote">Offerte</option></select></label>
+            <label>Type/model<input name="model" maxlength="250"></label>
+          </div>
+          <label>Urgentie<select name="urgency"><option value="normal">Normaal</option><option value="soon">Graag snel contact</option></select></label>
           <label>Wat is er aan de hand? *<textarea name="problem" rows="4" required placeholder="Beschrijf de storing zo duidelijk mogelijk"></textarea></label>
-          <label>Foto typeplaatje of storing<input name="photo" type="file" accept="image/*"></label>
-          <button class="button" type="submit">Serviceaanvraag starten</button>
-          <p id="form-message" class="form-message" role="status"></p>
+          <label>Foto of document toevoegen<input name="photo" type="file" accept=".jpg,.jpeg,.png,.webp,.pdf"></label>
+          <button class="button" type="submit" disabled>Serviceaanvraag verzenden</button>
+          <div id="form-message" class="form-message" role="status" tabindex="-1"></div>
         </form>
       </div>
     </section>

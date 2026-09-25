@@ -4,10 +4,18 @@ document.querySelectorAll('img[src="assets/obbink-service.svg"]').forEach((logo)
 
 const serviceGrid = document.querySelector('#service-grid');
 const services = window.OBBINK_CONTENT?.services || [];
+// Stable category tags keep the homepage colour families independent of translations.
+const serviceCardTypes = {
+  Service: 'service', Klimaat: 'service', Netwerk: 'service', Installatie: 'service',
+  Inbouw: 'solution', Energie: 'solution', AV: 'solution', Professional: 'solution', Premium: 'solution'
+};
 
 services.forEach((service) => {
   const card = document.createElement('article');
   card.className = 'service-card';
+  if (serviceCardTypes[service.tag]) {
+    card.classList.add('service-card--' + serviceCardTypes[service.tag]);
+  }
   card.dataset.tag = service.tag;
   card.innerHTML = `
     <svg class="service-card-watermark" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"><path d="${service.watermark || ''}"></path></svg>
@@ -88,11 +96,99 @@ updateBrandFields();
 
 const serviceForm = document.querySelector('#service-form');
 const formMessage = document.querySelector('#form-message');
-serviceForm?.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const message = 'Dank u. Dit is nog een prototype: in de volgende fase koppelen we de aanvraag aan de Obbink Service-processen en onze backoffice.';
-  if (formMessage) formMessage.textContent = window.obbinkT ? window.obbinkT(message) : message;
-});
+function initialiseServiceForm() {
+  if (!serviceForm) return;
+  const copy = window.obbinkServiceCopy;
+  const submit = serviceForm.querySelector('[type="submit"]');
+  const photo = serviceForm.elements.photo;
+  let pending = false, submitted = false;
+  submit.disabled = false;
+  const element = (tag, text, className) => {
+    const el = document.createElement(tag); if (text) el.textContent = text;
+    if (className) el.className = className; return el;
+  };
+  function contactLinks() {
+    const links = element('div', '', 'service-contact-actions');
+    const call = element('a', copy.call + ' +31 6 57081028'); call.href = 'tel:+31657081028'; call.setAttribute('aria-label', copy.callLabel);
+    const whatsapp = element('a', 'WhatsApp'); whatsapp.href = 'https://wa.me/31657081028?text=' + encodeURIComponent(copy.whatsappMessage);
+    whatsapp.target = '_blank'; whatsapp.rel = 'noopener'; whatsapp.setAttribute('aria-label', copy.whatsappLabel);
+    links.append(call, whatsapp); return links;
+  }
+  function message(title, body, success = false) {
+    formMessage.replaceChildren(element('strong', title), element('p', body));
+    formMessage.dataset.state = success ? 'success' : 'notice';
+    if (success) formMessage.append(element('p', copy.direct));
+    formMessage.append(contactLinks()); formMessage.focus();
+  }
+  const upload = element('div', '', 'regular-upload');
+  const uploadLabel = element('label', copy.attachmentLabel); photo.id = 'service-photo'; uploadLabel.htmlFor = photo.id;
+  const pick = element('button', copy.chooseFile, 'button button-secondary'); pick.type = 'button'; pick.addEventListener('click', () => photo.click());
+  const fileList = element('span', copy.noFile, 'regular-file-list'); fileList.setAttribute('aria-live','polite');
+  const remove = element('button', copy.removeFile, 'button button-secondary'); remove.type = 'button'; remove.hidden = true;
+  const hint = element('p', copy.attachmentHelp, 'field-help'); hint.id = 'service-photo-hint'; pick.setAttribute('aria-describedby',hint.id);
+  photo.parentElement.replaceWith(upload); photo.hidden = true; upload.append(uploadLabel,photo,pick,fileList,remove,hint);
+  function updateFile() { fileList.textContent = photo.files.length ? photo.files[0].name : copy.noFile; remove.hidden = !photo.files.length; }
+  photo.addEventListener('change', updateFile); remove.addEventListener('click',()=>{photo.value='';updateFile();});
+  const fields = [...serviceForm.querySelectorAll('input,select,textarea')];
+  fields.forEach(input => {
+    if (input.type !== 'file' && input.tagName !== 'SELECT') input.maxLength = input.tagName === 'TEXTAREA' ? 5000 : 250;
+    const error = element('span','','regular-field-error'); error.id = 'service-error-' + input.name; error.hidden = true;
+    input.setAttribute('aria-describedby', error.id + (input === photo ? ' ' + hint.id : ''));
+    if (input === photo) pick.setAttribute('aria-describedby', error.id + ' ' + hint.id);
+    input.insertAdjacentElement('afterend',error);
+    input.addEventListener('input',()=>{error.hidden=true;input.removeAttribute('aria-invalid');});
+  });
+  function validate() {
+    let first;
+    fields.forEach(input => {
+      const error = document.getElementById('service-error-' + input.name);
+      let text = '';
+      if (input.required && !input.value.trim()) text = copy.required;
+      else if (input.type === 'email' && !input.validity.valid) text = copy.emailError;
+      else if (input.maxLength > 0 && input.value.length > input.maxLength) text = copy.lengthError;
+      if (input === photo && [...photo.files].some(f => f.size > 2 * 1024 * 1024 || !/\.(jpe?g|png|webp|pdf)$/i.test(f.name))) text = copy.attachmentError;
+      error.textContent = text; error.hidden = !text; input.setAttribute('aria-invalid',String(!!text));
+      if (text && !first) first = input === photo ? pick : input;
+    });
+    if (first) { formMessage.textContent=copy.validation; first.focus(); }
+    return !first;
+  }
+  serviceForm.addEventListener('submit', async event => {
+    event.preventDefault(); if (pending || submitted || !validate()) return;
+    // GitHub Pages/file previews cannot send mail. Never post personal data there.
+    if (location.protocol === 'file:' || /(^|\.)github\.io$/i.test(location.hostname)) {
+      message(copy.notSent, copy.unavailable); return;
+    }
+    pending = true; submit.disabled = true; submit.textContent = copy.sending;
+    formMessage.textContent = copy.sending;
+    let attempted = false;
+    try {
+      const capabilityResponse = await fetch('/api/service-requests/capabilities', { credentials:'same-origin', cache:'no-store', signal:AbortSignal.timeout(8000) });
+      if (!capabilityResponse.ok || !capabilityResponse.headers.get('content-type')?.includes('application/json')) {
+        message(copy.notSent,copy.unavailable); return;
+      }
+      const capability = await capabilityResponse.json();
+      if (capability.available !== true || !capability.requestToken) { message(copy.notSent,copy.unavailable); return; }
+      const data = new FormData(serviceForm);
+      if (!['bosch','siemens'].includes(brandInput.value.trim().toLowerCase())) { data.delete('enr'); data.delete('fd'); }
+      if (brandInput.value.trim().toLowerCase() !== 'miele') data.delete('miele_serial');
+      attempted = true;
+      const response = await fetch('/api/service-requests', {method:'POST',body:data,credentials:'same-origin',headers:{'X-CSRF-TOKEN':capability.requestToken},signal:AbortSignal.timeout(30000)});
+      const result = response.headers.get('content-type')?.includes('application/json') ? await response.json() : {};
+      if (response.status === 202 && result.accepted === true) {
+        submitted = true; message(copy.received,copy.thanks,true);
+      } else if (response.status === 429) message(copy.notSent,copy.rateLimited);
+      else if (result.error === 'mail_unavailable') message(copy.notSent,copy.unavailable);
+      else if (result.error === 'invalid_attachment') message(copy.notSent,copy.attachmentError);
+      else if (result.error === 'invalid_request') message(copy.notSent,copy.validation);
+      else message(copy.unconfirmed,copy.failed);
+    } catch (_) {
+      message(attempted ? copy.unconfirmed : copy.notSent,attempted ? copy.failed : copy.unavailable);
+    } finally {
+      pending = false; submit.disabled = submitted; submit.textContent = copy.submit;
+    }
+  });
+}
 
 const checklistModal = document.querySelector('#checklist-modal');
 const checklistOpeners = document.querySelectorAll('#checklist-open, #checklist-store-open');
@@ -423,6 +519,16 @@ const i18nVersion = encodeURIComponent(document.currentScript?.dataset.i18nVersi
 i18nScript.src = currentLanguage === 'zh' ? `assets/i18n-zh.js?v=${i18nVersion}` : `assets/i18n.js?v=${i18nVersion}`;
 i18nScript.async = false;
 i18nScript.addEventListener('load', () => {
+  // Exact public preview only: no banner on local servers or production hosts.
+  if (location.hostname === 'gerben-obbink.github.io' && location.pathname.startsWith('/obbink-service--preview/')) {
+    const banner = document.createElement('aside');
+    banner.className = 'preview-environment-banner';
+    const label = document.createElement('strong');
+    label.textContent = window.obbinkPreviewCopy.label;
+    banner.append(label, document.createTextNode(' – ' + window.obbinkPreviewCopy.text));
+    document.body.prepend(banner);
+  }
+  initialiseServiceForm();
   document.querySelectorAll('a[href^="https://wa.me/"]').forEach((link) => {
     const url = new URL(link.href);
     const message = url.searchParams.get('text');
@@ -472,3 +578,243 @@ if (communityRegions) {
     });
   }
 }
+
+// Shared business intake. Stable route IDs stay independent of the interface language.
+(() => {
+  const triggers = [...document.querySelectorAll('a, button')].filter(el => el.textContent.trim() === 'Zakelijke aanvraag starten');
+  if (!triggers.length) return;
+  const translationsReady = window.obbinkBusinessCopy ? Promise.resolve() : new Promise(resolve => i18nScript.addEventListener('load', resolve, { once: true }));
+  const departments = ['purchasing', 'technical', 'facilities', 'ict', 'management', 'care', 'other'];
+  const subjects = ['laundry', 'climate', 'network', 'av', 'repair', 'assembly', 'other'];
+  const types = ['quote', 'fault', 'advice', 'maintenance', 'installation'];
+  // [field ID, label key, control kind, required, options]
+  const routes = {
+    fault: [['brand','brand'],['model','model'],['serial','serial'],['deviceLocation','deviceLocation','text',true],['faultDescription','faultDescription','textarea',true],['faultCode','faultCode'],['halted','halted','choice',true,['yes','no']],['urgency','urgency','choice',true,['normal','soon','stopped']],['faultUpload','faultUpload','file'],['extra','extra','textarea']],
+    quote: [['product','product','text',true],['quantity','quantity','number',true],['site','site','text',true],['delivery','delivery'],['installWanted','installWanted','choice',true,['yes','no']],['timeframe','timeframe'],['requestDescription','requestDescription','textarea',true],['docUpload','docUpload','file']],
+    advice: [['adviceTopic','adviceTopic','textarea',true],['currentSituation','currentSituation','textarea',true],['desiredSituation','desiredSituation','textarea',true],['location','location','text',true],['timeframe','timeframe'],['optionalUpload','optionalUpload','file']],
+    maintenance: [['equipment','equipment','text',true],['brand','brand'],['model','model'],['location','location','text',true],['maintenanceSituation','maintenanceSituation','textarea'],['desiredService','desiredService','textarea',true],['frequency','frequency']],
+    installation: [['installWhat','installWhat','textarea',true],['brandModel','brandModel'],['location','location','text',true],['quantity','quantity','number',true],['period','period'],['siteUpload','siteUpload','file'],['extra','extra','textarea']]
+  };
+  let dialog, form, copy, opener, step = 1, review = false, completed = false;
+  const t = key => copy[key];
+  const make = (tag, className, text) => {
+    const el = document.createElement(tag);
+    if (className) el.className = className;
+    if (text !== undefined) el.textContent = text;
+    return el;
+  };
+  const button = (key, className, action) => {
+    const el = make('button', className, t(key));
+    el.type = 'button'; el.addEventListener('click', action); return el;
+  };
+  const value = name => form.elements.namedItem(name)?.value || '';
+  const selectedDepartment = () => value('department') === 'other' ? value('departmentOther') : t(value('department'));
+  const selectedSubject = () => value('subject') === 'other' ? value('subjectOther') : t(value('subject'));
+  const panels = {};
+  const routePanels = {};
+  function field(parent, prefix, spec) {
+    const [key, label, kind = 'text', required = false, options = []] = spec;
+    const name = prefix + key;
+    const wrap = make(kind === 'choice' ? 'fieldset' : 'div', 'business-field' + (kind === 'textarea' || kind === 'file' || kind === 'choice' ? ' business-wide' : ''));
+    wrap.dataset.field = name;
+    const caption = make(kind === 'choice' ? 'legend' : 'label', 'business-label', t(label) + (required ? ' *' : ''));
+    wrap.append(caption);
+    const error = make('p', 'business-field-error');
+    error.id = 'business-error-' + name; error.hidden = true;
+    const setup = el => {
+      el.name = name; el.required = required;
+      el.setAttribute('aria-describedby', error.id);
+      return el;
+    };
+    if (kind === 'choice') {
+      const grid = make('div', 'business-options');
+      options.forEach(option => {
+        const choice = make('label', 'business-choice');
+        const input = setup(make('input'));
+        input.type = 'radio'; input.value = option;
+        choice.append(input, make('span', '', t(option))); grid.append(choice);
+      });
+      wrap.append(grid);
+    } else {
+      const input = setup(make(kind === 'textarea' ? 'textarea' : 'input'));
+      input.id = 'business-' + name; caption.htmlFor = input.id;
+      if (kind === 'textarea') { input.rows = 3; input.maxLength = 3000; }
+      else input.type = kind;
+      if (kind === 'number') { input.min = '1'; input.step = '1'; }
+      if (kind === 'text') input.maxLength = 250;
+      if (kind === 'file') {
+        input.multiple = true; input.accept = '.jpg,.jpeg,.png,.webp,.pdf'; input.hidden = true;
+        const upload = button('chooseFiles', 'business-secondary', () => input.click());
+        upload.setAttribute('aria-describedby', 'business-hint-' + name + ' ' + error.id);
+        const list = make('p', 'business-file-list', t('noFiles')); list.setAttribute('aria-live', 'polite');
+        const remove = button('removeFiles', 'business-text-button', () => { input.value = ''; updateFiles(); });
+        const hint = make('p', 'business-hint', t('uploadHint')); hint.id = 'business-hint-' + name;
+        function updateFiles() {
+          const files = [...input.files];
+          const invalid = files.length > 5 || files.some(file => file.size > 10 * 1024 * 1024 || !/\.(jpe?g|png|webp|pdf)$/i.test(file.name));
+          input.setCustomValidity(invalid ? t('uploadError') : '');
+          list.textContent = files.length ? files.map(file => file.name).join(', ') : t('noFiles');
+          remove.hidden = !files.length;
+          error.textContent = invalid ? t('uploadError') : ''; error.hidden = !invalid;
+          upload.setAttribute('aria-invalid', String(invalid));
+        }
+        input.addEventListener('change', updateFiles); remove.hidden = true;
+        wrap.append(input, upload, list, remove, hint);
+      } else { wrap.append(input); }
+    }
+    wrap.append(error);
+    // Remove a field error as soon as its corrected value is valid.
+    const clearResolvedError = () => {
+      const controls = [...wrap.querySelectorAll('input, textarea')];
+      const valid = kind === 'choice' ? controls.some(el => el.checked) : controls.every(el => el.validity.valid && (!el.required || el.value.trim()));
+      if (!valid) return;
+      error.hidden = true; error.textContent = '';
+      controls.forEach(el => el.removeAttribute('aria-invalid'));
+      if (!dialog.querySelector('.business-field-error:not([hidden])')) dialog.querySelector('.business-errors').textContent = '';
+    };
+    wrap.addEventListener('input', clearResolvedError);
+    wrap.addEventListener('change', clearResolvedError);
+    parent.append(wrap); return wrap;
+  }
+  function conditional(name, control) {
+    const wrap = form.querySelector('[data-field="' + name + '"]');
+    const show = value(control) === 'other';
+    wrap.hidden = !show; wrap.querySelector('input').disabled = !show;
+  }
+  function syncRoute() {
+    Object.entries(routePanels).forEach(([route, panel]) => {
+      const active = route === value('requestType'); panel.hidden = !active; panel.disabled = !active;
+    });
+  }
+  function validate(panel) {
+    let first;
+    panel.querySelectorAll('[data-field]').forEach(wrap => {
+      const inputs = [...wrap.querySelectorAll('input, textarea')].filter(input => !input.matches(':disabled'));
+      if (!inputs.length) return;
+      const input = inputs[0];
+      let message = '';
+      if (input.type === 'radio') { if (input.required && !inputs.some(el => el.checked)) message = t('choose'); }
+      else if (input.required && !input.value.trim()) message = t('required');
+      else if (!input.validity.valid) message = t(input.type === 'email' ? 'invalidEmail' : input.type === 'number' ? 'invalidQuantity' : input.type === 'file' ? 'uploadError' : 'required');
+      const error = wrap.querySelector('.business-field-error'); error.textContent = message; error.hidden = !message;
+      inputs.forEach(el => el.setAttribute('aria-invalid', String(!!message)));
+      if (message && !first) first = input.type === 'file' ? wrap.querySelector('button') : input;
+    });
+    const errors = dialog.querySelector('.business-errors'); errors.textContent = first ? t('errors') : '';
+    if (first) first.focus(); return !first;
+  }
+  function show() {
+    syncRoute();
+    Object.entries(panels).forEach(([key, panel]) => { panel.hidden = completed || review || Number(key) !== step; });
+    dialog.querySelector('.business-summary').hidden = !review || completed;
+    dialog.querySelector('.business-success').hidden = !completed;
+    dialog.querySelector('.business-footer').hidden = completed;
+    dialog.querySelector('.business-errors').textContent = '';
+    const progress = dialog.querySelector('.business-progress');
+    progress.hidden = completed; progress.textContent = t('step' + step);
+    dialog.querySelector('.business-progress-track').hidden = completed;
+    dialog.querySelector('.business-progress-fill').style.width = (step / 3 * 100) + '%';
+    const back = dialog.querySelector('[data-action="back"]'); back.hidden = step === 1 || review;
+    const next = dialog.querySelector('[data-action="next"]'); next.hidden = review; next.textContent = t(step === 3 ? 'review' : 'next');
+    dialog.querySelector('[data-action="edit"]').hidden = !review;
+    dialog.querySelector('[data-action="send"]').hidden = !review;
+    const target = completed ? dialog.querySelector('.business-success h3') : review ? dialog.querySelector('.business-summary h3') : progress;
+    target.focus(); dialog.querySelector('.business-scroll').scrollTop = 0;
+  }
+  function summary() {
+    const container = dialog.querySelector('.business-summary'); container.replaceChildren();
+    const heading = make('h3', '', t('summary')); heading.tabIndex = -1; container.append(heading);
+    const list = make('dl', 'business-summary-list'); container.append(list);
+    const add = (label, text) => { if (!text) return; const row = make('div'); row.append(make('dt','',t(label)), make('dd','',text)); list.append(row); };
+    add('department', selectedDepartment()); add('subject', selectedSubject()); add('requestType', t(value('requestType')));
+    add('organisation', value('company')); add('location', value('branch'));
+    routes[value('requestType')].forEach(([key,label,kind]) => {
+      const name = value('requestType') + '-' + key;
+      const text = kind === 'file' ? [...form.elements.namedItem(name).files].map(file=>file.name).join(', ') : kind === 'choice' ? t(value(name)) : value(name);
+      add(label, text);
+    });
+    ['contact','role','email','phone'].forEach(key => add(key, value(key)));
+    add('preference', t(value('preference')));
+  }
+  function close() { dialog.close(); }
+  function build() {
+    copy = window.obbinkBusinessCopy;
+    dialog = make('dialog', 'business-intake'); dialog.id = 'business-intake';
+    dialog.setAttribute('aria-labelledby', 'business-title'); dialog.setAttribute('aria-describedby', 'business-intro');
+    const closeButton = button('close', 'business-close', close); closeButton.textContent = '×'; closeButton.setAttribute('aria-label', t('close'));
+    const scroll = make('div', 'business-scroll');
+    const header = make('header', 'business-header');
+    const title = make('h2', '', t('title')); title.id = 'business-title';
+    const intro = make('p','',t('intro')); intro.id = 'business-intro';
+    header.append(make('p','business-brand','Obbink Zakelijk'), title, intro);
+    form = make('form', 'business-form'); form.noValidate = true;
+    const progress = make('h3', 'business-progress'); progress.tabIndex = -1;
+    const track = make('div','business-progress-track'); track.setAttribute('aria-hidden','true'); track.append(make('span','business-progress-fill'));
+    form.append(progress,track,make('p','business-hint',t('requiredHint')));
+    for (let number = 1; number <= 3; number++) { panels[number] = make('section','business-step'); panels[number].dataset.step = number; form.append(panels[number]); }
+    field(panels[1], '', ['department','departmentQuestion','choice',true,departments]);
+    field(panels[1], '', ['departmentOther','departmentOther','text',true]);
+    field(panels[1], '', ['subject','subjectQuestion','choice',true,subjects]);
+    field(panels[1], '', ['subjectOther','subjectOther','text',true]);
+    field(panels[1], '', ['requestType','typeQuestion','choice',true,types]);
+    Object.entries(routes).forEach(([route,specs]) => {
+      const panel = make('fieldset','business-detail-grid'); routePanels[route] = panel;
+      panel.append(make('legend','business-route-title',t(route))); specs.forEach(spec=>field(panel, route+'-',spec)); panels[2].append(panel);
+    });
+    panels[3].classList.add('business-contact-grid');
+    [['company','company','text',true],['branch','branch','text',true],['contactDepartment','department'],['contact','contact','text',true],['role','role'],['email','email','email',true],['phone','phone','tel',true],['preference','preference','choice',true,['call','mail']]].forEach(spec => field(panels[3], '', spec));
+    const departmentInput = form.elements.namedItem('contactDepartment'); departmentInput.readOnly = true;
+    const autofill = {company:'organization',contact:'name',role:'organization-title',email:'email',phone:'tel'};
+    Object.entries(autofill).forEach(([name, token]) => { form.elements.namedItem(name).autocomplete = token; });
+    form.append(make('section','business-summary'));
+    const success = make('section','business-success');
+    const successTitle = make('h3','',t('received')); successTitle.tabIndex = -1;
+    success.append(make('span','business-success-icon','✓'),successTitle,make('p','',t('confirmation')),button('done','business-primary',close)); form.append(success);
+    const errors = make('p','business-errors'); errors.setAttribute('role','alert'); form.append(errors);
+    const footer = make('div','business-footer');
+    const back = button('back','business-secondary',()=>{ step--; show(); }); back.dataset.action='back';
+    const next = button('next','business-primary',()=>{
+      if (!validate(panels[step])) return;
+      if (step === 1) departmentInput.value = selectedDepartment();
+      if (step === 3) { review = true; summary(); } else step++;
+      show();
+    }); next.dataset.action='next';
+    const edit = button('edit','business-secondary',()=>{ review=false; step=1; show(); }); edit.dataset.action='edit';
+    const send = make('button','business-primary',t('send')); send.type='submit'; send.dataset.action='send';
+    footer.append(back,edit,next,send); form.append(footer,make('p','business-prototype',t('prototype')));
+    scroll.append(header,form); dialog.append(closeButton,scroll); document.body.append(dialog);
+    form.addEventListener('change', event => {
+      conditional('departmentOther','department'); conditional('subjectOther','subject'); syncRoute();
+      // Keep operational impact and urgency consistent, without inferring response times.
+      if (event.target.name === 'fault-halted' && value('fault-halted') === 'yes') form.elements.namedItem('fault-urgency').value = 'stopped';
+      if (event.target.name === 'fault-halted' && value('fault-halted') === 'no' && value('fault-urgency') === 'stopped') form.elements.namedItem('fault-urgency').value = 'normal';
+      if (event.target.name === 'fault-urgency') form.elements.namedItem('fault-halted').value = value('fault-urgency') === 'stopped' ? 'yes' : 'no';
+    });
+    form.addEventListener('submit', event => {
+      event.preventDefault();
+      if (!review) { next.click(); return; }
+      // Deliberately no fetch, email, storage or backend request in this prototype.
+      completed = true; review = false; show();
+    });
+    dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
+    dialog.addEventListener('close', () => { document.body.classList.remove('business-intake-open'); opener?.focus(); });
+    dialog.addEventListener('keydown', event => {
+      if (event.key === 'Escape') { event.stopPropagation(); event.preventDefault(); close(); }
+      if (event.key !== 'Tab') return;
+      const focusable = [...dialog.querySelectorAll('button,input,textarea,[tabindex="0"]')].filter(el => !el.matches(':disabled') && el.getClientRects().length);
+      const first = focusable[0], last = focusable[focusable.length - 1];
+      if (event.shiftKey && (document.activeElement === first || !focusable.includes(document.activeElement))) { event.preventDefault(); last.focus(); }
+      else if (!event.shiftKey && (document.activeElement === last || !focusable.includes(document.activeElement))) { event.preventDefault(); first.focus(); }
+    });
+    conditional('departmentOther','department'); conditional('subjectOther','subject');
+  }
+  triggers.forEach(trigger => {
+    trigger.setAttribute('aria-haspopup','dialog'); trigger.setAttribute('aria-controls','business-intake');
+    trigger.addEventListener('click', async event => {
+      event.preventDefault(); await translationsReady;
+      if (!dialog) build(); opener = trigger;
+      if (completed) { form.reset(); dialog.remove(); dialog = null; step = 1; review = false; completed = false; build(); }
+      document.body.classList.add('business-intake-open'); dialog.showModal(); show();
+    });
+  });
+})();
