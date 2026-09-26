@@ -40,6 +40,7 @@
     @media(max-width:900px){.repair-brand-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 26px}.repair-brands{margin-top:44px}}
     @media(max-width:560px){.repair-brand-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 28px}.repair-brands{padding-top:28px}.repair-brands h3{margin-bottom:24px}.repair-brand-grid li{min-height:56px}}
   </style>
+  <link rel="stylesheet" href="assets/damage-report.css?v=1">
 </head>
 <body>
 <header class="site-header">
@@ -222,6 +223,19 @@
     </div>
   </section>
 
+  <section class="section wg-section" id="wertgarantie">
+    <div class="container">
+      <img class="wg-logo" src="assets/wertgarantie-logo-open-graph.png" width="1200" height="630" alt="WERTGARANTIE" loading="lazy">
+      <p class="eyebrow" data-damage="label">EXTRA ZEKERHEID</p>
+      <h2 data-damage="heading">Ook na de fabrieksgarantie helpen we u verder</h2>
+      <p class="wg-intro" data-damage="intro">Is uw apparaat defect of beschadigd? Meld uw schade bij Obbink Service. Wij bekijken samen met u de situatie, begeleiden de reparatie en helpen u te bepalen welke garantie-, service- of verzekeringsmogelijkheden van toepassing kunnen zijn.</p>
+      <div class="actions"><button type="button" class="button" data-damage-open data-damage="report">Schade melden</button><a class="button button-secondary" href="https://www.obbink.nl/winkels/" target="_blank" rel="noopener" data-damage="store">Vind een Obbink-winkel</a></div>
+      <img class="wg-banner" src="assets/waschmaschinen-versicherung-buehne-at.jpeg" width="1920" height="612" alt="Wasmachine met wasmand" data-damage-alt="washerAlt" loading="lazy">
+      <div class="wg-info"><div><h3 data-damage="expired">Fabrieksgarantie verlopen?</h3><p data-damage="insurance">Ook na afloop van de fabrieksgarantie zijn er mogelijkheden om apparatuur aanvullend te beschermen. Via WERTGARANTIE kunnen, afhankelijk van het apparaat en de situatie, verzekeringsmogelijkheden beschikbaar zijn.</p><p data-damage="assessment">Voorwaarden verschillen per apparaat en situatie. Een bestaande storing of schade moet eerst worden beoordeeld. Acceptatie of vergoeding is niet automatisch gegarandeerd.</p><p data-damage="visit">Ga naar één van onze Obbink-winkels en laat u persoonlijk adviseren.</p><a class="button button-secondary" href="https://www.obbink.nl/winkels/" target="_blank" rel="noopener" data-damage="store">Vind een Obbink-winkel</a></div><img src="assets/Tablet_Stage.jpg" width="1920" height="612" alt="Stel op de bank met een tablet" data-damage-alt="tabletAlt" loading="lazy"></div>
+      <ol class="wg-steps"><li><span aria-hidden="true">01</span><strong data-damage="stepOne">Meld uw schade</strong></li><li><span aria-hidden="true">02</span><strong data-damage="stepTwo">Wij beoordelen de situatie</strong></li><li><span aria-hidden="true">03</span><strong data-damage="stepThree">Reparatie en advies over eventuele aanvullende zekerheid</strong></li></ol>
+      <p class="wg-legal" data-damage="legal">Dekking, acceptatie en voorwaarden kunnen verschillen per apparaat, leeftijd, situatie en gekozen verzekering. Aan de informatie op deze pagina kunnen geen individuele verzekeringsrechten worden ontleend. Obbink Service beoordeelt samen met u welke mogelijkheden in uw situatie van toepassing zijn.</p>
+    </div>
+  </section>
   <section class="section">
     <div class="container repair-history">
       <div>
@@ -242,7 +256,8 @@
     <div><strong>Organisatie</strong><a href="organisatie.html">Overzicht</a><a href="betrokkenheid.html">Betrokken bij de regio</a><a href="werken-bij.html">Werken bij</a></div>
   </div>
 </footer>
-<script src="assets/app.js"></script>
+<script src="assets/app.js?v=damage-1" data-i18n-version="damage-1"></script>
+<script src="assets/damage-report.js?v=1"></script>
 <script src="assets/repair-categories.js"></script>
 <script>
 (() => {

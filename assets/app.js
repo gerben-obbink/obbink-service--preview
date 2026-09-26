@@ -109,7 +109,7 @@ function initialiseServiceForm() {
   };
   function contactLinks() {
     const links = element('div', '', 'service-contact-actions');
-    const call = element('a', copy.call + ' +31 6 57081028'); call.href = 'tel:+31657081028'; call.setAttribute('aria-label', copy.callLabel);
+    const call = element('a', copy.call + ' 0544-394878'); call.href = 'tel:+31544394878'; call.setAttribute('aria-label', copy.callLabel);
     const whatsapp = element('a', 'WhatsApp'); whatsapp.href = 'https://wa.me/31657081028?text=' + encodeURIComponent(copy.whatsappMessage);
     whatsapp.target = '_blank'; whatsapp.rel = 'noopener'; whatsapp.setAttribute('aria-label', copy.whatsappLabel);
     links.append(call, whatsapp); return links;
@@ -581,7 +581,7 @@ if (communityRegions) {
 
 // Shared business intake. Stable route IDs stay independent of the interface language.
 (() => {
-  const triggers = [...document.querySelectorAll('a, button')].filter(el => el.textContent.trim() === 'Zakelijke aanvraag starten');
+  const triggers = [...document.querySelectorAll('a, button')].filter(el => el.hasAttribute('data-business-intake') || el.textContent.trim() === 'Zakelijke aanvraag starten');
   if (!triggers.length) return;
   const translationsReady = window.obbinkBusinessCopy ? Promise.resolve() : new Promise(resolve => i18nScript.addEventListener('load', resolve, { once: true }));
   const departments = ['purchasing', 'technical', 'facilities', 'ict', 'management', 'care', 'other'];
@@ -768,8 +768,9 @@ if (communityRegions) {
     Object.entries(autofill).forEach(([name, token]) => { form.elements.namedItem(name).autocomplete = token; });
     form.append(make('section','business-summary'));
     const success = make('section','business-success');
-    const successTitle = make('h3','',t('received')); successTitle.tabIndex = -1;
-    success.append(make('span','business-success-icon','✓'),successTitle,make('p','',t('confirmation')),button('done','business-primary',close)); form.append(success);
+    const successTitle = make('h3','',t('testCompleted')); successTitle.tabIndex = -1;
+    const completionBody = make('div','business-completion-body');
+    success.append(successTitle,completionBody,button('done','business-primary',close)); form.append(success);
     const errors = make('p','business-errors'); errors.setAttribute('role','alert'); form.append(errors);
     const footer = make('div','business-footer');
     const back = button('back','business-secondary',()=>{ step--; show(); }); back.dataset.action='back';
@@ -794,7 +795,7 @@ if (communityRegions) {
       event.preventDefault();
       if (!review) { next.click(); return; }
       // Deliberately no fetch, email, storage or backend request in this prototype.
-      completed = true; review = false; show();
+      completeBusinessIntake();
     });
     dialog.addEventListener('cancel', event => { event.preventDefault(); close(); });
     dialog.addEventListener('close', () => { document.body.classList.remove('business-intake-open'); opener?.focus(); });
@@ -807,6 +808,27 @@ if (communityRegions) {
       else if (!event.shiftKey && (document.activeElement === last || !focusable.includes(document.activeElement))) { event.preventDefault(); first.focus(); }
     });
     conditional('departmentOther','department'); conditional('subjectOther','subject');
+  }
+  function completeBusinessIntake(response, result) {
+    // Future backend integration must pass the actual successful fetch response
+    // and parsed acceptance result. Host/environment flags alone never imply receipt.
+    // The current prototype calls this without arguments and performs no request.
+    const staticPreview = location.protocol === 'file:' || /(^|\.)github\.io$/i.test(location.hostname);
+    const accepted = !staticPreview && response instanceof Response && response.ok &&
+      response.status === 202 && result?.accepted === true;
+    const success = dialog.querySelector('.business-success');
+    success.dataset.delivery = accepted ? 'accepted' : 'not-sent';
+    success.querySelector('h3').textContent = t(accepted ? 'productionReceived' : 'testCompleted');
+    const body = success.querySelector('.business-completion-body'); body.replaceChildren();
+    if (!accepted) {
+      body.append(make('p','',t('testNotSent')),make('p','',t('testNext')),make('p','',t('testContact')));
+      const contact = make('p');
+      const email = make('a','','osc@obbinkservice.nl'); email.href = 'mailto:osc@obbinkservice.nl';
+      const phone = make('a','','0544-394878'); phone.href = 'tel:+31544394878';
+      contact.append(document.createTextNode(t('email') + ': '),email,document.createElement('br'),document.createTextNode(t('phone') + ': '),phone);
+      body.append(contact);
+    }
+    completed = true; review = false; show();
   }
   triggers.forEach(trigger => {
     trigger.setAttribute('aria-haspopup','dialog'); trigger.setAttribute('aria-controls','business-intake');
