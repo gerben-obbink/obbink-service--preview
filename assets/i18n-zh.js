@@ -369,6 +369,169 @@
     "Electrolux Professional wasmachines en drogers voor zorg, hospitality, bedrijven en andere professionele toepassingen. Advies, installatie en service door Obbink Service.":  "Electrolux Professional 洗衣机和烘干机适用于护理机构、酒店、企业及其他专业场景。Obbink Service 提供咨询、安装及售后服务。"
 });
   }
+  // Interface only: official Dutch conditions must remain unchanged.
+  Object.assign(ZH, {
+  "Voorwaarden": "条款",
+  "Voorwaarden & tarieven": "条款与收费",
+  "SERVICE · TARIEVEN · VOORWAARDEN": "服务 · 收费 · 条款",
+  "Hier vindt u de actuele servicevoorwaarden, tarieven en praktische informatie van Obbink Service overzichtelijk bij elkaar.": "在这里，您可以集中查阅 Obbink Service 的现行服务条款、收费及实用信息。",
+  "Duidelijk vooraf. Geen verrassingen achteraf.": "事先说明白，事后无意外。",
+  "Witgoed reparatie": "大型家电维修",
+  "TV, Audio & IT service": "电视、音响与 IT 服务",
+  "Installatie tarieven": "安装收费",
+  "Binnendienst tarieven": "维修车间收费",
+  "Algemene voorwaarden": "一般条款",
+  "Tarieven, vervolgafspraken en garantie bij witgoedreparaties.": "大型家电维修的收费、后续上门安排及保修。",
+  "Reparatietarieven en garantie voor televisie, audio en IT.": "电视、音响及 IT 设备的维修收费与保修。",
+  "Tarieven en garantie voor montage en aansluiting.": "装配与连接的收费及保修。",
+  "Reparatietarieven per apparaat en de werkwijze van onze technische dienst.": "按设备类别划分的维修收费及技术服务流程。",
+  "De officiële servicevoorwaarden van Obbink Service B.V.": "Obbink Service B.V. 的正式服务条款。",
+  "Bekijk voorwaarden": "查看条款",
+  "Bekijk details": "查看详情",
+  "Sluit details": "收起详情",
+  "Bron: actuele voorwaarden Obbink Service B.V.": "来源：Obbink Service B.V. 现行条款",
+  "Laatst gecontroleerd:": "最后核查：",
+  "De officiële Nederlandse tekst is leidend.": "以荷兰语正式文本为准。",
+  "Nog vragen over onze voorwaarden of tarieven?": "对我们的条款或收费还有疑问？",
+  "PERSOONLIJK CONTACT": "联系我们",
+  "Telefoon:": "电话：",
+  "E-mail:": "电子邮箱：",
+  "Onderdelen voorwaarden": "条款分类",
+  "Breadcrumb": "面包屑导航",
+  "Home": "首页",
+  "Bekijk de originele algemene voorwaarden (PDF)": "查看一般条款原件（PDF）",
+  "Bekijk de actuele voorwaarden, servicetarieven en praktische informatie van Obbink Service voor reparatie, installatie en binnendienst.": "查看 Obbink Service 关于维修、安装和车间服务的现行条款、收费及实用信息。",
+  "Voorwaarden & tarieven | Obbink Service": "条款与收费 | Obbink Service"
+});
+  ZH["Goede service begint met duidelijke afspraken. Daarom maken we helder wat u van Obbink Service mag verwachten — van het eerste contact en de planning tot reparatie, installatie en nazorg."] = "优质服务始于明确的约定。因此，我们清楚说明您可以期待 Obbink Service 提供哪些服务——从首次联系和安排，到维修、安装及后续服务。";
+  if (document.body.classList.contains('about-service-page')) {
+    Object.assign(ZH, {
+  "Over ons": "关于我们",
+  "De technische kracht achter Obbink.": "Obbink 背后的技术实力。",
+  "Sinds 1934": "始于1934年",
+  "Onze historie": "我们的历史",
+  "Onze technische organisatie": "我们的技术团队",
+  "Thuis & zakelijk": "家庭与企业",
+  "Onze servicebeloften": "我们的服务承诺",
+  "Werken bij Obbink Service": "加入 Obbink Service",
+  "Voor thuis": "家庭服务",
+  "Voor zakelijk": "企业服务",
+  "Onze technische diensten": "我们的技术服务",
+  "Reparatie & Service": "维修与服务",
+  "Inbouwapparatuur": "嵌入式家电",
+  "Airco & installatie": "空调与安装",
+  "Wifi & netwerk": "Wi-Fi 与网络",
+  "Thuisbatterij & energieopslag": "家庭电池与储能",
+  "Professioneel witgoed": "专业电器",
+  "Historische Obbink-winkel in Winterswijk met radio’s en televisies": "位于 Winterswijk 的 Obbink 老店，陈列着收音机和电视机",
+  "Historische radio uit de beginperiode van Obbink": "Obbink 创业初期的老式收音机",
+  "Technische organisatie van Obbink Service in het Service Center": "Obbink Service 在 Service Center 的技术团队",
+  "Obbink Service voor particuliere en zakelijke klanten": "Obbink Service 为家庭和企业客户提供服务",
+  "Over Obbink Service | Technische service sinds 1934": "关于 Obbink Service | 始于1934年的技术服务",
+  "Maak kennis met Obbink Service in Lichtenvoorde. Reparatie, installatie, onderhoud en technische service voor thuis en zakelijk in de Achterhoek.": "了解位于 Lichtenvoorde 的 Obbink Service。我们为 Achterhoek 地区的家庭和企业提供维修、安装、维护及技术服务。",
+  "De kracht van Obbink zit in de jarenlange passie voor techniek. Sinds 1934 is Obbink al bezig met techniek. Wat begon met radio’s en elektronica, groeide uit tot een organisatie met een sterke basis in reparatie, onderhoud, installatie en service. In al die jaren is Obbink zich blijven aanpassen aan veranderingen in de markt, zonder het vakmanschap en de persoonlijke betrokkenheid te verliezen. Juist die combinatie van ervaring, technische kennis en service maakt Obbink vandaag nog altijd sterk.": "Obbink 的实力源于多年来对技术的热爱。自1934年以来，Obbink 一直深耕技术领域。从收音机和电子设备起步，逐步发展成为在维修、维护、安装和服务方面拥有坚实基础的企业。多年来，Obbink 不断适应市场变化，始终保持精湛技艺和对客户的用心。经验、技术知识与服务的结合，至今仍是 Obbink 的优势所在。",
+  "Sinds 1934 is Obbink verbonden met techniek. In de beginjaren lag de focus op radio en elektronica. Vanuit die basis ontstond een sterke traditie in reparatie, onderhoud en service. Door de jaren heen groeide Obbink mee met nieuwe technieken, producten en klantvragen, maar de liefde voor het vak is altijd gebleven.": "自1934年以来，Obbink 始终与技术紧密相连。早期业务主要围绕收音机和电子设备展开，并由此形成了重视维修、维护和服务的传统。随着新技术、新产品和客户需求的发展，Obbink 不断成长，但对技艺的热爱始终未变。",
+  "Vandaag de dag is Obbink Service een moderne technische organisatie met eigen monteurs, planning, werkplaats en Service Center. Wij ondersteunen klanten met reparatie, installatie, onderhoud en technisch advies. Door praktijkervaring te combineren met actuele kennis kunnen wij snel schakelen en passende oplossingen bieden.": "如今，Obbink Service 是一家现代化的技术服务企业，拥有自己的技术人员、调度团队、维修车间和 Service Center。我们为客户提供维修、安装、维护和技术建议。通过结合实践经验与最新知识，我们能够迅速响应，提供合适的解决方案。",
+  "Vanuit ons Service Center in Lichtenvoorde bieden we technische ondersteuning in de Achterhoek.": "我们以位于 Lichtenvoorde 的 Service Center 为基地，为 Achterhoek 地区提供技术支持。",
+  "Obbink Service werkt voor particulieren én zakelijke klanten. Van service aan huis tot ondersteuning voor bedrijven, winkels en professionele toepassingen: wij zorgen voor techniek die werkt. Juist doordat wij beide werelden kennen, kunnen we klanten breed ondersteunen met advies, installatie, onderhoud en service.": "Obbink Service 同时服务于家庭和企业客户。从上门服务，到为企业、商店及专业应用提供支持，我们确保技术设备正常运行。正因为熟悉这两类客户的需求，我们能够在咨询、安装、维护和服务方面提供全面支持。"
+});
+  }
+  if (document.body.classList.contains('about-service-page')) {
+    Object.assign(ZH, {
+  "VIERDE GENERATIE": "第四代",
+  "De volgende generatie bouwt verder.": "新一代接续前行。",
+  "Vandaag staat de vierde generatie binnen het familiebedrijf klaar om Obbink verder te ontwikkelen. Ieder vanuit een eigen rol, maar met dezelfde basis: techniek, service, ondernemerschap en de bereidheid om te blijven veranderen.": "如今，家族企业的第四代已准备好推动 Obbink 继续发展。他们各有分工，却拥有共同的根基：技术、服务、创业精神，以及不断求变的意愿。",
+  "Sinds 1934 verandert de techniek. De betrokkenheid blijft.": "自1934年以来，技术不断变化，用心始终如一。",
+  "Bart, Emke en Jelle Obbink": "Bart、Emke 和 Jelle Obbink",
+  "Bart, Emke en Jelle Obbink – vierde generatie familiebedrijf Obbink": "Bart、Emke 和 Jelle Obbink——Obbink 家族企业第四代"
+});
+  }
+  if (document.body.classList.contains('installation-page')) {
+    Object.assign(ZH, {
+  "Installatie & montage | Obbink Service Achterhoek": "安装与装配 | Obbink Service Achterhoek",
+  "Obbink Service verzorgt installatie, montage en aansluiting van apparatuur voor thuis en zakelijk. Vakkundige service in Lichtenvoorde en de Achterhoek.": "Obbink Service 为家庭和企业提供设备安装、装配及连接服务。在 Lichtenvoorde 和 Achterhoek 提供专业服务。",
+  "INSTALLATIE & MONTAGE": "安装与装配",
+  "Vakkundig geplaatst. Netjes aangesloten.": "专业安装，整洁连接。",
+  "Een goede installatie stopt niet bij het neerzetten van een apparaat. Obbink Service verzorgt montage, aansluiting, instelling en oplevering voor thuis en zakelijke omgevingen. Van witgoed en televisie tot audio, netwerk en technische apparatuur.": "良好的安装不止于把设备放好。Obbink Service 为家庭和企业环境提供装配、连接、设置及交付服务，涵盖家电、电视、音响、网络及技术设备。",
+  "Installatie aanvragen": "申请安装",
+  "Bekijk onze mogelijkheden": "了解服务项目",
+  "Monteur van Obbink Service tijdens installatie en montage": "Obbink Service 技术人员进行安装与装配工作",
+  "ONZE INSTALLATIESERVICE": "我们的安装服务",
+  "Van apparaat tot complete oplevering.": "从设备到完整交付。",
+  "Apparatuur plaatsen & aansluiten": "设备摆放与连接",
+  "Wij plaatsen en sluiten apparatuur zorgvuldig aan en controleren of alles correct werkt voordat we vertrekken.": "我们仔细摆放并连接设备，在离开前检查一切是否正常运行。",
+  "TV & wandmontage": "电视与壁挂安装",
+  "Van plaatsbepaling en wandmontage tot het netjes aansluiten en instellen van televisie en randapparatuur.": "从确定位置和壁挂安装，到整洁连接并设置电视及周边设备。",
+  "Audio & beeld": "音响与视频",
+  "Montage en aansluiting van soundbars, audio-oplossingen en andere beeld- en geluidsapparatuur.": "安装和连接条形音箱、音响系统及其他视听设备。",
+  "Bekabeling & technische montage": "布线与技术装配",
+  "Netjes aangelegde bekabeling, montage van accessoires en technische oplossingen voor thuis en zakelijk.": "整洁布线、配件安装，以及适用于家庭和企业的技术方案。",
+  "Inbouwapparatuur": "嵌入式家电",
+  "Plaatsing, aansluiting en controle van inbouwapparatuur, inclusief technische afwerking.": "嵌入式家电的摆放、连接与检查，包括技术收尾工作。",
+  "Meer over inbouwapparatuur": "了解嵌入式家电服务",
+  "GOED VOORBEREID OP PAD": "充分准备再出发",
+  "Van magazijn tot montage.": "从仓库到安装现场。",
+  "Een goede installatie begint al vóór de monteur bij u aankomt. Apparatuur, onderdelen en montagematerialen worden voorbereid zodat onze monteurs efficiënt en zorgvuldig kunnen werken. Vanuit ons Service Center in Lichtenvoorde ondersteunen we dagelijks installaties en serviceopdrachten in de Achterhoek.": "良好的安装在技术人员到达之前就已开始。我们提前准备设备、零件和安装材料，让技术人员能够高效、细致地工作。位于 Lichtenvoorde 的 Service Center 每天为 Achterhoek 地区的安装和服务任务提供支持。",
+  "Obbink Service medewerkers bereiden apparatuur voor installatie voor": "Obbink Service 员工为设备安装做准备",
+  "VAN AFSPRAAK TOT OPLEVERING": "从预约到交付",
+  "Duidelijk geregeld van begin tot eind.": "从始至终，安排清晰。",
+  "Voorbereiden": "准备",
+  "Wij bespreken wat er geplaatst of gemonteerd moet worden en welke situatie we op locatie aantreffen.": "我们沟通需要摆放或安装的设备，并了解现场情况。",
+  "Installeren": "安装",
+  "Onze monteur plaatst en monteert de apparatuur zorgvuldig.": "我们的技术人员细致地摆放和安装设备。",
+  "Aansluiten & testen": "连接与测试",
+  "Na installatie controleren we werking, aansluiting en instellingen.": "安装后，我们检查运行情况、连接和设置。",
+  "Opleveren & uitleg": "交付与说明",
+  "U krijgt uitleg over het gebruik en we zorgen dat de werkplek of woning netjes wordt achtergelaten.": "我们说明使用方法，并确保工作场所或家中保持整洁。",
+  "Installatie voor thuis én bedrijven.": "面向家庭和企业的安装服务。",
+  "Thuis": "家庭",
+  "Zakelijk": "企业",
+  "Witgoed, televisie, audio, wifi/netwerk, energieoplossingen en overige technische apparatuur.": "家电、电视、音响、Wi-Fi/网络、能源方案及其他技术设备。",
+  "Kantoren, winkels, zorg, horeca, professionele apparatuur en netwerk-, beeld- en geluidsoplossingen.": "办公室、商店、护理机构、酒店餐饮、专业设备，以及网络和视听方案。",
+  "Zakelijke installatie aanvragen": "申请企业安装服务",
+  "Meer over Obbink Zakelijk": "了解 Obbink Zakelijk",
+  "ACHTERHOEKS SINDS 1934": "自1934年扎根 Achterhoek",
+  "Vakmanschap dichtbij.": "专业服务，就在身边。",
+  "Obbink Service combineert technische kennis met persoonlijke service. Vanuit Lichtenvoorde werken onze monteurs dagelijks in de regio. We kennen de omgeving, zijn snel bereikbaar en zorgen dat installatie en service praktisch en duidelijk geregeld zijn.": "Obbink Service 将技术知识与贴心服务相结合。我们的技术人员以 Lichtenvoorde 为基地，每天在本地区开展工作。我们熟悉当地环境，便于联系，让安装和服务安排务实、清晰。",
+  "Obbink Service monteur in de Achterhoek": "Obbink Service 技术人员在 Achterhoek",
+  "Iets installeren of monteren?": "需要安装或装配设备？",
+  "Vertel ons wat er geplaatst, aangesloten of gemonteerd moet worden. Wij kijken graag met u mee naar een passende installatie-oplossing.": "请告诉我们需要摆放、连接或装配什么设备。我们很乐意协助您寻找合适的安装方案。",
+  "Zakelijke aanvraag starten": "发起企业业务咨询",
+  "Meer technische oplossingen": "更多技术方案",
+  "Airco & installatie": "空调与安装",
+  "Wifi & netwerk": "Wi-Fi 与网络",
+  "Thuisbatterij & energieopslag": "家庭电池与储能",
+  "Professioneel witgoed": "专业电器",
+  "Reparatie & Service": "维修与服务",
+  "Onze servicebeloften": "我们的服务承诺"
+});
+  }
+  // Shared recognition sections and footer. Descriptions do not assert certification status.
+  Object.assign(ZH, {
+  "VAKKENNIS · VEILIGHEID · KWALITEIT": "专业知识 · 安全 · 品质",
+  "Technische kwaliteit waarop organisaties kunnen vertrouwen.": "值得机构信赖的技术品质。",
+  "Voor zakelijke klanten zijn veiligheid, vakbekwaamheid en continuïteit essentieel. Hieronder vindt u organisaties en normen rond professioneel technisch werk. Welke erkenning of certificering relevant is, hangt af van de werkzaamheden.": "对于企业客户，安全、专业能力和业务连续性至关重要。以下介绍与专业技术工作相关的机构和标准。适用的资质或认证取决于具体工作。",
+  "Kwaliteit en vakbekwaamheid": "品质与专业能力",
+  "Technische service vraagt om kennis, veilig werken en actuele vakbekwaamheid. Deze organisaties en normen hebben ieder een eigen werkgebied.": "技术服务需要专业知识、安全作业和与时俱进的技能。这些机构和标准各有其适用范围。",
+  "Certificering en toetsing binnen technische vakgebieden.": "技术领域的认证与评估。",
+  "Aandacht voor veiligheid, gezondheid en milieu op het werk.": "关注工作场所的安全、健康与环境。",
+  "Erkenningsregelingen voor technische installatiewerkzaamheden.": "技术安装工作的资质认可体系。",
+  "Brancheorganisatie voor de technische sector.": "技术行业的行业协会。",
+  "Register voor professionele reparateurs.": "专业维修人员及企业名录。",
+  "NEN 3140 gaat over veilig werken aan elektrische installaties en arbeidsmiddelen.": "NEN 3140 涉及电气装置和作业设备的安全工作要求。",
+  "VAKKENNIS & VEILIGHEID": "专业知识与安全",
+  "Professionele apparatuur vraagt professionele service.": "专业设备需要专业服务。",
+  "Van advies en installatie tot onderhoud en reparatie: professionele apparatuur vraagt om aantoonbare technische kennis en veilig werken.": "从咨询、安装到维护和维修，专业设备需要扎实的技术知识与安全作业。",
+  "Erkenningen en certificeringen kunnen betrekking hebben op specifieke werkzaamheden, medewerkers of vakgebieden.": "资质认可与认证可能仅适用于特定工作、员工或专业领域。",
+  "Informatie": "信息",
+  "Privacy": "隐私",
+  "Telefoon:": "电话：",
+  "E-mail:": "电子邮箱：",
+  "Contact": "联系我们",
+  "Servicebeloften": "服务承诺",
+  "Voorwaarden": "条款",
+  "Technische service voor thuis en zakelijk.": "面向家庭和企业的技术服务。"
+});
   const translate = (value) => ZH[value] || value;
   window.obbinkT = translate;
   window.OBBINK_LANGUAGE = 'zh';
@@ -379,13 +542,16 @@
   document.title = translate(document.title);
   const description = document.querySelector('meta[name="description"]');
   if (description) description.content = translate(description.content);
+    if (document.body.matches('.about-service-page, .installation-page')) {
+      document.querySelectorAll('meta[property="og:title"], meta[property="og:description"]').forEach(meta => { meta.content = translate(meta.content); });
+    }
 
   const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
   const nodes = [];
   while (walker.nextNode()) nodes.push(walker.currentNode);
   nodes.forEach((node) => {
     const parent = node.parentElement;
-    if (!parent || ['SCRIPT','STYLE'].includes(parent.tagName)) return;
+    if (!parent || parent.closest('[translate="no"]') || ['SCRIPT','STYLE'].includes(parent.tagName)) return;
     const raw = node.nodeValue;
     const trimmed = raw.trim();
     if (!trimmed) return;
@@ -400,6 +566,7 @@
 
   ['placeholder','aria-label','alt','title'].forEach((attr) => {
     document.querySelectorAll(`[${attr}]`).forEach((el) => {
+      if (el.closest('[translate="no"]')) return;
       const value = el.getAttribute(attr);
       if (value && ZH[value]) el.setAttribute(attr, ZH[value]);
     });

@@ -131,7 +131,7 @@
         <form id="service-form" class="service-form" action="/api/service-requests" method="post" enctype="multipart/form-data" novalidate>
           <div class="field-row">
             <label>Naam *<input name="name" autocomplete="name" required></label>
-            <label>Telefoonnummer *<input name="phone" type="tel" autocomplete="tel" required placeholder="Bijv. 06 12345678"></label>
+            <label>Telefoonnummer *<input name="phone" type="tel" autocomplete="tel" required></label>
           </div>
           <div class="field-row">
             <label>E-mailadres *<input name="email" type="email" autocomplete="email" required></label>
@@ -140,32 +140,32 @@
             </label>
           </div>
           <div class="field-row">
-            <label>Postcode *<input name="postal_code" autocomplete="postal-code" required placeholder="Bijv. 7131 AA"></label>
-            <label>Huisnummer *<input name="house_number" inputmode="numeric" required placeholder="Bijv. 12"></label>
+            <label>Postcode *<input name="postal_code" autocomplete="postal-code" required></label>
+            <label>Huisnummer *<input name="house_number" inputmode="numeric" required></label>
           </div>
           <div class="field-row">
             <label>Straat *<input name="street" autocomplete="address-line1" required></label>
-            <label>Toevoeging<input name="house_number_suffix" placeholder="Bijv. A"></label>
+            <label>Toevoeging<input name="house_number_suffix"></label>
           </div>
           <label>Plaats *<input name="city" autocomplete="address-level2" required></label>
           <div class="field-row">
             <label>Apparaat *
-              <input id="device-input" name="device" list="device-options" required placeholder="Kies of typ een apparaat">
+              <input id="device-input" name="device" list="device-options" required>
               <datalist id="device-options"><option value="Wasmachine"><option value="Wasdroger"><option value="Vaatwasser"><option value="Koelkast"><option value="Vrieskast / vriezer"><option value="Koel-vriescombinatie"><option value="Kookplaat"><option value="Fornuis"><option value="Oven"><option value="Combi-oven / magnetron"><option value="Magnetron"><option value="Afzuigkap"><option value="Koffiezetter / espressomachine"><option value="Televisie"><option value="Audio"><option value="Anders"></datalist>
             </label>
             <label>Merk *
-              <input id="brand-input" name="brand" list="brand-options" required placeholder="Kies of typ een merk">
+              <input id="brand-input" name="brand" list="brand-options" required>
               <datalist id="brand-options"><option value="Bosch"><option value="Siemens"><option value="Miele"><option value="AEG"><option value="Samsung"><option value="Hisense"><option value="Philips"><option value="Anders"></datalist>
             </label>
           </div>
-          <div id="bsh-fields" class="conditional-fields" hidden><div class="field-row"><label>E-Nr.<input name="enr" placeholder="Bijv. WGG.../01"></label><label>FD-nummer<input name="fd" placeholder="Bijv. FD 0312"></label></div><p class="field-help">Tip: maak een duidelijke foto van het typeplaatje. Zo kunnen wij de gegevens controleren.</p></div>
-          <div id="miele-fields" class="conditional-fields" hidden><label>Serienummer / type<input name="miele_serial" placeholder="Vul in wat op het typeplaatje staat"></label></div>
+          <div id="bsh-fields" class="conditional-fields" hidden><div class="field-row"><label>E-Nr.<input name="enr" aria-describedby="enr-help"><small id="enr-help" class="field-help">Bijv. WGG.../01</small></label><label>FD-nummer<input name="fd" aria-describedby="fd-help"><small id="fd-help" class="field-help">Bijv. FD 0312</small></label></div><p class="field-help">Tip: maak een duidelijke foto van het typeplaatje. Zo kunnen wij de gegevens controleren.</p></div>
+          <div id="miele-fields" class="conditional-fields" hidden><label>Serienummer / type<input name="miele_serial"></label></div>
           <div class="field-row">
             <label>Type aanvraag<select name="request_type"><option value="repair">Reparatie &amp; service</option><option value="installation">Installatie</option><option value="maintenance">Onderhoud</option><option value="advice">Advies</option><option value="quote">Offerte</option></select></label>
             <label>Type/model<input name="model" maxlength="250"></label>
           </div>
           <label>Urgentie<select name="urgency"><option value="normal">Normaal</option><option value="soon">Graag snel contact</option></select></label>
-          <label>Wat is er aan de hand? *<textarea name="problem" rows="4" required placeholder="Beschrijf de storing zo duidelijk mogelijk"></textarea></label>
+          <label>Wat is er aan de hand? *<textarea name="problem" rows="4" required></textarea></label>
           <label>Foto of document toevoegen<input name="photo" type="file" accept=".jpg,.jpeg,.png,.webp,.pdf"></label>
           <button class="button" type="submit" disabled>Serviceaanvraag verzenden</button>
           <div id="form-message" class="form-message" role="status" tabindex="-1"></div>
@@ -185,9 +185,7 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid"><div><img src="assets/obbinkservice.png" alt="Obbink Service" class="footer-logo"><p>Technische service voor thuis en zakelijk.</p></div><div><strong>Service</strong><a href="#aanvragen">Reparatie aanvragen</a><a href="#diensten">Installatie & oplossingen</a><a href="#reparatie">Serviceproces</a></div><div><strong>Organisatie</strong><a href="organisatie.html">Overzicht</a><a href="servicebeloften.html">Servicebeloften</a><a href="betrokkenheid.html">Betrokken bij de regio</a><a href="werken-bij.html">Werken bij</a></div></div>
-  </footer>
+  <footer class="site-footer service-footer"><div class="container footer-grid"><div><img src="assets/obbinkservice.png" alt="Obbink Service" class="footer-logo"><p>Technische service voor thuis en zakelijk.</p></div><div><strong>Contact</strong><a href="tel:+31544394878"><span>Telefoon:</span> <span translate="no">0544-394878</span></a><a href="mailto:info@obbinkservice.nl"><span>E-mail:</span> <span translate="no">info@obbinkservice.nl</span></a><address translate="no">Koningslinde 3<br>7131 MP Lichtenvoorde</address></div><nav aria-label="Informatie"><strong>Informatie</strong><a href="voorwaarden.html">Voorwaarden</a><span class="footer-pending">Privacy</span><a href="index.html#aanvragen">Contact</a><a href="servicebeloften.html">Servicebeloften</a></nav></div><div class="footer-recognitions"><div class="container"><div class="recognition-grid"><div class="recognition-item"><div class="recognition-image"><img class="recognition-kiwa" src="assets/kiwa.jpg" alt="Kiwa" translate="no" loading="lazy" decoding="async"></div></div><div class="recognition-item"><div class="recognition-image"><img class="recognition-vca" src="assets/VCA.jpg" alt="VCA" translate="no" loading="lazy" decoding="async"></div></div><div class="recognition-item"><div class="recognition-image"><img class="recognition-installq" src="assets/InstallQ.png" alt="InstallQ" translate="no" loading="lazy" decoding="async"></div></div><div class="recognition-item"><div class="recognition-image"><img class="recognition-technieknl" src="assets/technieknl.png" alt="Techniek Nederland" translate="no" loading="lazy" decoding="async"></div></div><div class="recognition-item"><div class="recognition-image"><img class="recognition-register" src="assets/nationaal-reparateursregister-1600x900.jpg" alt="Nationaal Reparateursregister" translate="no" loading="lazy" decoding="async"></div></div><div class="recognition-item"><div class="recognition-image"><img class="recognition-nen" src="assets/NEN-keuring_logo.png" alt="NEN" translate="no" loading="lazy" decoding="async"></div></div></div><p class="recognition-note">Erkenningen en certificeringen kunnen betrekking hebben op specifieke werkzaamheden, medewerkers of vakgebieden.</p></div></div></footer>
 
   <script src="data/content.js"></script>
   <script src="assets/app.js"></script>

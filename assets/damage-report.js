@@ -2,6 +2,15 @@
   function initialise() {
     const c = window.obbinkDamageCopy;
     if (!c || !document.querySelector('#wertgarantie')) return;
+    // Compact field labels; the step headings and optional indicators remain unchanged.
+    const labelLanguage = document.documentElement.lang.split('-')[0];
+    const fieldLabels = {
+      nl: { device: 'Apparaat', serial: 'Serienummer', purchased: 'Aankoopdatum', shop: 'Winkel', code: 'Foutcode' },
+      de: { device: 'Gerät', serial: 'Seriennummer', purchased: 'Kaufdatum', shop: 'Geschäft', code: 'Fehlercode' },
+      en: { device: 'Appliance', serial: 'Serial number', purchased: 'Purchase date', shop: 'Retailer', code: 'Error code' },
+      fr: { device: 'Appareil', serial: 'Numéro de série', purchased: 'Date d’achat', shop: 'Magasin', code: 'Code d’erreur' },
+      zh: { device: '设备', serial: '序列号', purchased: '购买日期', shop: '商店', code: '故障代码' }
+    }[labelLanguage] || {};
     document.querySelectorAll('[data-damage]').forEach(el => { el.textContent = c[el.dataset.damage]; });
     document.querySelectorAll('[data-damage-alt]').forEach(el => { el.alt = c[el.dataset.damageAlt]; });
     const make = (tag, text, className) => {
@@ -39,7 +48,7 @@
       const panel=make('div','','damage-grid');panels.push(panel);form.append(panel);
       list.forEach(([key,type,required,options])=>{
         const wrap=make('div','','damage-field'+(['textarea','file'].includes(type)?' wide':''));
-        const label=make('label',c[key]+(required?' *':' — '+c.optional));label.htmlFor='damage-'+key;label.id='damage-label-'+key;
+        const label=make('label',(fieldLabels[key] || c[key])+(required?' *':' — '+c.optional));label.htmlFor='damage-'+key;label.id='damage-label-'+key;
         const input=make(type==='select'?'select':type==='textarea'?'textarea':'input');input.id='damage-'+key;input.name=key;
         if(!['select','textarea'].includes(type))input.type=type;
         input.required=!!required;input.maxLength=type==='textarea'?3000:80;
